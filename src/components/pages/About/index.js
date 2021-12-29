@@ -1,11 +1,13 @@
 import './About.css'
+import Bios from './Bios';
 import Blurb from './Blurb';
 
 function About() {
   return (
     <>
-      <h1>About</h1>
+      <h1>University of Toronto Freelancers' Organization</h1>
       <Blurb />
+      <Bios />
     </>
   );
 }

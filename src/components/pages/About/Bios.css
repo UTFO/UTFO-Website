@@ -1,0 +1,36 @@
+.carousel-root {
+	max-width: 66%;
+	margin: 0 auto 1em auto;
+	--arrow-width: 28px;
+}
+.dev-bio {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	max-width: calc(100% - 2 * var(--arrow-width));
+	width: max-content;
+	margin: 0 auto 2.5em auto;
+}
+.dev-bio div {
+	flex-grow: 1;
+	padding: 0 1em;
+}
+.carousel-root .dev-bio img.profile-pic {
+	width: auto;
+	height: 200px;
+	align-self: flex-end;
+}
+.carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
+	border-left-color: rgba(0, 0, 0, 0.7);
+	border-right-color: rgba(0, 0, 0, 0.7);
+}
+.carousel .carousel-status {
+	right: var(--arrow-width);
+	text-shadow: 1px 1px 2px rgb(255 255 255 / 90%);
+	color: #000;
+}
+.carousel .control-dots .dot {
+	box-shadow: 1px 1px 2px rgb(255 255 255 / 90%);
+	background: #000;
+}
