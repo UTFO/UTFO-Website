@@ -1,13 +1,15 @@
 import './App.css';
 import React from 'react';
 import Navbar from './components/Navbar';
-import About from './components/pages/About';
-import Home from './components/pages/Home';
+import Blurb from './components/pages/About/Blurb';
 
 function App() {
-  return (
-    <Navbar />
-  );
+    return (
+        <>
+            <Navbar />
+            <Blurb />
+        </>
+    );
 }
 
 export default App;
