@@ -1,12 +1,11 @@
-import React from 'react'
-import './Home.css'
+import './Home.css';
 
-function Home(){
-    return(
+function Home() {
+    return (
         <>
             <h1>Home</h1>
         </>
-    )
+    );
 }
 
-export default Home
+export default Home;
