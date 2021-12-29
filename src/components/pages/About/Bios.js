@@ -1,9 +1,9 @@
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Bios.css';
-import Tyler from './dev-pics/tyler.jpg';
-import Ken from './dev-pics/ken.png';
-import Adam from './dev-pics/adam.jpg';
+import TylerPic from './dev-pics/tyler.jpg';
+import KenPic from './dev-pics/ken.png';
+import AdamPic from './dev-pics/adam.jpg';
 
 /**
  * Format a bio for a team member.
@@ -36,7 +36,7 @@ function Bios() {
 			<h2>Meet the Team</h2>
 			<Carousel showThumbs={false}>
 				<Bio
-					name="Tyler Jon Wong" pic={Tyler}
+					name="Tyler Jon Wong" pic={TylerPic}
 					link="https://linkedin.com/in/tyler-jon-wong"
 				>
 					Founder and Chief Executive. Now is the time for all good men
@@ -44,13 +44,13 @@ function Bios() {
 					sentence that should hopefully wrap now.
 				</Bio>
 				<Bio
-					name="Ken Hilton" pic={Ken}
+					name="Ken Hilton" pic={KenPic}
 					link="https://linkedin.com/in/abyxdev"
 				>
 					Team 5 Developer.
 				</Bio>
 				<Bio
-					name="Adam Stechishin" pic={Adam}
+					name="Adam Stechishin" pic={AdamPic}
 					link="https://linkedin.com/in/adam-stechishin-986329211"
 				>
 					Team 2 Developer.

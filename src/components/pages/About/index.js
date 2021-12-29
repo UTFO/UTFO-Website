@@ -2,6 +2,10 @@ import './About.css'
 import Bios from './Bios';
 import Blurb from './Blurb';
 
+
+/**
+ * Construct the About page.
+ */
 function About() {
   return (
     <>
