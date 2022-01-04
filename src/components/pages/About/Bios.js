@@ -1,5 +1,4 @@
 import { GitHub, LinkedIn, Roles } from './Socials';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Bios.css';
 import TylerPic from './dev-pics/tyler.jpg';
 import KenPic from './dev-pics/ken.png';
