@@ -1,4 +1,4 @@
-import { Carousel } from 'react-responsive-carousel';
+import { GitHub, LinkedIn, Roles } from './Socials';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Bios.css';
 import TylerPic from './dev-pics/tyler.jpg';
@@ -10,19 +10,17 @@ import AdamPic from './dev-pics/adam.jpg';
  * @param {{
  * name: string
  * pic: string
- * link: string
- * children: any
- * }} props Name, picture, LinkedIn, and bio of member, respectively.
+ * positions: JSX.Element[]
+ * children: JSX.Element[]
+ * }} props Name, picture, positions, and social links of the member.
  */
 function Bio(props) {
 	return (
-		<div className="dev-bio">
-			<div>
-				<h3><a href={props.link}>{props.name}</a></h3>
-				<p>{props.children}</p>
-			</div>
-			<img className="profile-pic" src={props.pic} alt={props.name} />
-			<p style={{clear: 'both'}}></p>
+		<div className="card">
+			<img className="member-img" src={props.pic} alt={props.name} />
+			<h2 className="member-name">{props.name}</h2>
+			<h3 className="member-position">{props.positions}</h3>
+			<ul className="socials">{props.children}</ul>
 		</div>
 	);
 }
@@ -32,31 +30,30 @@ function Bio(props) {
  */
 function Bios() {
 	return (
-		<>
+		<div className="dev-bios">
 			<h2>Meet the Team</h2>
-			<Carousel showThumbs={false}>
+			<div className="row">
 				<Bio
 					name="Tyler Jon Wong" pic={TylerPic}
-					link="https://linkedin.com/in/tyler-jon-wong"
+					positions={[Roles.founder, Roles.chiefExec]}
 				>
-					Founder and Chief Executive. Now is the time for all good men
-					to come to the aid of their party. This is an even longer
-					sentence that should hopefully wrap now.
+					<GitHub>Tyler-Jon-Wong</GitHub>
+					<LinkedIn>https://linkedin.com/in/tyler-jon-wong</LinkedIn>
 				</Bio>
 				<Bio
-					name="Ken Hilton" pic={KenPic}
-					link="https://linkedin.com/in/abyxdev"
+					name="Ken Hilton" pic={KenPic} positions={[Roles.frontend]}
 				>
-					Team 5 Developer.
+					<GitHub>Kenny2github</GitHub>
+					<LinkedIn>https://linkedin.com/in/abyxdev</LinkedIn>
 				</Bio>
 				<Bio
-					name="Adam Stechishin" pic={AdamPic}
-					link="https://linkedin.com/in/adam-stechishin-986329211"
+					name="Adam Stechishin" pic={AdamPic} positions={[Roles.frontend]}
 				>
-					Team 2 Developer.
+					<GitHub>AdamS260</GitHub>
+					<LinkedIn>https://linkedin.com/in/adam-stechishin-986329211</LinkedIn>
 				</Bio>
-			</Carousel>
-		</>
+			</div>
+		</div>
 	);
 }
 
