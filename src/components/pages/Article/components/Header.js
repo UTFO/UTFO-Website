@@ -24,7 +24,6 @@ pageTitleStyle = {
     paddingBottom: 10,
     width: '50%',
     textShadow: '4px 4px 0px #513096',
-    fontFamily: 'Comic Sans MS'
 },
 
 descStyle = {

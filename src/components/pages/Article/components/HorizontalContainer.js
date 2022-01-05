@@ -2,6 +2,8 @@ import ThumbPost from './ThumbPostThree.js'
 import './styles/ThumbPostThree.css'
 
 
+const titleColor = window.getComputedStyle(document.body).backgroundColor === 'rgba(0, 0, 0, 0)' ? 'white' : window.getComputedStyle(document.body).backgroundColor
+
 const HorizontalContainer = ( { posts, category }) => {
     console.log(window.getComputedStyle(document.body).backgroundColor)
     require('./styles/ThumbPostThree.css')
@@ -80,7 +82,7 @@ categoryStyle = {
     fontWeight: 'bold',
     top: 35/2+5,
     zIndex: 1,
-    backgroundColor: window.getComputedStyle(document.body).backgroundColor,
+    backgroundColor: titleColor,
     width: 'fit-content',
     left: '5%',
     padding: '0px 10px 0px 10px',

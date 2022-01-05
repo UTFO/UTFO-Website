@@ -37,7 +37,7 @@ postLinkStyle = {
 
 imageStyle = {
     width: '60%',   
-    height: 685,
+    height: 680,
     objectFit: 'cover',
     borderRadius: '40px 0px 0px 40px',
     margin: 'auto'

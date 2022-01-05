@@ -1,5 +1,6 @@
 import ThumbPost from './ThumbPostFour.js'
 
+const titleColor = window.getComputedStyle(document.body).backgroundColor === 'rgba(0, 0, 0, 0)' ? 'white' : window.getComputedStyle(document.body).backgroundColor
 
 const VerticalContainer = ( { recentPosts, category }) => {
 
@@ -45,7 +46,7 @@ categoryStyle = {
     fontWeight: 'bold',
     top: 35/2+5,
     zIndex: 1,
-    backgroundColor: 'white',
+    backgroundColor: titleColor,
     width: 'fit-content',
     left: '5%',
     padding: '0px 10px 0px 10px',
