@@ -1,0 +1,23 @@
+.linkBox {
+    color: black;
+
+}
+
+.linkBox:hover {
+    color: #878787;
+}
+
+div::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+div::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+
+    background-color: rgb(0, 0, 0, 0.5);
+}

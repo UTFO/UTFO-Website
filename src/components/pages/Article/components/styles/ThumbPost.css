@@ -1,0 +1,29 @@
+:root {
+    --postTransitionTime: 1.5s;
+    --postTransitionFunc: ease-in-out;
+    --postWidth: -250px;
+}
+
+.postTitle {
+    right: 0;
+    transition: var(--postTransitionTime);
+    transition-timing-function: var(--postTransitionFunc);
+    
+}
+.dummy {
+    color: red
+}
+.postText {
+    right: 0;
+    transition: var(--postTransitionTime);
+    transition-timing-function: var(--postTransitionFunc);
+}
+
+.thumbPost:hover .postTitle {
+    right: var(--postWidth); /*Post Width*/
+}
+
+.thumbPost:hover .postText {
+    right: var(--postWidth);/*Post Width*/
+    
+}
