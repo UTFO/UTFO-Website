@@ -1,10 +1,6 @@
 import React from 'react';
-import './App.css';
+import './Contact.css';
 import ReactDOM from 'react-dom';
-
-import EmailField from './components/EmailField.jsx'
-import MessageField from './components/MessageField.jsx'
-import NameField from './components/NameField.jsx'
 
 class App extends React.Component {
   constructor(props) {
