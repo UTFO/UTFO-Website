@@ -1,4 +1,4 @@
-import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 * {
@@ -9,6 +9,5 @@ import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&
 }
 
 h1, h2{
-  
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
