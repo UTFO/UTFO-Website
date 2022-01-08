@@ -10,7 +10,7 @@ const FeaturedPost = ( { post }) => {
       e.target.style.backgroundColor = 'rgb(255, 255, 255, 0.5)';
       e.target.style.borderColor = 'rgb(255, 255, 255, 0.5)';
     }
-    
+
     return (
         <div style={containerStyle}>
             <img style={imageStyle} src={post.image} alt=""/>
@@ -31,12 +31,8 @@ const containerStyle = {
     transition: '2s'
 },
 
-postLinkStyle = {
-    zIndex: 0,
-},
-
 imageStyle = {
-    width: '60%',   
+    width: '60%',
     height: 680,
     objectFit: 'cover',
     borderRadius: '40px 0px 0px 40px',

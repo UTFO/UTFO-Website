@@ -1,5 +1,5 @@
 import logo from './logo.png';
-import Navbar from './Navbar.js';
+import Navbar from './Navbar/Navbar.js';
 import './Header.css';
 
 function Header() {
