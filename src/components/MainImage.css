@@ -1,0 +1,43 @@
+.main-image {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image img {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title-wrapper {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.scrolldown-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.scrolldown-button-wrapper button {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    border: none;
+    opacity: 0.6;
+    background-color: lightgray;
+    transition: opacity 0.2s;
+}
+
+.scrolldown-button-wrapper button:hover {
+    opacity: 0.9;
+}
