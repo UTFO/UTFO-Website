@@ -18,7 +18,12 @@
   font-family: Montserrat, sans-serif;
 }
 
-.navbar-logo {
+.logo-text-image{
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-text {
   color: #fff;
   justify-self: start;
   margin-left: 20px;
@@ -26,14 +31,16 @@
   vertical-align: middle;
 }
 
-.logo {
+.logo-image {
     position: relative;
-    width: 100px;
-    height: 100px;
+    justify-self: left;
+    width: 75px;
+    height: 75px;
     overflow: hidden;
     border-radius: 50%;
     border-style: solid;
     border-width: thin;
+    border-color: white;
     vertical-align: middle;
 }
 
@@ -123,10 +130,11 @@
     border-radius: 0;
   }
 
-  .navbar-logo {
+  .logo-text-image {
     position: absolute;
     top: 0;
     left: 0;
+    padding:10px;
   }
 
   .menu-icon {
