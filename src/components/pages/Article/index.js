@@ -1,7 +1,5 @@
 
 import SearchContainer from './components/SearchContainer.js'
-import ThumbPost from './components/ThumbPost.js'
-import ThumbPostTwo from './components/ThumbPostTwo.js'
 import HorizontalContainer from './components/HorizontalContainer.js'
 import FeaturedContainer from './components/FeaturedContainer.js'
 import Header from './components/Header.js'
@@ -223,31 +221,6 @@ function Article() {
     }
   ])
 
-  //Something fun...
-  let thumbPostList = [
-    <>
-      <ThumbPost 
-        title="The Brain is a Tumor!" 
-        date="01/23/2025" 
-        text="TestText" 
-        author="Guy D"
-        image={brain}
-      />
-      <br/>
-    </>
-    ,
-    <>
-      <ThumbPostTwo
-        title="The Brain is a Tumor!" 
-        date="01/23/2025" 
-        text="TestText" 
-        author="Guy D"
-        image={brain}
-      />
-      <br/>
-    </>
-  ];
-
   let categories = [
     <>
       <HorizontalContainer posts={posts} category={"Tutorials"}/>
@@ -287,9 +260,6 @@ function Article() {
       {/* Thumb Posts */} 
       {categories[categorySelected]}
 
-      {/* Some extra stuff I made */}
-      <div style={{marginTop: 500}}></div>
-      {thumbPostList}
     </>
   );
 }

@@ -1,4 +1,4 @@
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+//import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import mainImage from './main-image.svg';
 import './MainImage.css'
 
@@ -22,7 +22,7 @@ function MainImage() {
           </div>
           <div className='scrolldown-button-wrapper'>
               <button onClick={scrollToNext} >
-                  {<KeyboardArrowDownIcon />}
+                  {/* <KeyboardArrowDownIcon />*/}
                   {/* [Arrow] */}
               </button>
           </div>
