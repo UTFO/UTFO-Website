@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems";
 import './Navbar.css';
-import Logo from '../../../assets/logo.png';
+import Logo from '../../assets/logo.png';
 
 class Navbar extends Component {
 state = { clicked: false }
