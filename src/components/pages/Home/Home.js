@@ -1,6 +1,5 @@
-import Blurb from '../About/Blurb';
 import MainImage from './MainImage';
-import About from './AboutBlurb';
+import About from '../About/Blurb';
 import Article from './ArticleBlurb';
 import Contact from './ContactBlurb';
 import './Home.css';
@@ -17,7 +16,7 @@ function Home() {
 
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
-      } 
+      }
       else {
         reveals[i].classList.remove("active");
       }
