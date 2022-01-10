@@ -1,8 +1,8 @@
-function Blurb() {
+function AboutBlurb() {
 	return (
 		<>
 			<h2>About Us</h2>
-			<p className="blurb">
+			<p className="AboutBlurb">
 				The University of Toronto Freelancers' Organization is
 				a group dedicated to providing software development
 				services for other University of Toronto associated
@@ -24,4 +24,4 @@ function Blurb() {
 	);
 }
 
-export default Blurb;
+export default AboutBlurb;

@@ -1,5 +1,8 @@
 import Blurb from '../About/Blurb';
-import MainImage from './MainImage'
+import MainImage from './MainImage';
+import About from './AboutBlurb';
+import Article from './ArticleBlurb';
+import Contact from './ContactBlurb';
 import './Home.css';
 
 function Home() {
@@ -28,15 +31,15 @@ function Home() {
       <>
         <MainImage />
         <div className='reveal accent' id='first-blurb'>
-          <Blurb />
+          <About />
         </div>
         <div className='reveal'>
           {/* Blurb for article page */}
-          <Blurb />
+          <Article />
         </div>
         <div className='reveal accent'>
           {/* Blurb for contact page */}
-          <Blurb />
+          <Contact />
         </div>
       </>
     </div>
