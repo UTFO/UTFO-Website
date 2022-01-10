@@ -1,5 +1,5 @@
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import mainImage from './main-image.svg';
+import mainImage from './../../../assets/main-image.svg';
 import './MainImage.css'
 
 function MainImage() {
