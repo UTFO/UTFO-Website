@@ -1,0 +1,10 @@
+.articleCategorySelector {
+    display: flex;
+    gap: 1%;
+    font-size: 20px;
+}
+
+.articleCategorySelectorCategory {
+    cursor: pointer;
+}
+

@@ -1,0 +1,39 @@
+.articleSearchButton {
+    position: relative;
+    border-radius: 100px;
+    padding: 2px;
+    background-color: "#F1F1F1";
+    border-color: "#E5E5E5";
+    border-width: 2px;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    border: none;
+    box-shadow: 2px 2px 0px 0px rgb(0, 0, 0, 0.5);
+}
+
+.articleSearchIcon {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+
+.articleSearchContainer {
+    margin: auto;
+    position: relative;
+    text-align: center;
+    margin-left: 100px;
+    display: flex;
+    width: fit-content;
+}
+
+.articleSearchTextField {
+    position: relative;
+    top: 6px;
+    left: -23px;
+    height: 30px;
+    width: 200px;
+    z-index: 0;
+    border-radius: 100px;
+    padding-left: 25px;
+}
