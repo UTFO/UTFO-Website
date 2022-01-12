@@ -2,3 +2,20 @@ body {
   background-color: white; 
   z-index: -1000;
 }
+
+.articleTopContainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 4%;
+  width: 80%;
+}
+
+.articleMiddleContainer {
+  position: relative;
+  display: flex;
+  width: 80%;
+  left: 5%;
+  gap: 10%;
+  justify-content: space-between;
+}

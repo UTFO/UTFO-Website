@@ -1,10 +1,5 @@
 import './styles/ThumbPostVert.css'
 
-const postWidth = 250, postHeight = postWidth;
-const fontSize = 15;
-
-
-
 const ThumbPostThree = ( { post } ) => {
     
     return (

@@ -1,7 +1,7 @@
 function ArticleBlurb() {
 	return (
 		<>
-			<h2>Past Projects</h2>
+			<h2>Recommended Articles</h2>
 			<p className="blurb">
 				lorem ipsum
 			</p>

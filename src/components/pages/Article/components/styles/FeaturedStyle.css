@@ -1,8 +1,7 @@
 /* This is a test comment */
 
 .articleFeaturedContainer {
-    margin-left: 5%;
-    width: 120%;
+    width: 100%;
     max-width: 1500px;
 }
 

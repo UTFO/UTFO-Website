@@ -1,8 +1,5 @@
 import './styles/ThumbPostHorizontal.css'
 
-const postWidth = 250, postHeight = postWidth;
-const fontSize = 15;
-
 const ThumbPostFour = ( { post } ) => {
     
     return (

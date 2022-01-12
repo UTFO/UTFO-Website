@@ -11,6 +11,7 @@ import brain from './components/images/brainImage.jpg'
 import sleep from './components/images/sleep.png'
 import authorImage from './components/images/authorImage.png'
 
+import './components/styles/CategorySelector.css'
 import './Article.css';
 
 function Article() {
@@ -233,13 +234,44 @@ function Article() {
   ]
 
   const [ categorySelected, selectCategory ] = useState(0);
-  
+
+  const selectNewCategory = (number) => {
+    selectCategory(number)
+    document.querySelector(".articleCategoryAll").style.color = "black"
+    document.querySelector(".articleCategoryAll").style.fontWeight = ""
+
+    document.querySelector(".articleCategoryTutorials").style.color = "black"
+    document.querySelector(".articleCategoryTutorials").style.fontWeight = ""
+
+    document.querySelector(".articleCategoryProjects").style.color = "black"
+    document.querySelector(".articleCategoryProjects").style.fontWeight = ""
+    
+    switch(number) {
+      case 0:
+        document.querySelector(".articleCategoryAll").style.color = "#6390C3"
+        document.querySelector(".articleCategoryAll").style.fontWeight = "bold"
+        break;
+      
+      case 1:
+        document.querySelector(".articleCategoryTutorials").style.color = "#6390C3"
+        document.querySelector(".articleCategoryTutorials").style.fontWeight = "bold"
+        break;
+      
+      case 2:
+        document.querySelector(".articleCategoryProjects").style.color = "#6390C3"
+        document.querySelector(".articleCategoryProjects").style.fontWeight = "bold"
+        break;
+
+      default:
+    }
+  }
+
   return (
     <>
       {/* Header */}
       <Header/>
 
-      <div style={topContainerStyle}>
+      <div className="articleTopContainer">
         {/* Featured & Recent Container */}
         <FeaturedContainer featuredPosts={featuredPosts} featuredNum={featuredNum} nextFeaturedNum={nextFeaturedNum}/>
 
@@ -247,12 +279,12 @@ function Article() {
         <VerticalContainer recentPosts={recentPosts} category={"Recent Posts"}/>
       </div>
 
-      <div style={middleContainerStyle}>
+      <div className="articleMiddleContainer">
         {/* Search Container */}
         <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch}/>
 
         {/* Category Selector Container */}
-        <CategorySelector categories={categories} categorySelected={categorySelected} selectCategory={selectCategory}/>
+        <CategorySelector categories={categories} categorySelected={categorySelected} selectCategory={selectNewCategory}/>
       </div>
 
       
@@ -263,22 +295,6 @@ function Article() {
     </>
   );
 }
-
-const topContainerStyle = {
-  display: 'flex',
-  justifyContent: 'space-around',
-  position: 'relative',
-  margin: 'auto',
-  textAlign: 'center',
-  gap: 10
-},
-
-middleContainerStyle = {
-  display: 'flex',
-  width: 'fit-content',
-  gap: '10%'
-}
-
 
 
 export default Article;
