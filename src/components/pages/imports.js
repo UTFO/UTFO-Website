@@ -1,4 +1,4 @@
-import Home from './Home';
+import Home from './Home/Home.js';
 import About from './About';
 import Article from './Article';
 import Contact from './Contact';

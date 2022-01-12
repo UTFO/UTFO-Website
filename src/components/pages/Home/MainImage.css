@@ -1,5 +1,5 @@
 .main-image {
-    height: 100vh;
+    height: calc(100vh - 100px);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
 
 .title-wrapper {
     position: absolute;
-    top: 100px;
+    top: 50px;
     width: 100%;
     text-align: center;
 }

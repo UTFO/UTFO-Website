@@ -1,3 +1,19 @@
 .home {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
 
+.reveal {
+    position: relative;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.active {
+    opacity: 1;
+}
+
+.accent {
+    background-color: #6C63FF;
 }

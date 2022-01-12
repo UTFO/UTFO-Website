@@ -1,5 +1,5 @@
-//import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import mainImage from './main-image.svg';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import mainImage from './../../../assets/main-image.svg';
 import './MainImage.css'
 
 function MainImage() {
@@ -7,7 +7,7 @@ function MainImage() {
   const scrollToNext = () => { 
     if (document.documentElement.scrollTop <= 0) {
       // element which needs to be scrolled to
-      const element = document.querySelector(".footer");
+      const element = document.querySelector("#first-blurb");
 
       // scroll to element
       element.scrollIntoView({behavior: 'smooth'});
@@ -22,8 +22,7 @@ function MainImage() {
           </div>
           <div className='scrolldown-button-wrapper'>
               <button onClick={scrollToNext} >
-                  {/* <KeyboardArrowDownIcon />*/}
-                  {/* [Arrow] */}
+                  {<KeyboardArrowDownIcon fontSize='large'/>}
               </button>
           </div>
       </div>
