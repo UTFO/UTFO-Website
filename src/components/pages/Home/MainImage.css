@@ -19,25 +19,3 @@
     width: 100%;
     text-align: center;
 }
-
-.scrolldown-button-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.scrolldown-button-wrapper button {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    vertical-align: middle;
-    border: none;
-    opacity: 0.6;
-    background-color: lightgray;
-    transition: opacity 0.2s;
-}
-
-.scrolldown-button-wrapper button:hover {
-    opacity: 0.9;
-}

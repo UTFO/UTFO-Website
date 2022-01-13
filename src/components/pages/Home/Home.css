@@ -1,19 +1,46 @@
 .home {
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .reveal {
     position: relative;
-    opacity: 0.6;
-    transition: opacity 0.5s;
     text-align: center;
     overflow: hidden;
 }
 
-.active {
+.reveal * {
+    opacity: 0.6;
+    transition: opacity 0.5s;
+}
+
+.active * {
     opacity: 1;
 }
 
 .accent {
     background-color: #6C63FF;
+}
+
+.scrolldown-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.scrolldown-button-wrapper button {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    border: none;
+    opacity: 0.6;
+    background-color: lightgray;
+    transition: opacity 0.2s;
+    z-index: 2;
+}
+
+.scrolldown-button-wrapper button:hover {
+    opacity: 0.9;
 }
