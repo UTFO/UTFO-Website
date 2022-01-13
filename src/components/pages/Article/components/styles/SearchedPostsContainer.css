@@ -1,0 +1,30 @@
+.articleSearchedPostsContainer {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.articleSearchedPostsContainerPostsContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
+.articleSearchedPostsContainerPostsContainer > div {
+    margin-top: 50px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    padding: 1%;
+    border-radius: 10%;
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0, 0.5);
+}
+
+.articleSearchedPostsContainerPostsContainer > div:hover {
+    border-color: rgb(0, 0, 0, 0.5);
+}
+
+.articleSearchedPostsResult {
+    font-size: 25px;
+}

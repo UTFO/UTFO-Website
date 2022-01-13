@@ -1,23 +1,14 @@
 import SearchButton from './SearchButton.js'
 import SearchTextField from './SearchTextField.js'
+import './styles/Search.css'
 
-const SearchContainer = ( { searchToggle, toggleSearch }) => {
+const SearchContainer = ( { searchToggle, toggleSearch, searchFor }) => {
     return (
-        <div style={searchContainerStyle}>
+        <div className="articleSearchContainer">
             <SearchButton isToggle={searchToggle} onToggle={toggleSearch}/>
-            {searchToggle ? <SearchTextField/> : <></>}
+            {searchToggle ? <SearchTextField searchFor={searchFor}/> : <></>}
         </div>
     )
-}
-
-//Style for Search Container
-const searchContainerStyle = {
-    margin: 'auto', 
-    position: 'relative', 
-    textAlign: 'center', 
-    marginLeft: 100, 
-    display: 'flex',
-    width: 'fit-content',
 }
 
 export default SearchContainer

@@ -1,14 +1,10 @@
-import ThumbPost from './ThumbPostThree.js'
-import './styles/ThumbPostThree.css'
-
-
-const titleColor = window.getComputedStyle(document.body).backgroundColor === 'rgba(0, 0, 0, 0)' ? 'white' : window.getComputedStyle(document.body).backgroundColor
+import ThumbPost from './ThumbPostVertical.js'
+import './styles/HorizontalContainer.css'
 
 const HorizontalContainer = ( { posts, category }) => {
-    console.log(window.getComputedStyle(document.body).backgroundColor)
-    require('./styles/ThumbPostThree.css')
+    
     //Draggable Function, too buggy atm
-    /* const postContainer = document.querySelector('.postContainer');
+    /* const postContainer = document.querySelector('.articleHorizontalHorizontal');
 
       
     let isDown;
@@ -32,18 +28,18 @@ const HorizontalContainer = ( { posts, category }) => {
     postContainer.addEventListener('mouseup', () => {
         isDown = false;
         postContainer.style.cursor = 'grab';
-    }) */
-
+    }) 
+ */
     return (
         
-        <div style={containerStyle}>
+        <div className="articleHorizontalContainer">
             
-            <div style={categoryStyle}>
+            <div className="articleHorizontalCategory">
                 {category}
             </div>
             
-            <div style={horizStyle}>
-                <div className="postContainer" style={postContainerStyle}>
+            <div className="articleHorizontalHorizontal">
+                <div className="articleHorizontalPost">
                     {posts.map((post) => {
                         return <ThumbPost 
                                 post={post}
@@ -56,49 +52,6 @@ const HorizontalContainer = ( { posts, category }) => {
     )
 
     
-}
-
-
-
-
-const containerStyle = {
-    marginLeft: '5%',
-    marginBottom: '5%'
-},
-
-postContainerStyle = {
-    display: 'flex',
-    flexWrap: 'nowrap',
-    gridColumnGap: 20,
-    overflowX: 'auto',
-    paddingBottom: 10,
-    cursor: 'grab',
-    zIndex: 3
-},
-
-categoryStyle = {
-    position: 'relative',
-    fontSize: 35,
-    fontWeight: 'bold',
-    top: 35/2+5,
-    zIndex: 1,
-    backgroundColor: titleColor,
-    width: 'fit-content',
-    left: '5%',
-    padding: '0px 10px 0px 10px',
-    color: '#7960AE',
-},
-
-horizStyle = {
-    position: 'relative',
-    borderStyle: 'solid',
-    borderWidth: 10,
-    borderRadius: 40,
-    borderColor: '#9E81DD',
-    width: '90%',
-    zIndex: 0,
-    padding: '40px 20px 10px 20px',
-
 }
 
 export default HorizontalContainer

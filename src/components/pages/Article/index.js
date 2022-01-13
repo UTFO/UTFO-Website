@@ -1,18 +1,18 @@
 
 import SearchContainer from './components/SearchContainer.js'
-import ThumbPost from './components/ThumbPost.js'
-import ThumbPostTwo from './components/ThumbPostTwo.js'
 import HorizontalContainer from './components/HorizontalContainer.js'
 import FeaturedContainer from './components/FeaturedContainer.js'
 import Header from './components/Header.js'
 import VerticalContainer from './components/VerticalContainer.js'
 import CategorySelector from './components/CategorySelector.js'
+import SearchedPostsContainer from './components/SearchedPostsContainer.js'
 
 import { useState } from 'react'
 import brain from './components/images/brainImage.jpg'
 import sleep from './components/images/sleep.png'
 import authorImage from './components/images/authorImage.png'
 
+import './components/styles/CategorySelector.css'
 import './Article.css';
 
 function Article() {
@@ -223,50 +223,78 @@ function Article() {
     }
   ])
 
-  //Something fun...
-  let thumbPostList = [
-    <>
-      <ThumbPost 
-        title="The Brain is a Tumor!" 
-        date="01/23/2025" 
-        text="TestText" 
-        author="Guy D"
-        image={brain}
-      />
-      <br/>
-    </>
-    ,
-    <>
-      <ThumbPostTwo
-        title="The Brain is a Tumor!" 
-        date="01/23/2025" 
-        text="TestText" 
-        author="Guy D"
-        image={brain}
-      />
-      <br/>
-    </>
-  ];
-
   let categories = [
-    <>
-      <HorizontalContainer posts={posts} category={"Tutorials"}/>
-      <HorizontalContainer posts={posts} category={"Projects"}/>
-    </>
+    {
+      category: "Tutorials",
+      posts: posts,
+    }
     ,
-    <HorizontalContainer posts={posts} category={"Tutorials"}/>
-    ,
-    <HorizontalContainer posts={posts} category={"Projects"}/>
+    {
+      category: "Projects",
+      posts: posts,
+    }
   ]
-
+  //All = 0, Tutorials = 1, Projects = 2
   const [ categorySelected, selectCategory ] = useState(0);
+
+
+  const resetCategory = (className) => {
+    document.querySelector(className).style.color = "black";
+    document.querySelector(className).style.fontWeight = "";
+  }
+
+  const activeCategory = (className) => {
+    document.querySelector(className).style.color = "#6390C3";
+    document.querySelector(className).style.fontWeight = "bold";
+  }
+
+  const selectNewCategory = (number) => {
+    selectCategory(number)
+    resetCategory(".articleCategoryAll");
+    resetCategory(".articleCategoryTutorials");
+    resetCategory(".articleCategoryProjects");
+    
+    switch(number) {
+      case 0:
+        activeCategory(".articleCategoryAll");
+        break;
+      
+      case 1:
+        activeCategory(".articleCategoryTutorials");
+        break;
+      
+      case 2:
+        activeCategory(".articleCategoryProjects");
+        break;
+
+      default:
+    }
+  }
+
+  const [searchTitle, setSearchTitle] = useState("")
+  const [emptySearch, setEmptySearch] = useState(false)
+
+
+  const searchFor = () => {
+    let searchValue = document.querySelector(".articleSearchTextField").value;
+    setSearchTitle(searchValue)
+
+    if(searchValue.normalize() !== "".normalize()) {
+
+      setEmptySearch(true)
+    } else {
+      setEmptySearch(false)
+    } 
+  }
+
   
+
   return (
     <>
       {/* Header */}
       <Header/>
 
-      <div style={topContainerStyle}>
+      <div className="articleTopContainer">
         {/* Featured & Recent Container */}
         <FeaturedContainer featuredPosts={featuredPosts} featuredNum={featuredNum} nextFeaturedNum={nextFeaturedNum}/>
 
@@ -274,41 +302,25 @@ function Article() {
         <VerticalContainer recentPosts={recentPosts} category={"Recent Posts"}/>
       </div>
 
-      <div style={middleContainerStyle}>
+      <div className="articleMiddleContainer">
         {/* Search Container */}
-        <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch}/>
+        <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch} searchFor={searchFor}/>
 
         {/* Category Selector Container */}
-        <CategorySelector categories={categories} categorySelected={categorySelected} selectCategory={selectCategory}/>
+        <CategorySelector categories={categories} categorySelected={categorySelected} selectCategory={selectNewCategory}/>
       </div>
 
       
 
       {/* Thumb Posts */} 
-      {categories[categorySelected]}
+      {!emptySearch ? (categorySelected === 0 ? categories.map((category) => {
+            return <HorizontalContainer posts={category.posts} category={category.category}/>
+          }) : <HorizontalContainer posts={categories[categorySelected-1].posts} category={categories[categorySelected-1].category}/>
+        ) : <SearchedPostsContainer posts={posts} searchTitle={searchTitle}/>}
 
-      {/* Some extra stuff I made */}
-      <div style={{marginTop: 500}}></div>
-      {thumbPostList}
     </>
   );
 }
-
-const topContainerStyle = {
-  display: 'flex',
-  justifyContent: 'space-around',
-  position: 'relative',
-  margin: 'auto',
-  textAlign: 'center',
-  gap: 10
-},
-
-middleContainerStyle = {
-  display: 'flex',
-  width: 'fit-content',
-  gap: '10%'
-}
-
 
 
 export default Article;

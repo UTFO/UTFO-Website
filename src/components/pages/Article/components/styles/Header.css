@@ -1,0 +1,21 @@
+.articleHeader {
+    text-align: center;
+    margin-top: 3%
+}
+
+.articleHeaderTitle {
+    font-weight: bold;
+    color: #9578D3;
+    font-size: 100px;
+    margin: auto;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    width: 50%;
+    text-shadow: 4px 4px 0px #513096;
+}
+
+.articleHeaderDescription {
+    margin: 50px;
+    font-size: 30px;
+    color: gray
+}
