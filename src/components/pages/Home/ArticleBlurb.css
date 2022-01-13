@@ -1,0 +1,67 @@
+.homeArticleBlurbPostContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.homeArticleBlurbPost {
+    background-color: white;
+    width: 25%;
+    height: 500px;
+    margin: 3%;
+    transition: 0.2s;
+}
+
+.homeArticleBlurbPost:hover {
+    transform: scale(1.1);
+}
+
+.homeArticleBlurbPost img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0px 0px 20px 0px rgb(0, 0, 0, 0.5);
+    opacity: 50%;
+    transition: 0.25s;
+}
+
+.homeArticleBlurbPost:hover img {
+    opacity: 100%;
+}
+
+
+.homeArticleBlurbPostTextContainer {
+    position: relative;
+    margin: auto;
+    background-color: rgb(255, 255, 255, 0.65);
+    width: 65%;
+    height: 501px;
+    top: -101%;
+    padding: 5%;
+    transition: 0.25s;
+    color: rgb(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.homeArticleBlurbPost:hover .homeArticleBlurbPostTextContainer {
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 75%;
+    color: black;
+}
+
+.homeArticleBlurbPostLink {
+    text-decoration: none;
+    height: fit-content;
+    width: fit-content;
+}
+
+.homeArticleBlurbPostTextContainer h2 {
+    margin: 5%; 
+}
+
+.homeArticleBlurbPostTextContainer p {
+    margin: 10%; 
+}
