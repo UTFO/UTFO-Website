@@ -1,9 +1,9 @@
 import './styles/Search.css'
 
-const SearchTextField = () => {
+const SearchTextField = ( { searchFor }) => {
     return (
-        <form>
-            <input type="text" className="articleSearchTextField" placeholder="Search here..."/>
+        <form className="articleSearchTextForm">
+            <input type="text" className="articleSearchTextField" placeholder="Search here..." onChange={() => searchFor()}/>
         </form>
     )
 }

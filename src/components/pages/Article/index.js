@@ -5,6 +5,7 @@ import FeaturedContainer from './components/FeaturedContainer.js'
 import Header from './components/Header.js'
 import VerticalContainer from './components/VerticalContainer.js'
 import CategorySelector from './components/CategorySelector.js'
+import SearchedPostsContainer from './components/SearchedPostsContainer.js'
 
 import { useState } from 'react'
 import brain from './components/images/brainImage.jpg'
@@ -223,48 +224,70 @@ function Article() {
   ])
 
   let categories = [
-    <>
-      <HorizontalContainer posts={posts} category={"Tutorials"}/>
-      <HorizontalContainer posts={posts} category={"Projects"}/>
-    </>
+    {
+      category: "Tutorials",
+      posts: posts,
+    }
     ,
-    <HorizontalContainer posts={posts} category={"Tutorials"}/>
-    ,
-    <HorizontalContainer posts={posts} category={"Projects"}/>
+    {
+      category: "Projects",
+      posts: posts,
+    }
   ]
-
+  //All = 0, Tutorials = 1, Projects = 2
   const [ categorySelected, selectCategory ] = useState(0);
+
+
+  const resetCategory = (className) => {
+    document.querySelector(className).style.color = "black";
+    document.querySelector(className).style.fontWeight = "";
+  }
+
+  const activeCategory = (className) => {
+    document.querySelector(className).style.color = "#6390C3";
+    document.querySelector(className).style.fontWeight = "bold";
+  }
 
   const selectNewCategory = (number) => {
     selectCategory(number)
-    document.querySelector(".articleCategoryAll").style.color = "black"
-    document.querySelector(".articleCategoryAll").style.fontWeight = ""
-
-    document.querySelector(".articleCategoryTutorials").style.color = "black"
-    document.querySelector(".articleCategoryTutorials").style.fontWeight = ""
-
-    document.querySelector(".articleCategoryProjects").style.color = "black"
-    document.querySelector(".articleCategoryProjects").style.fontWeight = ""
+    resetCategory(".articleCategoryAll");
+    resetCategory(".articleCategoryTutorials");
+    resetCategory(".articleCategoryProjects");
     
     switch(number) {
       case 0:
-        document.querySelector(".articleCategoryAll").style.color = "#6390C3"
-        document.querySelector(".articleCategoryAll").style.fontWeight = "bold"
+        activeCategory(".articleCategoryAll");
         break;
       
       case 1:
-        document.querySelector(".articleCategoryTutorials").style.color = "#6390C3"
-        document.querySelector(".articleCategoryTutorials").style.fontWeight = "bold"
+        activeCategory(".articleCategoryTutorials");
         break;
       
       case 2:
-        document.querySelector(".articleCategoryProjects").style.color = "#6390C3"
-        document.querySelector(".articleCategoryProjects").style.fontWeight = "bold"
+        activeCategory(".articleCategoryProjects");
         break;
 
       default:
     }
   }
+
+  const [searchTitle, setSearchTitle] = useState("")
+  const [emptySearch, setEmptySearch] = useState(false)
+
+
+  const searchFor = () => {
+    let searchValue = document.querySelector(".articleSearchTextField").value;
+    setSearchTitle(searchValue)
+
+    if(searchValue.normalize() !== "".normalize()) {
+
+      setEmptySearch(true)
+    } else {
+      setEmptySearch(false)
+    } 
+  }
+
+  
 
   return (
     <>
@@ -281,7 +304,7 @@ function Article() {
 
       <div className="articleMiddleContainer">
         {/* Search Container */}
-        <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch}/>
+        <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch} searchFor={searchFor}/>
 
         {/* Category Selector Container */}
         <CategorySelector categories={categories} categorySelected={categorySelected} selectCategory={selectNewCategory}/>
@@ -290,7 +313,10 @@ function Article() {
       
 
       {/* Thumb Posts */} 
-      {categories[categorySelected]}
+      {!emptySearch ? (categorySelected === 0 ? categories.map((category) => {
+            return <HorizontalContainer posts={category.posts} category={category.category}/>
+          }) : <HorizontalContainer posts={categories[categorySelected-1].posts} category={categories[categorySelected-1].category}/>
+        ) : <SearchedPostsContainer posts={posts} searchTitle={searchTitle}/>}
 
     </>
   );
