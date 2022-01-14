@@ -17,7 +17,6 @@
 
 .dev-bios .row {
   display: flex;
-  justify-content: center;
   overflow-x: auto;
   position: relative;
 }
@@ -62,6 +61,7 @@
   font-family: 'Source Code Pro', monospace;
   font-weight: bold;
   font-size: small;
+  flex-wrap: wrap;
 }
 
 .dev-bios .member-name {
@@ -75,6 +75,7 @@
   border-radius: 5px;
   background-color: rgba(4, 0, 255, 0.35);
   color: rgba(4, 0, 255, 1);
+  white-space: nowrap;
 }
 
 
@@ -102,7 +103,7 @@
 }
 
 .dev-bios .social-wrapper .button:hover {
-  width: 125px;
+  width: 140px;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
