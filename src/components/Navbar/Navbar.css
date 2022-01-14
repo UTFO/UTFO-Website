@@ -1,9 +1,3 @@
-.logo {
-  height: 50px;
-  width: 100px;
-  margin-left: 10px;
-}
-
 .NavbarItems {
   background: linear-gradient(
     90deg,
@@ -27,19 +21,18 @@
 }
 
 .logo {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: thin;
-    vertical-align: middle;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
 .logo img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .fa-react {
