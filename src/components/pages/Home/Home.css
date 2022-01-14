@@ -3,18 +3,15 @@
     scroll-behavior: smooth;
 }
 
-.reveal {
+.reveal > * {
     position: relative;
     text-align: center;
     overflow: hidden;
-}
-
-.reveal * {
     opacity: 0.6;
     transition: opacity 0.5s;
 }
 
-.active * {
+.reveal.active > * {
     opacity: 1;
 }
 
