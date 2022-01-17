@@ -2,8 +2,8 @@
     position: relative;
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
-    padding: 1em 0;
+    align-items: flex-start;
+    padding: 4rem 0;
 }
 
 .main-image img {
@@ -14,19 +14,19 @@
     flex-grow: 1;
 }
 
-.title-wrapper {
+.main-image .text {
     display: inline-block;
     width: min-content;
     flex: 0 0;
+}
+.main-image .title-wrapper {
+    font-weight: normal;
     color: #493ffc;
 }
-.title-wrapper h1 {
-    font-weight: normal;
-}
-.title-wrapper .uoft {
+.main-image .title-wrapper .uoft {
     font-size: 1.9rem;
 }
-.title-wrapper .fo {
+.main-image .title-wrapper .fo {
     font-size: 3rem;
     font-weight: bold;
 }
