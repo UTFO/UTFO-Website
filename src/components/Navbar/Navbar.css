@@ -23,6 +23,11 @@
   margin-left: 20px;
   cursor: pointer;
   vertical-align: middle;
+  letter-spacing: 0.4rem;
+}
+
+.navbar-logo.utfo {
+  flex-grow: 1;
 }
 
 .logo {
@@ -85,16 +90,13 @@
     overflow-x: hidden;
   }
 
-  .NavbarItems {
-    position: relative;
-  }
   .nav-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 500px;
     position: absolute;
-    top: 80px;
+    top: 100px;
     right: -100%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -120,20 +122,11 @@
     border-radius: 0;
   }
 
-  .navbar-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
   .menu-icon {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    padding: 1rem;
   }
 
   .fa-times {

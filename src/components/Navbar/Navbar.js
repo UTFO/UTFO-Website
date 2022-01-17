@@ -14,20 +14,22 @@ handleClick = () => {
         return(
             <nav className="NavbarItems">
                 <div className="inner">
-                <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-                </div>
-                <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {MenuItems.map((item, index) => {
-                        return(
-                            <li key={index}>
-                                <a className={item.cName} href={item.url}>
-                                    {item.title}
-                                </a>
-                            </li>
-                        )
-                    })}
-                </ul>
+                    <h1 className="navbar-logo"><img src={Logo} className='logo' alt="UTFO" /></h1>
+                    <h1 className="navbar-logo utfo">UTFO</h1>
+                    <div className="menu-icon" onClick={this.handleClick}>
+                        <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+                    </div>
+                    <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+                        {MenuItems.map((item, index) => {
+                            return(
+                                <li key={index}>
+                                    <a className={item.cName} href={item.url}>
+                                        {item.title}
+                                    </a>
+                                </li>
+                            )
+                        })}
+                    </ul>
                 </div>
             </nav>
         )
