@@ -1,4 +1,5 @@
 import mainImage from './../../../assets/main-image.svg';
+import Slogan from './Slogan';
 import './MainImage.css'
 
 function MainImage() {
@@ -11,6 +12,7 @@ function MainImage() {
           <p className="uoft">University of Toronto</p>
           <p className="fo">Freelancer's<br/>Organization</p>
         </h1>
+        <Slogan />
       </div>
     </div>
   );
