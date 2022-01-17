@@ -11,6 +11,11 @@
   font-size: 1.2rem;
   font-family: Montserrat, sans-serif;
 }
+.NavbarItems .inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .navbar-logo {
   color: #fff;
@@ -46,7 +51,6 @@
   grid-gap: 10px;
   list-style: none;
   text-align: center;
-  width: 70vw;
   justify-content: end;
   margin-left: 2rem;
 }

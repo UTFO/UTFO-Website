@@ -12,8 +12,8 @@ handleClick = () => {
 
     render() {
         return(
-            <nav className='NavbarItems'>
-                <h1 className="navbar-logo">UTFO <img src={Logo} className='logo' alt="UTFO" /></h1>
+            <nav className="NavbarItems">
+                <div className="inner">
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
@@ -28,6 +28,7 @@ handleClick = () => {
                         )
                     })}
                 </ul>
+                </div>
             </nav>
         )
     }
