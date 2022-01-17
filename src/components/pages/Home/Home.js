@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import MainImage from './MainImage';
-import About from './AboutBlurb';
-import Article from './ArticleBlurb';
-import Contact from './ContactBlurb';
+import About from './Blurbs/AboutBlurb';
+import Article from './Blurbs/ArticleBlurb';
+import Contact from './Blurbs/ContactBlurb';
 import ScrollIcon from './ScrollIcon';
 import './Home.css';
 

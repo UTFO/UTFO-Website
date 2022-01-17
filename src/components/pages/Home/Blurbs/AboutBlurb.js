@@ -1,7 +1,7 @@
-import Blurb from '../About/Blurb';
+import Blurb from '../../About/Blurb';
 import './AboutBlurb.css';
-import TopQuote from '../../../assets/top_quote.png';
-import BottomQuote from '../../../assets/bottom_quote.png';
+import TopQuote from '../../../../assets/top_quote.png';
+import BottomQuote from '../../../../assets/bottom_quote.png';
 
 export default function AboutBlurb() {
 	return (
