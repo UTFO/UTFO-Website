@@ -4,7 +4,6 @@
 }
 
 .homeArticleBlurbPost {
-    background-color: white;
     width: 25%;
     height: 500px;
     margin: 3%;
@@ -59,9 +58,9 @@
 }
 
 .homeArticleBlurbPostTextContainer h2 {
-    margin: 5%; 
+    margin: 5%;
 }
 
 .homeArticleBlurbPostTextContainer p {
-    margin: 10%; 
+    margin: 10%;
 }
