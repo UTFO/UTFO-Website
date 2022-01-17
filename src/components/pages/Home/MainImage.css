@@ -1,21 +1,32 @@
 .main-image {
-    height: calc(100vh - 100px);
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
+    padding: 1em 0;
 }
 
 .main-image img {
     z-index: -1;
-    width: 100%;
-    height: 100%;
+    min-width: 50%;
+    height: auto;
     object-fit: contain;
+    flex-grow: 1;
 }
 
 .title-wrapper {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    text-align: center;
+    display: inline-block;
+    width: min-content;
+    flex: 0 0;
+    color: #493ffc;
+}
+.title-wrapper h1 {
+    font-weight: normal;
+}
+.title-wrapper .uoft {
+    font-size: 1.9rem;
+}
+.title-wrapper .fo {
+    font-size: 3rem;
+    font-weight: bold;
 }
