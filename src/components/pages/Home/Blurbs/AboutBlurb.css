@@ -17,3 +17,19 @@
 	background: linear-gradient(transparent 0%, transparent 49.9%,
 		#6c63ff 50%, #6c63ff 100%);
 }
+
+.about-link div {
+	border: 3px solid #493ffc;
+	color: #493ffc;
+	text-transform: uppercase;
+	padding: 0.5rem;
+	padding-left: 0.75rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+a.about-link {
+	text-decoration: none;
+	font-weight: bold;
+}

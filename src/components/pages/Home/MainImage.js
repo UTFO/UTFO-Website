@@ -1,6 +1,7 @@
 import mainImage from './../../../assets/main-image.svg';
 import Slogan from './Slogan';
 import './MainImage.css'
+import { AboutLink } from './Blurbs/AboutBlurb';
 
 function MainImage() {
 
@@ -13,6 +14,7 @@ function MainImage() {
           <p className="fo">Freelancer's<br/>Organization</p>
         </h1>
         <Slogan />
+        <AboutLink />
       </div>
     </div>
   );
