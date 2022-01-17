@@ -67,15 +67,15 @@ function Home() {
       document.querySelector('.NavbarItems').scrollIntoView({behavior: 'smooth'});
     }
   }
-  
+
   // A function to determine if the arrow icon should be upwards or downwards depending on the amount the user has scrolled
   // CURRENTLY DYSFUNCTIONAL
-  const setArrowDirection = () => { 
+  const setArrowDirection = () => {
     const blurbs = document.querySelectorAll('.reveal');
     const mainImage = document.querySelector('.main-image');
     const Navbar = document.querySelector('.NavbarItems');
 
-    const height = Navbar.scrollHeight + mainImage.scrollHeight + blurbs[0].scrollHeight + 
+    const height = Navbar.scrollHeight + mainImage.scrollHeight + blurbs[0].scrollHeight +
       blurbs[1].scrollHeight + blurbs[2].scrollHeight;
 
     if (document.body.scrollTop >= height) {
@@ -96,17 +96,17 @@ function Home() {
       <MainImage />
       <div className='scrolldown-button-wrapper'>
         <button id='scroll-button' onClick={scrollToNext}>
-            <ScrollIcon direction={direction}/>
+          <ScrollIcon direction={direction}/>
         </button>
       </div>
-      <div className='reveal accent'>
-        <About />
+      <div className='about reveal'>
+        <div className='inner'><About /></div>
       </div>
-      <div className='reveal'>
-        <Article />
+      <div className='article reveal accent'>
+        <div className='inner'><Article /></div>
       </div>
-      <div className='reveal accent'>
-        <Contact />
+      <div className='contact reveal'>
+        <div className='inner'><Contact /></div>
       </div>
     </div>
   );
