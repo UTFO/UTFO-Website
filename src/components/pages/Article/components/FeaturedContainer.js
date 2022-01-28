@@ -5,7 +5,7 @@ const FeaturedContainer = ( { featuredPosts, featuredNum, nextFeaturedNum }) => 
 
     return (
         <div className="articleFeaturedContainer">
-            <div className="articleFeaturedCategory">Featured Posts</div>
+            <div className="articleFeaturedCategory">Featured Articles</div>
             <div className="articleFeaturedFeaturedContainer">
                 <FeaturedPost post={featuredPosts[featuredNum]}/>
                 <button className="articleFeaturedLeftButton" onClick={() => nextFeaturedNum(false)}>&#60;</button>

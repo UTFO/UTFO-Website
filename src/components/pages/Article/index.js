@@ -294,6 +294,12 @@ function Article() {
       {/* Header */}
       <Header/>
 
+      {/* Search Container */}
+      {/* <div className="searchbarContainer">
+        <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch} searchFor={searchFor}/>
+      </div> */}
+
+
       <div className="articleTopContainer">
         {/* Featured & Recent Container */}
         <FeaturedContainer featuredPosts={featuredPosts} featuredNum={featuredNum} nextFeaturedNum={nextFeaturedNum}/>
@@ -303,8 +309,6 @@ function Article() {
       </div>
 
       <div className="articleMiddleContainer">
-        {/* Search Container */}
-        <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch} searchFor={searchFor}/>
 
         {/* Category Selector Container */}
         <CategorySelector categories={categories} categorySelected={categorySelected} selectCategory={selectNewCategory}/>

@@ -1,21 +1,43 @@
+@font-face {
+    font-family: Kollektif-Bold;
+    src: url(/src/assets/Kollektif-Bold.ttf);
+}
+
+@font-face {
+    font-family: Kollektif;
+    src: url(/src/assets/Kollektif.ttf);
+}
+
 .articleHeader {
     text-align: center;
     margin-top: 3%
 }
 
 .articleHeaderTitle {
+    font-family: Kollektif;
     font-weight: bold;
-    color: #9578D3;
-    font-size: 100px;
+    color: #4234bd;
+    font-size: 75px;
     margin: auto;
-    margin-bottom: 0;
+    margin-top: 100px;
     padding-bottom: 10px;
     width: 50%;
-    text-shadow: 4px 4px 0px #513096;
+    text-shadow: 4px 4px 0px #9a7ed6;
 }
 
 .articleHeaderDescription {
     margin: 50px;
     font-size: 30px;
-    color: gray
+    font-family: Kollektif;
+    color: rgb(92, 90, 90);
+}
+
+hr{
+    width: 6%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 47%;
+    height: 20px;
+    border: none;
+    background-color: rgb(188, 200, 233);
 }
