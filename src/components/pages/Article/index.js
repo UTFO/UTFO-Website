@@ -305,7 +305,7 @@ function Article() {
         <FeaturedContainer featuredPosts={featuredPosts} featuredNum={featuredNum} nextFeaturedNum={nextFeaturedNum}/>
 
         {/* Recent Posts */} 
-        <VerticalContainer recentPosts={recentPosts} category={"Recent Posts"}/>
+        <VerticalContainer recentPosts={recentPosts} category={"RECENT POSTS"}/>
       </div>
 
       <div className="articleMiddleContainer">

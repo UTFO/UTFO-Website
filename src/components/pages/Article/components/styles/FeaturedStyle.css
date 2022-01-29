@@ -1,5 +1,15 @@
 /* This is a test comment */
 
+@font-face {
+    font-family: Kollektif-Bold;
+    src: url(/src/assets/Kollektif-Bold.ttf);
+}
+
+@font-face {
+    font-family: Kollektif;
+    src: url(/src/assets/Kollektif.ttf);
+}
+
 .articleFeaturedContainer {
     width: 100%;
     max-width: 1500px;
@@ -7,15 +17,15 @@
 
 .articleFeaturedCategory {
     position: relative;
-    text-align: center;
+    text-align: left;
+    font-family: Kollektif;
     font-size: 35px;
     font-weight: bold;
     top: 23px;
     z-index: 1;
     background-color: white;
-    width: fit-content;
     padding: 0px 10px 0px 10px;
-    color: #7960AE;
+    color: #2b2831;
     margin: auto;
 }
 
@@ -28,7 +38,7 @@
 
 }
 
-.articleFeaturedLeftButton {
+/* .articleFeaturedLeftButton {
     position: relative;
     float: left;
     margin-left: 5%;
@@ -41,9 +51,9 @@
     color: white;
     text-shadow: 5px 5px 0px rgb(0, 0, 0, 0.5);
     z-index: 1
-}
+} */
 
-.articleFeaturedRightButton {
+/* .articleFeaturedRightButton {
     position: relative;
     float: right;
     margin-left: 5%;
@@ -56,30 +66,36 @@
     color: white;
     text-shadow: 5px 5px 0px rgb(0, 0, 0, 0.5);
     z-index: 1
-}
+} */
 
 .articleFeaturedPostContainer {
     position: relative;
+    width: 100%;
     display: flex;
     transition: 2s
 }
 
 .articleFeaturedPostImage {
-    width: 60%;
+    width: 100%;
     height: 680px;
     object-fit: cover;
-    border-radius: 40px 0px 0px 40px;
+    border-radius: 40px 40px 40px 40px;
     margin: auto
 }
 
 .articleFeaturedPostTextContainer {
-    width: 300%;
+    width: 40%;
     height: 680px;
-    background-color: #5D33B5;
+    background-color: #000000;
+    opacity: 0.7;
+    z-index: 1;
+    position:absolute;
     border-radius: 0 40px 40px 0;
     padding-top: 5px;
     padding-left: 3%;
-    padding-right: 9em
+    padding-right: 3%;
+    bottom: 0px;
+    right: 0px;
 }
 
 .articleFeaturedPostTitle {
@@ -97,6 +113,9 @@
     -webkit-line-clamp: 14;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    margin-top: 15%;
+    text-align: center;
+    font-size: large;
 }
 
 .articleFeaturedPostButton {

@@ -8,6 +8,8 @@
 
 .articleVerticalContainerCategory {
     position: relative;
+    text-align: left;
+    font-family: Kollektif;
     font-size: 35px;
     font-weight: bold;
     top: calc(35px / 2 + 5px);
@@ -16,15 +18,11 @@
     width: fit-content;
     left: 5%;
     padding: 0px 10px 0px 10px;
-    color: #7960AE;
+    color: #2b2831;
 }
 
 .articleVerticalContainerVerti {
     position: relative;
-    border-style: solid;
-    border-width: 10px;
-    border-radius: 40px;
-    border-color: #7D5DC3;
     width: fit-content;
     padding: 40px 20px 30px 20px;
     display: flex;
