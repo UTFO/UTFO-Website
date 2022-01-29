@@ -10,7 +10,9 @@ function Blurb() {
 		client. The team will implement DevOps principles to
 		build software and extend a student's knowledge of
 		programming with experience in developing in a team
-		environment. The UTFO will not charge any monetary
+		environment.
+		<br/><br/>
+		The UTFO will not charge any monetary
 		amounts for its services unless it is to cover costs
 		required to complete the project such as domain names,
 		web hosting, etc. In addition, the Freelancers'
