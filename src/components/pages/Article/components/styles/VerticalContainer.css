@@ -32,6 +32,7 @@
 .articleVerticalContainerPost {
     display: flex;
     flex-direction: column;
-    row-gap: 30px
+    row-gap: 30px;
+    justify-content: space-between;
 }
 

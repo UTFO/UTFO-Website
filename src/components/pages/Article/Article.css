@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Kollektif-Bold;
+  src: url(/src/assets/Kollektif-Bold.ttf);
+}
+
+@font-face {
+  font-family: Kollektif;
+  src: url(/src/assets/Kollektif.ttf);
+}
+
 body {
   background-color: white; 
   z-index: -1000;
@@ -9,6 +19,17 @@ body {
   position: relative;
   left: 4%;
   width: 80%;
+}
+
+.text{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-family: Kollektif;
+  font-size: x-large;
+  width: 40%;
 }
 
 .articleMiddleContainer {

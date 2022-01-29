@@ -308,6 +308,8 @@ function Article() {
         <VerticalContainer recentPosts={recentPosts} category={"RECENT POSTS"}/>
       </div>
 
+       <div className='text'>Check out all the articles written by our members by navigating the different categories below!</div>
+
       <div className="articleMiddleContainer">
 
         {/* Category Selector Container */}

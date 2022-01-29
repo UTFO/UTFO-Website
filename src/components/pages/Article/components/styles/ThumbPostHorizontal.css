@@ -17,7 +17,7 @@
     position: relative;
     width: var(--post-width);
     height: calc(250px * 3/4);
-    box-shadow: 0px 0px 10px 0px
+    border-radius: 10px;
 }
 
 .articleThumbHorizContainer {
