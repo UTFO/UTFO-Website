@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    padding: 4rem 0;
+    padding: 2rem 0 4rem 0;
 }
 
 .main-image img {
