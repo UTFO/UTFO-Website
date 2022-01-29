@@ -1,6 +1,6 @@
-import './About.css'
+import './About.css';
 import Bios from './Bios';
-import Blurb from './Blurb';
+import AboutSection from './About';
 
 
 /**
@@ -8,11 +8,10 @@ import Blurb from './Blurb';
  */
 function About() {
   return (
-    <>
-      <h1>University of Toronto Freelancers' Organization</h1>
-      <Blurb />
+    <div className="about-page inner">
+      <AboutSection />
       <Bios />
-    </>
+    </div>
   );
 }
 
