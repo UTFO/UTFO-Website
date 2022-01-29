@@ -24,6 +24,8 @@
 
 :root {
   --fixed-width: 960px;
+  --accent-color: #5CE1E6;
+  --dark-bg-color: #343347;
 }
 
 * {
