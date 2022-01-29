@@ -3,31 +3,28 @@
   scroll-behavior: smooth;
 }
 
-.reveal {
+.home .reveal {
   position: relative;
   text-align: center;
   overflow: hidden;
-}
-
-.reveal {
   opacity: 0.6;
   transition: opacity 0.5s;
 }
 
-.active {
+.home .active {
   opacity: 1;
 }
 
-.accent {
+.home .accent {
   background-color: #6c63ff;
 }
 
-.scrolldown-button-wrapper {
+.home .scrolldown-button-wrapper {
   display: flex;
   justify-content: center;
 }
 
-.scrolldown-button-wrapper button {
+.home .scrolldown-button-wrapper button {
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -41,6 +38,6 @@
   z-index: 2;
 }
 
-.scrolldown-button-wrapper button:hover {
+.home .scrolldown-button-wrapper button:hover {
   opacity: 0.9;
 }
