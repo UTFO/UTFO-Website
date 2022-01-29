@@ -21,7 +21,6 @@
 .navbar-logo {
   color: #fff;
   justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
   vertical-align: middle;
   letter-spacing: 0.4rem;
@@ -38,7 +37,6 @@
   overflow: hidden;
   border-radius: 50%;
   vertical-align: middle;
-  margin-left: 10px;
 }
 
 .logo img {
