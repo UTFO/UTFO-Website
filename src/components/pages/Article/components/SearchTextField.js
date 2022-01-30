@@ -1,4 +1,4 @@
-import './styles/Search.css'
+import './styles/Search.css';
 
 const SearchTextField = ( { searchFor }) => {
     return (

@@ -68,7 +68,8 @@ function Home() {
     }
   }
 
-  // A function to determine if the arrow icon should be upwards or downwards depending on the amount the user has scrolled
+  // A function to determine if the arrow icon should be upwards or downwards
+  // depending on the amount the user has scrolled
   // CURRENTLY DYSFUNCTIONAL
   const setArrowDirection = () => {
     const blurbs = document.querySelectorAll('.reveal');

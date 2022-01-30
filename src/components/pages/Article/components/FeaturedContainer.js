@@ -1,5 +1,5 @@
-import FeaturedPost from './FeaturedPost.js'
-import './styles/FeaturedStyle.css'
+import FeaturedPost from './FeaturedPost.js';
+import './styles/FeaturedStyle.css';
 
 const FeaturedContainer = ( { featuredPosts, featuredNum, nextFeaturedNum }) => {
 
@@ -11,7 +11,7 @@ const FeaturedContainer = ( { featuredPosts, featuredNum, nextFeaturedNum }) => 
                 {/* <button className="articleFeaturedLeftButton" onClick={() => nextFeaturedNum(false)}>&#60;</button>
                 <button className="articleFeaturedRightButton" onClick={() => nextFeaturedNum(true)}>&#62;</button> */}
             </div>
-            
+
         </div>
     )
 }

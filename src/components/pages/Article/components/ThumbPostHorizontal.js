@@ -1,14 +1,14 @@
-import './styles/ThumbPostHorizontal.css'
+import './styles/ThumbPostHorizontal.css';
 
 const ThumbPostFour = ( { post } ) => {
-    
+
     return (
-        
+
             <div className="articleThumbHorizContainer">
-                <a className='articleThumbHorizLinkBox' href={post.link} target="_blank" rel="noreferrer"> 
+                <a className='articleThumbHorizLinkBox' href={post.link} target="_blank" rel="noreferrer">
                     <div>
                         <img className="articleThumbHorizImage" src={post.image} alt=""/>
-                        
+
                     </div>
                     <div className="articleThumbHorizAuthorContainer">
                         <p className="articleThumbHorizTitle">{post.title}</p>
@@ -17,13 +17,13 @@ const ThumbPostFour = ( { post } ) => {
                         <div className="articleThumbHorizAuthorImageContainer">
                             <img className="articleThumbHorizAuthorImage" src={post.authorImage} alt=""/>
                         </div>
-                        
+
                         <p className="articleThumbHorizCategory">• {post.category}</p>
                     </div>
                 </a>
-                
+
             </div>
-        
+
     )
 }
 

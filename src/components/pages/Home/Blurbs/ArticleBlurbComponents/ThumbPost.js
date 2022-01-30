@@ -9,7 +9,7 @@ const ThumbPost = ( { image, title, link } ) => {
                     </div>
                 </a>
             </div>
-        
+
     )
 }
 

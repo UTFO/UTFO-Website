@@ -1,11 +1,11 @@
-import './styles/ThumbPostVert.css'
+import './styles/ThumbPostVert.css';
 
 const ThumbPostThree = ( { post } ) => {
-    
+
     return (
-        
+
             <div className="articleThumbVertContainer">
-                <a className='articleThumbVertLinkBox' href={post.link} target="_blank" rel="noreferrer"> 
+                <a className='articleThumbVertLinkBox' href={post.link} target="_blank" rel="noreferrer">
                     <div>
                         <img className="articleThumbVertImage" src={post.image} alt=""/>
                         <div>
@@ -18,11 +18,11 @@ const ThumbPostThree = ( { post } ) => {
                     <p className="articleThumbVertDate">{post.date}</p>
                     <div className="articleThumbVertAuthorImageContainer">
                         <img className="articleThumbVertAuthorImage" src={post.authorImage} alt=""/></div>
-                    
+
                     <p className="articleThumbVertCategory">• {post.category}</p>
                 </div>
             </div>
-        
+
     )
 }
 

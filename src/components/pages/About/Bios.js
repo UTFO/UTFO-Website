@@ -73,8 +73,6 @@ function Execs() {
 	)
 }
 
-
-
 /**
  * Construct the Meet the Team section.
  */
@@ -95,14 +93,16 @@ function Bios() {
 					<LinkedIn>https://linkedin.com/in/adam-stechishin-986329211</LinkedIn>
 				</Bio>
 				<Bio
-					name="Krishna Cheemalapati" pic={KrishnaPic} positions={[Roles.frontend, Roles.mobile]}
+					name="Krishna Cheemalapati" pic={KrishnaPic}
+					positions={[Roles.frontend, Roles.mobile]}
 				>
 					<GitHub>krishnacheemalapati</GitHub>
 					<LinkedIn>https://linkedin.com/in/krishnacheemalapati</LinkedIn>
 					<Instagram>krish_krishkrish</Instagram>
 				</Bio>
 				<Bio
-					name="Aravind Subramanian" pic={AravindPic} positions={[Roles.frontend, Roles.backend]}
+					name="Aravind Subramanian" pic={AravindPic}
+					positions={[Roles.frontend, Roles.backend]}
 				>
 					<GitHub>aravind987</GitHub>
 					<LinkedIn>https://linkedin.com/in/aravind-subramanian-914704212</LinkedIn>

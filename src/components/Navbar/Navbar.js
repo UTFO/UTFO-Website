@@ -14,7 +14,9 @@ handleClick = () => {
         return(
             <nav className="NavbarItems">
                 <div className="inner">
-                    <h1 className="navbar-logo"><img src={Logo} className='logo' alt="UTFO" /></h1>
+                    <h1 className="navbar-logo">
+                        <img src={Logo} className='logo' alt="UTFO" />
+                    </h1>
                     <h1 className="navbar-logo utfo">UTFO</h1>
                     <div className="menu-icon" onClick={this.handleClick}>
                         <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>

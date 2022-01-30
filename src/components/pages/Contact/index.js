@@ -1,6 +1,5 @@
 import React from 'react';
 import './Contact.css';
-import ReactDOM from 'react-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,16 +22,16 @@ class App extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="form">
-        <h2>Send us a message!</h2> 
-        
+        <h2>Send us a message!</h2>
+
         <input type="text" placeholder="Name" />
 
         <input type="email" placeholder="Email" value={this.state.value} onChange={this.handleChange} />
 
-        <textarea placeholder="Write your message here..." rows='6' />      
+        <textarea placeholder="Write your message here..." rows='6' />
 
         <input type="submit" value="Submit" />
-        
+
       </form>
     );
   }

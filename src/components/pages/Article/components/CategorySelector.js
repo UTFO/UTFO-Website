@@ -1,4 +1,4 @@
-import './styles/CategorySelector.css'
+import './styles/CategorySelector.css';
 
 const CategorySelector = ( { categories, categorySelected, selectCategory }) => {
     return (

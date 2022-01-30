@@ -1,8 +1,8 @@
-import './ArticleBlurb.css'
-import ThumbPost from './ArticleBlurbComponents/ThumbPost.js'
-import imageOne from './ArticleBlurbComponents/images/recommendedArticleImage1.jpg'
-import imageTwo from './ArticleBlurbComponents/images/recommendedArticleImage2.jpg'
-import imageThree from './ArticleBlurbComponents/images/recommendedArticleImage3.jpg'
+import './ArticleBlurb.css';
+import ThumbPost from './ArticleBlurbComponents/ThumbPost.js';
+import imageOne from './ArticleBlurbComponents/images/recommendedArticleImage1.jpg';
+import imageTwo from './ArticleBlurbComponents/images/recommendedArticleImage2.jpg';
+import imageThree from './ArticleBlurbComponents/images/recommendedArticleImage3.jpg';
 //Check mans' drawings here!... https://void0.fanbox.cc/ (I was forced to pls--)
 
 function ArticleBlurb() {

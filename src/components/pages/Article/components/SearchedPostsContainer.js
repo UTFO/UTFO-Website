@@ -1,15 +1,15 @@
-import './styles/SearchedPostsContainer.css'
-import ThumbPost from './ThumbPostVertical.js'
+import './styles/SearchedPostsContainer.css';
+import ThumbPost from './ThumbPostVertical.js';
 
 
 
 const SearchedPostsContainer = ( { posts, searchTitle } ) => {
-    
+
 
     return (
         <div className="articleSearchedPostsContainer">
             <p className="articleSearchedPostsResult"><strong>Search Result — </strong>{searchTitle}</p>
-            
+
             <div className="articleSearchedPostsContainerPostsContainer">
                 {posts.map((post) => {
                     if(post.title.toLowerCase().includes(searchTitle.toLowerCase())) {
@@ -19,7 +19,7 @@ const SearchedPostsContainer = ( { posts, searchTitle } ) => {
                         return <></>
                 })}
             </div>
-            
+
         </div>
     )
 }

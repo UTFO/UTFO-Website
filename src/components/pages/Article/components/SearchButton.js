@@ -1,5 +1,5 @@
-import searchIcon from './images/searchIcon.png'
-import './styles/Search.css'
+import searchIcon from './images/searchIcon.png';
+import './styles/Search.css';
 
 const SearchButton = ( { isToggle, onToggle } ) => {
     return (

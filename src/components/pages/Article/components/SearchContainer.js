@@ -1,6 +1,6 @@
-import SearchButton from './SearchButton.js'
-import SearchTextField from './SearchTextField.js'
-import './styles/Search.css'
+import SearchButton from './SearchButton.js';
+import SearchTextField from './SearchTextField.js';
+import './styles/Search.css';
 
 const SearchContainer = ( { searchToggle, toggleSearch, searchFor }) => {
     return (
