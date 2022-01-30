@@ -277,13 +277,12 @@ function Article() {
         <VerticalContainer recentPosts={recentPosts} category={"RECENT POSTS"}/>
       </div>
 
-       <div className='text'>Check out all the articles written by our members by navigating the different categories below!</div>
+      <div className='text'>Check out all the articles written by our members by navigating the different categories below!</div>
 
+       {/* Category Selector Container 
       <div className="articleMiddleContainer">
-
-        {/* Category Selector Container */}
         <CategorySelector categories={categories} categorySelected={categorySelected} selectCategory={selectNewCategory}/>
-      </div>
+      </div> */}
 
 
 
