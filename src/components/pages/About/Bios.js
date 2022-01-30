@@ -30,44 +30,69 @@ function Bio(props) {
 }
 
 /**
+ * Format the executives' bios.
+ */
+function Execs() {
+	return (
+		<div className="row">
+			<Bio
+				name="Tyler Jon Wong" pic={TylerPic}
+				positions={[Roles.founder, Roles.chiefExec]}
+			>
+				<GitHub>Tyler-Jon-Wong</GitHub>
+				<LinkedIn>https://linkedin.com/in/tyler-jon-wong</LinkedIn>
+			</Bio>
+			<Bio
+				name="Ken Hilton" pic={KenPic}
+				positions={[Roles.techExec, Roles.frontend, Roles.backend]}
+			>
+				<Website>https://abyx.dev</Website>
+				<GitHub>Kenny2github</GitHub>
+				<LinkedIn>https://linkedin.com/in/abyxdev</LinkedIn>
+			</Bio>
+			<Bio
+				name="Shreyansh Nair" pic={ShreyPic} positions={[Roles.founder, Roles.vp]}
+			>
+				<Website>https://shreyanshnair.wixsite.com/portfolio</Website>
+				<LinkedIn>https://linkedin.com/in/shreyansh-nair</LinkedIn>
+				<Instagram>shrey.nair</Instagram>
+			</Bio>
+			<Bio
+				name="Irwin Ngo" pic={IrwinPic} positions={[Roles.treasurer, Roles.frontend]}
+			>
+				<GitHub>Niwri</GitHub>
+				<LinkedIn>https://linkedin.com/in/irwin-ngo-9b306980</LinkedIn>
+			</Bio>
+			<Bio
+				name="Khondoker Intiser Alam" pic={KIAPic} positions={[Roles.secretary]}
+			>
+				<LinkedIn>https://linkedin.com/in/khondoker-intiser-alam-aa4417229</LinkedIn>
+				<Instagram>khondokerintiser</Instagram>
+			</Bio>
+		</div>
+	)
+}
+
+
+
+/**
  * Construct the Meet the Team section.
  */
 function Bios() {
 	return (
 		<div className="dev-bios">
-			<h2>Meet the Team</h2>
+			<div className="inner">
+			<h1>Meet the Team</h1>
+			<h2 className="accent left">Executive Team</h2>
+			<Execs />
+			<h2 className="accent right">Developers</h2>
 			<div className="row">
-				<Bio
-					name="Tyler Jon Wong" pic={TylerPic}
-					positions={[Roles.founder, Roles.chiefExec]}
-				>
-					<GitHub>Tyler-Jon-Wong</GitHub>
-					<LinkedIn>https://linkedin.com/in/tyler-jon-wong</LinkedIn>
-				</Bio>
-				<Bio
-					name="Ken Hilton" pic={KenPic} positions={[Roles.frontend, Roles.backend]}
-				>
-					<Website>https://abyx.dev</Website>
-					<GitHub>Kenny2github</GitHub>
-					<LinkedIn>https://linkedin.com/in/abyxdev</LinkedIn>
-				</Bio>
+
 				<Bio
 					name="Adam Stechishin" pic={AdamPic} positions={[Roles.frontend]}
 				>
 					<GitHub>AdamS260</GitHub>
 					<LinkedIn>https://linkedin.com/in/adam-stechishin-986329211</LinkedIn>
-				</Bio>
-				<Bio
-					name="Irwin Ngo" pic={IrwinPic} positions={[Roles.frontend, Roles.treasurer]}
-				>
-					<GitHub>Niwri</GitHub>
-					<LinkedIn>https://linkedin.com/in/irwin-ngo-9b306980</LinkedIn>
-				</Bio>
-				<Bio
-					name="Khondoker Intiser Alam" pic={KIAPic} positions={[Roles.secretary]}
-				>
-					<LinkedIn>https://linkedin.com/in/khondoker-intiser-alam-aa4417229</LinkedIn>
-					<Instagram>khondokerintiser</Instagram>
 				</Bio>
 				<Bio
 					name="Krishna Cheemalapati" pic={KrishnaPic} positions={[Roles.frontend, Roles.mobile]}
@@ -83,13 +108,7 @@ function Bios() {
 					<LinkedIn>https://linkedin.com/in/aravind-subramanian-914704212</LinkedIn>
 					<Instagram>_aravindsubramanian</Instagram>
 				</Bio>
-				<Bio
-					name="Shreyansh Nair" pic={ShreyPic} positions={[Roles.founder, Roles.vp]}
-				>
-					<Website>https://shreyanshnair.wixsite.com/portfolio</Website>
-					<LinkedIn>https://linkedin.com/in/shreyansh-nair</LinkedIn>
-					<Instagram>shrey.nair</Instagram>
-				</Bio>
+			</div>
 			</div>
 		</div>
 	);

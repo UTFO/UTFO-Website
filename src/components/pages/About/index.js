@@ -8,7 +8,7 @@ import AboutSection from './About';
  */
 function About() {
   return (
-    <div className="about-page inner">
+    <div className="about-page">
       <AboutSection />
       <Bios />
     </div>
