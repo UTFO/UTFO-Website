@@ -10,8 +10,13 @@
     overflow-x: auto;
     padding-bottom: 10px;
     cursor: grab;
-    z-index: 3
+    z-index: 3;
 }
+
+.articleHorizontalPost::-webkit-scrollbar-thumb {
+    background-color: white;
+    height: 5px;
+  }
 
 .articleHorizontalCategory {
     font-size: 35px;
@@ -21,6 +26,7 @@
     background-color: white;
     width: fit-content;
     padding: 0px 10px 0px 10px;
+    margin-bottom: 20px;
     color: #2b2831;
 }
 
@@ -31,5 +37,6 @@
     width: 90%;
     z-index: 0;
     padding: 20px 20px 20px 20px;
+    scrollbar-color: white;
 }
 

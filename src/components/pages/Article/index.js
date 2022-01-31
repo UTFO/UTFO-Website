@@ -215,12 +215,12 @@ function Article() {
 
   let categories = [
     {
-      category: "Tutorials",
+      category: "TUTORIALS",
       posts: posts,
     }
     ,
     {
-      category: "Projects",
+      category: "PROJECTS",
       posts: posts,
     }
   ]
