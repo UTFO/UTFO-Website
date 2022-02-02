@@ -223,6 +223,11 @@ function Article() {
       category: "PROJECTS",
       posts: posts,
     }
+    ,
+    {
+      category: "ANNOUNCEMENTS",
+      posts: posts,
+    }
   ]
   //All = 0, Tutorials = 1, Projects = 2
   const [ categorySelected, selectCategory ] = useState(0);
