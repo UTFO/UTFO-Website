@@ -121,7 +121,7 @@ function Article() {
   ])
 
   const featuredPosts = [{
-    title: "The Brain is a Tumor!",
+      title: "The Brain is a Tumor!",
       date: "01/23/2025",
       author: "Guy D",
       image: brain,
@@ -132,7 +132,7 @@ function Article() {
     }
     ,
     {
-    title: "The Brain is NOT a Tumor!",
+      title: "The Brain is NOT a Tumor!",
       date: "01/23/2025",
       author: "Guy D",
       image: brain,
@@ -143,7 +143,7 @@ function Article() {
     }
     ,
     {
-    title: "The Brain is DEF a Tumor!",
+      title: "The Brain is DEF a Tumor!",
       date: "01/23/2025",
       author: "Guy D",
       image: brain,
@@ -229,6 +229,7 @@ function Article() {
       posts: posts,
     }
   ]
+  
   //All = 0, Tutorials = 1, Projects = 2
   const [ categorySelected, selectCategory ] = useState(0);
 

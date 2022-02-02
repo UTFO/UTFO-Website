@@ -8,7 +8,7 @@
     flex-wrap: nowrap;
     grid-column-gap: 20px;
     overflow-x: auto;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     cursor: grab;
     z-index: 3;
 }
@@ -27,12 +27,12 @@
     width: fit-content;
     padding: 0px 10px 0px 10px;
     margin-bottom: 20px;
-    color: #2b2831;
+    color: #343347;
 }
 
 .articleHorizontalHorizontal {
     position: relative;
-    background-color: #9E81DD;
+    background-color: #9aa9cd;
     border-radius: 30px;
     width: 90%;
     z-index: 0;
