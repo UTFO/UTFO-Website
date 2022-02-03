@@ -177,38 +177,38 @@ function Article() {
       date: "03/14/1592",
       author: "Author",
       image: sleep,
+      type: "Announcement",
       authorImage: authorImage,
-      category: "Sleepy Time",
       link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     }
     ,
     {
-      title: "Test Test 2",
+      title: "Test Test 2 - I Needed a Longer Title to Test",
       date: "03/14/1592",
       author: "Author",
       image: brain,
+      type: "Announcement",
       authorImage: authorImage,
-      category: "Sleepy Time",
       link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     }
     ,
     {
-      title: "Test Test 3",
+      title: "Test Test 3 - I Needed a Longer Title to Test",
       date: "03/14/1592",
       author: "Author",
       image: sleep,
+      type: "Project",
       authorImage: authorImage,
-      category: "Sleepy Time",
       link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     }
     ,
     {
-      title: "Test Test 4",
+      title: "Test Test 4 - I Needed a Longer Title to Test",
       date: "03/14/1592",
       author: "Author",
       image: brain,
+      type: "Tutorial",
       authorImage: authorImage,
-      category: "Sleepy Time",
       link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     }
   ])

@@ -21,45 +21,34 @@
 }
 
 .articleThumbHorizContainer {
-    text-align: center;
+    text-align: left;
     z-index: 1;
-    width: fit-content
+    width: fit-content;
 }
 
 .articleThumbHorizTitle {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     margin: auto;
     width: calc(var(--post-width) - 50px);
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    border-color: rgb(0, 0, 0, 0.3);
     margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 18px;
     padding-bottom: 5px;
     grid-area: horizTitle
 }
 
+.articleThumbHorizType{
+    color: #493ffc;
+    grid-area: horizTitle;
+    margin-left: 18px;
+}
+
 .articleThumbHorizAuthor {
     grid-area: horizAuthor;
-    font-size: var(--font-size);
-    margin-top: 10px;
+    font-size: 17px;
+    margin-top: 25px;
     margin-bottom: 3px;
-}
-
-.articleThumbHorizDate {
-    margin-top: 0px;
-    grid-area: horizDate;
-    font-size: var(--font-size);
-}
-
-.articleThumbHorizCategory {
-    font-size: var(--font-size);
-    color: rgb(0, 0, 0, 0.5);
-    grid-area: horizCategory;
-    position: relative;
-    margin-left: 10%;     
 }
 
 .articleThumbHorizAuthorImage {
@@ -71,8 +60,11 @@
     border-radius: 100px;
 }
 
-.articleThumbHorizAuthorImageContainer {
+.articleThumbHorizAuthorImageNameContainer {
     grid-area: horizAuthorImage;
+    display: flex;
+    gap: 15px;
+    color: #999ca3;
 }
 
 .articleThumbHorizAuthorContainer {
@@ -82,9 +74,7 @@
     max-width: var(--post-width);
     grid-template-areas: 
     'horizTitle horizTitle' 
-    'horizAuthorImage horizAuthor'
-    'horizAuthorImage horizDate'
-    'horizCategory horizCategory';
+    'horizAuthorImage horizAuthor';
     text-align: left;
 }
 

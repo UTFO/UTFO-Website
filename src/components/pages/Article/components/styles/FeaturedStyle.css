@@ -98,6 +98,10 @@
     right: 0px;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 .articleFeaturedPostTitle {
     text-align: center;
     color: white;

@@ -8,17 +8,14 @@ const ThumbPostFour = ( { post } ) => {
                 <a className='articleThumbHorizLinkBox' href={post.link} target="_blank" rel="noreferrer">
                     <div>
                         <img className="articleThumbHorizImage" src={post.image} alt=""/>
-
                     </div>
                     <div className="articleThumbHorizAuthorContainer">
+                        <p className="articleThumbHorizType">{post.type}</p>
                         <p className="articleThumbHorizTitle">{post.title}</p>
-                        <p className="articleThumbHorizAuthor">{post.author}</p>
-                        <p className="articleTHubHorizDate">{post.date}</p>
-                        <div className="articleThumbHorizAuthorImageContainer">
+                        <div className="articleThumbHorizAuthorImageNameContainer">
                             <img className="articleThumbHorizAuthorImage" src={post.authorImage} alt=""/>
+                            <p className="articleThumbHorizAuthor">{post.author}</p>
                         </div>
-
-                        <p className="articleThumbHorizCategory">• {post.category}</p>
                     </div>
                 </a>
 
