@@ -28,9 +28,6 @@
     font-weight: bold;
     margin: auto;
     width: calc(var(--post-width) - 20px);
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    border-color: rgb(0, 0, 0, 0.3);
     margin-top: 30px;
     padding-bottom: 5px;
 }

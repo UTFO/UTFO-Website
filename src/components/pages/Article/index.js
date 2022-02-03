@@ -215,17 +215,15 @@ function Article() {
 
   let categories = [
     {
-      category: "TUTORIALS",
+      category: "ANNOUNCEMENTS",
       posts: posts,
-    }
-    ,
+    },
     {
       category: "PROJECTS",
       posts: posts,
-    }
-    ,
+    },
     {
-      category: "ANNOUNCEMENTS",
+      category: "TUTORIALS",
       posts: posts,
     }
   ]

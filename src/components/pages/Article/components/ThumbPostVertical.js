@@ -18,8 +18,6 @@ const ThumbPostThree = ( { post } ) => {
                     <p className="articleThumbVertDate">{post.date}</p>
                     <div className="articleThumbVertAuthorImageContainer">
                         <img className="articleThumbVertAuthorImage" src={post.authorImage} alt=""/></div>
-
-                    <p className="articleThumbVertCategory">• {post.category}</p>
                 </div>
             </div>
 
