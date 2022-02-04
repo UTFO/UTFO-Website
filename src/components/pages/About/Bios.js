@@ -8,6 +8,9 @@ import KIAPic from './dev-pics/KIA.JPG';
 import KrishnaPic from './dev-pics/Krishna.jfif';
 import AravindPic from './dev-pics/aravind.jpg';
 import ShreyPic from './dev-pics/shrey.png';
+import LiaPic from './dev-pics/lia.jpg';
+import JenPic from './dev-pics/jennifer.jpeg';
+import OsmanPic from './dev-pics/osman.jpg';
 
 /**
  * Format a bio for a team member.
@@ -37,14 +40,14 @@ function Execs() {
 		<div className="row">
 			<Bio
 				name="Tyler Jon Wong" pic={TylerPic}
-				positions={[Roles.founder, Roles.chiefExec]}
+				positions={[Roles.founder, Roles.chiefExec, Roles.teamLead]}
 			>
 				<GitHub>Tyler-Jon-Wong</GitHub>
 				<LinkedIn>https://linkedin.com/in/tyler-jon-wong</LinkedIn>
 			</Bio>
 			<Bio
 				name="Ken Hilton" pic={KenPic}
-				positions={[Roles.techExec, Roles.frontend, Roles.backend]}
+				positions={[Roles.teamLead, Roles.frontend, Roles.backend]}
 			>
 				<Website>https://abyx.dev</Website>
 				<GitHub>Kenny2github</GitHub>
@@ -58,7 +61,8 @@ function Execs() {
 				<Instagram>shrey.nair</Instagram>
 			</Bio>
 			<Bio
-				name="Irwin Ngo" pic={IrwinPic} positions={[Roles.treasurer, Roles.frontend]}
+				name="Irwin Ngo" pic={IrwinPic}
+				positions={[Roles.treasurer, Roles.teamLead, Roles.frontend]}
 			>
 				<GitHub>Niwri</GitHub>
 				<LinkedIn>https://linkedin.com/in/irwin-ngo-9b306980</LinkedIn>
@@ -68,6 +72,13 @@ function Execs() {
 			>
 				<LinkedIn>https://linkedin.com/in/khondoker-intiser-alam-aa4417229</LinkedIn>
 				<Instagram>khondokerintiser</Instagram>
+			</Bio>
+			<Bio
+				name="Osman Sultan" pic={OsmanPic}
+				positions={[Roles.teamLead, Roles.frontend, Roles.backend]}
+			>
+				<GitHub>100emoji</GitHub>
+				<LinkedIn>https://linkedin.com/in/osmansultan-</LinkedIn>
 			</Bio>
 		</div>
 	)
@@ -107,6 +118,19 @@ function Bios() {
 					<GitHub>aravind987</GitHub>
 					<LinkedIn>https://linkedin.com/in/aravind-subramanian-914704212</LinkedIn>
 					<Instagram>_aravindsubramanian</Instagram>
+				</Bio>
+				<Bio
+					name="Lia Weng" pic={LiaPic}
+					positions={[Roles.frontend, Roles.backend]}
+				>
+					<GitHub>LiaWeng</GitHub>
+				</Bio>
+				<Bio
+					name="Jennifer Wu" pic={JenPic}
+					positions={[Roles.designer]}
+				>
+					<LinkedIn>https://linkedin.com/in/jennifer-wu2021</LinkedIn>
+					<Instagram>jennifer_wuu</Instagram>
 				</Bio>
 			</div>
 			</div>
