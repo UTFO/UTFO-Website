@@ -1,6 +1,5 @@
 import React from 'react';
 import './Apply.css';
-import ReactDOM from 'react-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,18 +21,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="form">
-        <div className='join-title'><span>Join the Team!</span></div> 
-        
-        <input type="text" placeholder="Name" />
+      <div className="inner">
+        <form onSubmit={this.handleSubmit} className="apply-form">
+          <div className='join-title'><span>Join the Team!</span></div>
 
-        <input type="email" placeholder="Email" value={this.state.value} onChange={this.handleChange} />
+          <input type="text" placeholder="Name" />
 
-        <textarea placeholder="Write your message here..." rows='6' />      
+          <input type="email" placeholder="Email" value={this.state.value} onChange={this.handleChange} />
 
-        <input type="submit" value="Submit" />
-        
-      </form>
+          <textarea placeholder="Write your message here..." rows='6' />
+
+          <input type="submit" value="Submit" />
+
+        </form>
+      </div>
     );
   }
 
