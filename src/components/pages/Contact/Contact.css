@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Kollektif";
-  src: url('../../../../src/assets/Kollektif.ttf');
-}
-
 .contact-title {
   font-family: Kollektif, monospace;
   font-size: 4.2vw;
@@ -11,54 +6,32 @@
   padding-bottom: 2vh;
 }
 
-text {
-  font-family: Kollektif, monospace;
-}
-
-.form-container {
+.contact-form {
   display: flex;
-  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
-iframe {
-  padding-top: 3%;
-  width: 50%;
-}
-
-input, textarea {
-  margin: 1vh;
-  border-radius: 10px;
-  width: 100%;
-  font-size: 1.3vw;
-  font-family: Kollektif, monospace;
-  padding: 1vh;
-}
-
-input[type=submit]{
-  background: #AA82FB;
-  width: 30%;
-  color: white;
-  text-transform: uppercase;
-  font-family: Kollektif, monospace;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  margin-bottom: 0vh;
-  margin-top: 2.5vh;
-}
-
-.form { 
+.contact-form iframe {
+  box-sizing: border-box;
   padding: 2vw;
   padding-left: 3vw;
   padding-right: 3vw;
   font-family: Kollektif, monospace;
-  height: 100%;
-  width: 40vw;
-  background: #5E17EB;
-  display: flex;
-  flex-direction: column;
+  flex-basis: 60%;
+  height: 40vw;
+  background: #CDCDFF;
   border-radius: 20px;
-  justify-content: space-around;
-  align-items: center;
   margin: 5%;
   color: white;
+}
+
+.contact-form .information {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+.contact-form .information img {
+  width: 100%;
 }
