@@ -1,5 +1,6 @@
 import React from 'react';
 import './Contact.css';
+import Logo from '../../../assets/logo_spearman.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,22 +20,34 @@ class App extends React.Component {
     event.preventDefault();
   }
 
+  // render() {
+  //   return (
+  //     <form onSubmit={this.handleSubmit} className="form">
+  //       <div className='contact-title'>SEND US A MESSAGE!</div> 
+        
+  //       <input type="text" placeholder="Name" />
+
+  //       <input type="email" placeholder="Email" value={this.state.value} onChange={this.handleChange} />
+
+  //       <textarea placeholder="Write your message here..." rows='6' />      
+
+  //       <input type="submit" value="Submit" />
+        
+  //     </form>
+  //   );
+  // }
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="form">
-        <h2>Send us a message!</h2>
-
-        <input type="text" placeholder="Name" />
-
-        <input type="email" placeholder="Email" value={this.state.value} onChange={this.handleChange} />
-
-        <textarea placeholder="Write your message here..." rows='6' />
-
-        <input type="submit" value="Submit" />
-
-      </form>
+      <div className='form-container'>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegAj-XyKDQT5x0AfKDoVap2mJKhG5cXl_HUBZe3eSo_k1N7A/viewform?embedded=true" height='1026'>Loading…</iframe>
+        <div className='information'>
+          <text>Get in touch with us here</text>
+          <img src={Logo} alt='spearman logo'></img>
+        </div>
+      </div>
     );
   }
+
 }
 
 

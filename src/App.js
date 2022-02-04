@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import { Home, About, Article, Contact } from './components/pages/imports';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer';
+import { Home, About, Article, Contact, Apply } from './components/pages/imports';
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -16,6 +16,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/articles" element={<Article />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/apply" element={<Apply />} />
         </Routes>
         <Footer/>
       </BrowserRouter>
