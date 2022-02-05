@@ -55,7 +55,6 @@
 }
 
 .articleThumbVertAuthor {
-    /* grid-area: author; */
     font-size: var(--font-size);
     color: white;
     margin-top: 15px;
@@ -68,14 +67,12 @@
     margin-left: 10px;
     color: white;
     font-family: Kollektif;
-    /* grid-area: date; */
     font-size: var(--font-size);
 }
 
 .articleThumbVertCategory {
     font-size: var(--font-size);
     color: rgb(0, 0, 0, 0.5);
-    /* grid-area: category; */
     position: relative;
     margin: 0px;
     margin-right: 20%     
@@ -90,10 +87,6 @@
     border-radius: 100px;
 }
 
-.articleThumbVertAuthorImageContainer {
-    /* grid-area: authorImage; */
-}
-
 .articleThumbVertAuthorDateContainer{
     display: flex;
 }
@@ -103,11 +96,6 @@
     margin: auto;
     display: flex;
     max-width: var(--post-width);
-    /* grid-template-areas: 
-    'author authorImage'
-    'date authorImage'
-    'category category';
-    text-align: right */
 }
 
 div::-webkit-scrollbar-track {
