@@ -1,0 +1,58 @@
+.apply-form span {
+  display: inline-block;
+  background-color: white;
+  word-wrap: normal;
+}
+.apply-form .join-title span {
+  display: inline-block;
+  font-family: Kollektif, monospace;
+  font-size: 5.2vw;
+  color: #000;
+  padding: 1rem;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  border-radius: 15px;
+  white-space: nowrap;
+}
+.apply-form textarea {
+  font-family: Kollektif, monospace;
+}
+
+
+.apply-form input, .apply-form textarea {
+  margin: 1vh;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 1.3vw;
+  font-family: Kollektif, monospace;
+  padding: 1vh;
+}
+
+.apply-form input[type=submit]{
+  background: #AA82FB;
+  width: 30%;
+  color: white;
+  text-transform: uppercase;
+  font-family: Kollektif, monospace;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin-bottom: 0vh;
+  margin-top: 2.5vh;
+}
+
+.apply-form {
+  padding: 2vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  font-family: Kollektif, monospace;
+  height: 100%;
+  width: 50vw;
+  background: #CDCDFF;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5% auto;
+  color: white;
+}

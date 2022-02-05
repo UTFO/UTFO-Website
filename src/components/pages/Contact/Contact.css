@@ -1,12 +1,37 @@
-.form { 
-  height: 400px;
-  width: 300px;
-  background: #7530DD;
+.contact-title {
+  font-family: Kollektif, monospace;
+  font-size: 4.2vw;
+  text-shadow: -3px 3px #AA82FB;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.contact-form {
   display: flex;
-  flex-direction: column;
-  border-radius: 20px;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.contact-form iframe {
+  box-sizing: border-box;
+  padding: 2vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  font-family: Kollektif, monospace;
+  flex-basis: 60%;
+  height: 40vw;
+  background: #CDCDFF;
+  border-radius: 20px;
   margin: 5%;
   color: white;
+}
+
+.contact-form .information {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+.contact-form .information img {
+  width: 100%;
 }
