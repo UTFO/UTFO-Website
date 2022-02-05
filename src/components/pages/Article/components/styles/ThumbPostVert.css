@@ -3,6 +3,16 @@
     --post-width: 250px;
 }
 
+@font-face {
+    font-family: Kollektif-Bold;
+    src: url(/src/assets/Kollektif-Bold.ttf);
+}
+
+@font-face {
+    font-family: Kollektif;
+    src: url(/src/assets/Kollektif.ttf);
+}
+
 .articleThumbVertLinkBox {
     text-decoration: none;
 }
@@ -26,38 +36,54 @@
 .articleThumbVertTitle {
     font-size: 20px;
     font-weight: bold;
+    color: #343347;
+    text-align: left;
     margin: auto;
     width: calc(var(--post-width) - 20px);
-    margin-top: 30px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.type{
+    color: #493ffc;
+    text-align: left;
+    margin: auto;
+    width: calc(var(--post-width) - 20px);
+    margin-top: 15px;
     padding-bottom: 5px;
 }
 
 .articleThumbVertAuthor {
-    grid-area: author;
+    /* grid-area: author; */
     font-size: var(--font-size);
-    margin-top: 10px;
+    color: white;
+    margin-top: 15px;
     margin-bottom: 3px;
-    margin-left: 130px;
+    margin-left: 10px;
 }
 
 .articleThumbVertDate {
-    margin-top: 0px;
-    grid-area: date;
+    margin-top: 15px;
+    margin-left: 10px;
+    color: white;
+    font-family: Kollektif;
+    /* grid-area: date; */
     font-size: var(--font-size);
 }
 
 .articleThumbVertCategory {
     font-size: var(--font-size);
     color: rgb(0, 0, 0, 0.5);
-    grid-area: category;
+    /* grid-area: category; */
     position: relative;
     margin: 0px;
     margin-right: 20%     
 }
 
 .articleThumbVertAuthorImage {
-    width: calc(var(--font-size) * 2 + 4px * 5);
-    height: calc(var(--font-size) * 2 + 3px * 5);
+    width: calc(var(--font-size) * 1.25 + 4px * 5);
+    height: calc(var(--font-size) * 1.25 + 3px * 5);
     object-fit: cover;
     margin-top: 5px;
     margin-left: 5px;
@@ -65,19 +91,23 @@
 }
 
 .articleThumbVertAuthorImageContainer {
-    grid-area: authorImage;
+    /* grid-area: authorImage; */
+}
+
+.articleThumbVertAuthorDateContainer{
+    display: flex;
 }
 
 .articleThumbVertAuthorContainer {
     position: relative;
     margin: auto;
-    display: grid;
+    display: flex;
     max-width: var(--post-width);
-    grid-template-areas: 
+    /* grid-template-areas: 
     'author authorImage'
     'date authorImage'
     'category category';
-    text-align: right
+    text-align: right */
 }
 
 div::-webkit-scrollbar-track {
