@@ -52,8 +52,8 @@
 }
 
 .articleThumbHorizAuthorImage {
-    width: calc(var(--font-size) * 2 + 4px * 5);
-    height: calc(var(--font-size) * 2 + 3px * 5);
+    width: calc(var(--font-size) * 1.35 + 4px * 5);
+    height: calc(var(--font-size) * 1.35 + 3px * 5);
     object-fit: cover;
     margin-top: 10%;
     margin-left: 20%;

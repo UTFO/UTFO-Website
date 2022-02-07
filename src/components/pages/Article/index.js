@@ -291,11 +291,9 @@ function Article() {
 
 
       {/* Thumb Posts */}
-      {!emptySearch ? (categorySelected === 0 ? categories.map((category) => {
+      {categorySelected === 0 ? categories.map((category) => {
             return <HorizontalContainer posts={category.posts} category={category.category}/>
-          }) : <HorizontalContainer posts={categories[categorySelected-1].posts} category={categories[categorySelected-1].category}/>
-        ) : <SearchedPostsContainer posts={posts} searchTitle={searchTitle}/>}
-
+          }) : <HorizontalContainer posts={categories[categorySelected-1].posts} category={categories[categorySelected-1].category}/>}
     </>
   );
 }
