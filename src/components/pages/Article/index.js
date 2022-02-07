@@ -3,8 +3,6 @@ import HorizontalContainer from './components/HorizontalContainer.js';
 import FeaturedContainer from './components/FeaturedContainer.js';
 import Header from './components/Header.js';
 import VerticalContainer from './components/VerticalContainer.js';
-import CategorySelector from './components/CategorySelector.js';
-import SearchedPostsContainer from './components/SearchedPostsContainer.js';
 
 import { useState } from 'react';
 import brain from './components/images/brainImage.jpg';
@@ -17,7 +15,7 @@ import './Article.css';
 function Article() {
 
   //List of Posts
-  const [ posts, setPosts ] = useState([
+  const [ posts ] = useState([
     {
       title: "The Brain is a Tumor!",
       date: "01/23/2025",
@@ -227,46 +225,6 @@ function Article() {
       posts: posts,
     }
   ]
-  
-  //All = 0, Tutorials = 1, Projects = 2
-  const [ categorySelected, selectCategory ] = useState(0);
-
-
-  const resetCategory = (className) => {
-    document.querySelector(className).style.color = "black";
-    document.querySelector(className).style.fontWeight = "";
-  }
-
-  const activeCategory = (className) => {
-    document.querySelector(className).style.color = "#6390C3";
-    document.querySelector(className).style.fontWeight = "bold";
-  }
-
-  const selectNewCategory = (number) => {
-    selectCategory(number)
-    resetCategory(".articleCategoryAll");
-    resetCategory(".articleCategoryTutorials");
-    resetCategory(".articleCategoryProjects");
-
-    switch(number) {
-      case 0:
-        activeCategory(".articleCategoryAll");
-        break;
-
-      case 1:
-        activeCategory(".articleCategoryTutorials");
-        break;
-
-      case 2:
-        activeCategory(".articleCategoryProjects");
-        break;
-
-      default:
-    }
-  }
-
-  const [searchTitle, setSearchTitle] = useState("")
-  const [emptySearch, setEmptySearch] = useState(false)
 
   return (
     <>
@@ -283,17 +241,10 @@ function Article() {
 
       <div className='text'>Check out all the articles written by our members by navigating the different categories below!</div>
 
-       {/* Category Selector Container 
-      <div className="articleMiddleContainer">
-        <CategorySelector categories={categories} categorySelected={categorySelected} selectCategory={selectNewCategory}/>
-      </div> */}
-
-
-
       {/* Thumb Posts */}
-      {categorySelected === 0 ? categories.map((category) => {
-            return <HorizontalContainer posts={category.posts} category={category.category}/>
-          }) : <HorizontalContainer posts={categories[categorySelected-1].posts} category={categories[categorySelected-1].category}/>}
+      {categories.map((category) => {
+        return <HorizontalContainer posts={category.posts} category={category.category}/>
+      })}
     </>
   );
 }
