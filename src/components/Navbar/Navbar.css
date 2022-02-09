@@ -30,7 +30,7 @@
   flex-grow: 1;
 }
 
-.logo {
+.navbar-logo .logo {
   position: relative;
   width: 80px;
   height: 80px;
