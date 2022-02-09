@@ -27,7 +27,7 @@
 }
 
 .about-page .about .utfo {
-	color: #6E5EFE;
+	color: var(--title-color);
 	align-self: flex-end;
 }
 
