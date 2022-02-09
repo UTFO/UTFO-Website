@@ -14,23 +14,18 @@
 }
 
 .contact-form iframe {
-  box-sizing: border-box;
   padding: 2vw;
-  padding-left: 3vw;
-  padding-right: 3vw;
-  font-family: Kollektif, monospace;
-  flex-basis: 60%;
-  height: 40vw;
+  flex-basis: 70%;
+  height: 70vh;
   background: #CDCDFF;
   border-radius: 20px;
-  margin: 5%;
-  color: white;
+  margin-right: 5%;
 }
 
 .contact-form .information {
   display: flex;
   flex-direction: column;
-  flex-basis: 40%;
+  flex-basis: 30%;
 }
 .contact-form .information img {
   width: 100%;
