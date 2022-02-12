@@ -373,7 +373,7 @@ function Article() {
   ]
 
   return (
-    <>
+    <div className="article-page">
       {/* Header */}
       <Header/>
 
@@ -391,7 +391,7 @@ function Article() {
       {categories.map((category) => {
         return <HorizontalContainer posts={category.posts} category={category.category}/>
       })}
-    </>
+    </div>
   );
 }
 
