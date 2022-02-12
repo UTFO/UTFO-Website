@@ -29,6 +29,9 @@
 .navbar-logo.utfo {
   flex-grow: 1;
 }
+.navbar-logo a {
+  color: #fff;
+}
 
 .navbar-logo .logo {
   position: relative;

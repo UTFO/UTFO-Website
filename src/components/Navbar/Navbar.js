@@ -16,9 +16,11 @@ handleClick = () => {
             <nav className="NavbarItems">
                 <div className="inner">
                     <h1 className="navbar-logo">
-                        <img src={Logo} className='logo' alt="UTFO" />
+                        <Link to="/"><img src={Logo} className='logo' alt="UTFO" /></Link>
                     </h1>
-                    <h1 className="navbar-logo utfo">UTFO</h1>
+                    <h1 className="navbar-logo utfo">
+                        <Link to="/">UTFO</Link>
+                    </h1>
                     <div className="menu-icon" onClick={this.handleClick}>
                         <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                     </div>
