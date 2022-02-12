@@ -88,6 +88,7 @@ function Home() {
   }
 
   window.addEventListener('scroll', () => {
+    if (document.querySelector('.home') == null) return;
     reveal();
     setArrowDirection();
   });
