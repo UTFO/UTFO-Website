@@ -30,3 +30,12 @@
 .contact-form .information img {
   width: 100%;
 }
+.contact-form .information > div {
+  font-size: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contact-form .information > div a {
+  color: unset;
+}
