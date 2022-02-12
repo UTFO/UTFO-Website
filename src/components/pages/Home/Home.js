@@ -39,25 +39,25 @@ function Home() {
     const secondBlurbLocation = blurbs[1].getBoundingClientRect().bottom;
     const thirdBlurbLocation = blurbs[2].getBoundingClientRect().bottom;
 
-    if (buttonLocation === mainImageLocation) {
+    if (buttonLocation < mainImageLocation) {
+      window.scrollBy({
+        top: mainImageLocation.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+    else if (buttonLocation < firstBlurbLocation) {
       window.scrollBy({
         top: blurbs[0].scrollHeight,
         behavior: 'smooth'
       });
     }
-    else if (buttonLocation === firstBlurbLocation) {
+    else if (buttonLocation < secondBlurbLocation) {
       window.scrollBy({
         top: blurbs[1].scrollHeight,
         behavior: 'smooth'
       });
     }
-    else if (buttonLocation === secondBlurbLocation) {
-      window.scrollBy({
-        top: blurbs[2].scrollHeight,
-        behavior: 'smooth'
-      });
-    }
-    else if (buttonLocation === thirdBlurbLocation) {
+    else if (buttonLocation < thirdBlurbLocation) {
       window.scrollBy({
         top: document.querySelector('.footer').scrollHeight,
         behavior: 'smooth'
@@ -72,18 +72,21 @@ function Home() {
   // depending on the amount the user has scrolled
   // CURRENTLY DYSFUNCTIONAL
   const setArrowDirection = () => {
-    const blurbs = document.querySelectorAll('.reveal');
-    const mainImage = document.querySelector('.main-image');
-    const Navbar = document.querySelector('.NavbarItems');
+    // const blurbs = document.querySelectorAll('.reveal');
+    // const mainImage = document.querySelector('.main-image');
+    // const Navbar = document.querySelector('.NavbarItems');
+    // console.log("over here")
 
-    const height = Navbar.scrollHeight + mainImage.scrollHeight + blurbs[0].scrollHeight +
-      blurbs[1].scrollHeight + blurbs[2].scrollHeight;
+    // const height = Navbar.scrollHeight + mainImage.scrollHeight + blurbs[0].scrollHeight +
+    //   blurbs[1].scrollHeight + blurbs[2].scrollHeight;
+    
+    const height = document.body.clientHeight - window.innerHeight;
 
-    if (document.body.scrollTop >= height) {
-      setDirection('upwards');
-    }
-    else if (document.body.scrollTop < height) {
-      setDirection('downwards');
+
+    if (window.pageYOffset >= height) {
+      setDirection("upwards");
+    } else if (window.pageYOffset < height) {
+      setDirection("downwards");
     }
   }
 

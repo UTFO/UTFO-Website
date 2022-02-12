@@ -6,7 +6,7 @@ const icons = {
     'downwards': <KeyboardArrowDownIcon fontSize='large' />
 }
 
- function ScrollIcon(props) {
+function ScrollIcon(props) {
     const ArrowIcon = icons[props.direction];
     return ArrowIcon;
 }
