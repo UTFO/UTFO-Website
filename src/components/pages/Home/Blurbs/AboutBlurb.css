@@ -24,11 +24,23 @@
 	text-transform: uppercase;
 	padding: 0.5rem;
 	padding-left: 0.75rem;
-	display: flex;
+	display: block;
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: row;
+	margin-top: 0.5em;
+	transition: transform 250ms, opacity 400ms;
+	transition-timing-function: linear;
 }
+
+.about-link div:hover {
+	transition: -webkit-transform .5s linear;
+	justify-content: space-around;
+	display: flex;
+	border-radius: 4px;
+	transform: scale(1.08);
+}
+
 a.about-link {
 	text-decoration: none;
 	font-weight: bold;

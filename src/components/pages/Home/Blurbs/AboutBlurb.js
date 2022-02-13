@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Blurb from '../../About/Blurb';
 import './AboutBlurb.css';
 import TopQuote from '../../../../assets/top_quote.png';
@@ -16,11 +17,14 @@ export function AboutBlurb() {
 }
 
 export function AboutLink() {
+	const [showArrow, setShowArrow] = useState(false);
+
 	return (
 		<Link className="about-link" to="/about">
-			<div>
-				<span>More About Us</span>
-				<KeyboardArrowRightIcon fontSize='normal' />
+			<div onMouseEnter={() => setShowArrow(true)}
+				onMouseLeave={() => setShowArrow(false)}>
+				<span>More About<br/>Us</span>
+				{showArrow ? <KeyboardArrowRightIcon fontSize='normal' /> : null}
 			</div>
 		</Link>
 	)
