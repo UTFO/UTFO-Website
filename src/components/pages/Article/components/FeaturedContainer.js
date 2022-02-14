@@ -8,8 +8,10 @@ const FeaturedContainer = ( { featuredPosts, featuredNum, nextFeaturedNum }) => 
             <div className="articleFeaturedCategory">FEATURED ARTICLES</div>
             <div className="articleFeaturedFeaturedContainer">
                 <FeaturedPost post={featuredPosts[featuredNum]}/>
-                {/* <button className="articleFeaturedLeftButton" onClick={() => nextFeaturedNum(false)}>&#60;</button>
-                <button className="articleFeaturedRightButton" onClick={() => nextFeaturedNum(true)}>&#62;</button> */}
+                <div className="buttons">
+                    <button className="articleFeaturedLeftButton" onClick={() => nextFeaturedNum(false)}>&#60;</button>
+                    <button className="articleFeaturedRightButton" onClick={() => nextFeaturedNum(true)}>&#62;</button> 
+                </div>
             </div>
 
         </div>

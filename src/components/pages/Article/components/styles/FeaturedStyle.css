@@ -38,35 +38,33 @@
 
 }
 
-/* .articleFeaturedLeftButton {
-    position: relative;
-    float: left;
+.articleFeaturedLeftButton {
     margin-left: 5%;
-    transform: translateY(-400%);
-    font-size: 5em;
+    font-size: 3em;
     font-weight: bold;
     cursor: pointer;
     background-color: rgb(0, 0, 0, 0);
     border: none;
-    color: white;
-    text-shadow: 5px 5px 0px rgb(0, 0, 0, 0.5);
+    color: #999ca3;
     z-index: 1
-} */
+}
 
-/* .articleFeaturedRightButton {
-    position: relative;
-    float: right;
+.buttons{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.articleFeaturedRightButton {
     margin-left: 5%;
-    transform: translateY(-400%);
-    font-size: 5em;
+    font-size: 3em;
     font-weight: bold;
     cursor: pointer;
-    background-color: rgb(0, 0, 0, 0);
     border: none;
-    color: white;
-    text-shadow: 5px 5px 0px rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0);
+    color: #999ca3;
     z-index: 1
-} */
+}
 
 .articleFeaturedPostContainer {
     position: relative;
