@@ -1,4 +1,3 @@
-
 import HorizontalContainer from './components/HorizontalContainer.js';
 import FeaturedContainer from './components/FeaturedContainer.js';
 import Header from './components/Header.js';
@@ -389,7 +388,7 @@ function Article() {
 
       {/* Thumb Posts */}
       {categories.map((category) => {
-        return <HorizontalContainer posts={category.posts} category={category.category}/>
+        return <HorizontalContainer posts={category.posts} category={category.category} />
       })}
     </div>
   );

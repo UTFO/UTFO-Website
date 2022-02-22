@@ -5,7 +5,6 @@ const ThumbPostThree = ( { post } ) => {
     return (
 
             <div className="articleThumbVertContainer">
-                <a className='articleThumbVertLinkBox' href={post.link} target="_blank" rel="noreferrer">
                     <div>
                         <img className="articleThumbVertImage" src={post.image} alt=""/>
                         <div>
@@ -14,7 +13,6 @@ const ThumbPostThree = ( { post } ) => {
                             <p className="articleThumbVertTitle">{post.title}</p>
                         </div>
                     </div>
-                </a>
                 <div className="articleThumbVertAuthorContainer">
                     <div className="articleThumbVertAuthorImageContainer">
                         <img className="articleThumbVertAuthorImage" src={post.authorImage} alt=""/>

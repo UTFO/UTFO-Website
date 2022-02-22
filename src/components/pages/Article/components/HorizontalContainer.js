@@ -1,5 +1,6 @@
 import ThumbPost from './ThumbPostVertical.js';
 import './styles/HorizontalContainer.css';
+import { Link } from "react-router-dom";
 
 const HorizontalContainer = ( { posts, category }) => {
 
@@ -30,6 +31,8 @@ const HorizontalContainer = ( { posts, category }) => {
         postContainer.style.cursor = 'grab';
     })
  */
+    
+    // For ROUTE LINKS for titles, use title but make sure it only has letters and spaces that are separated by dashes
     return (
 
         <div className="articleHorizontalContainer">
@@ -41,9 +44,17 @@ const HorizontalContainer = ( { posts, category }) => {
             <div className="articleHorizontalHorizontal">
                 <div className="articleHorizontalPost">
                     {posts.map((post) => {
-                        return <ThumbPost
-                                post={post}
-                                />
+                        return (
+                            <Link
+                                to={`/articles/${post.title
+                                .replace(/\s+/g, "-")
+                                .replace(/[^\w-]/g,'')
+                                .toLowerCase()}`}
+                                target="_blank"
+                            >
+                                <ThumbPost post={post} />
+                            </Link>
+                        );
                     })}
                 </div>
             </div>
