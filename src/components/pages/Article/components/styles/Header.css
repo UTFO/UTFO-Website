@@ -10,7 +10,8 @@
 
 .articleHeader {
     text-align: center;
-    margin-top: 3%
+    margin-top: 3%;
+    background-color: white;
 }
 
 .articleHeaderTitle {
@@ -27,10 +28,11 @@
 
 .articleHeaderDescription {
     margin: 50px;
-    margin-bottom: 150px;
-    font-size: 30px;
+    padding-bottom: 150px;
+    font-size: 28px;
     font-family: Kollektif;
     color: #343347;
+    background-color: white;
 }
 
 hr{

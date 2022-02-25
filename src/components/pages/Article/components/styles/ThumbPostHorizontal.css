@@ -1,6 +1,6 @@
 :root {
     --font-size: 15px;
-    --post-width: 250px;
+    --post-width: 175px;
 }
 
 .articleThumbHorizLinkBox {
@@ -16,7 +16,7 @@
 .articleThumbHorizImage {
     position: relative;
     width: var(--post-width);
-    height: calc(250px * 3/4);
+    height: calc(175px * 3/4);
     border-radius: 10px;
 }
 
@@ -27,11 +27,12 @@
 }
 
 .articleThumbHorizTitle {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     text-align: left;
     margin: auto;
-    width: calc(var(--post-width) - 50px);
+    width: calc(var(--post-width));
+    color: white;
     margin-top: 30px;
     margin-left: 18px;
     padding-bottom: 5px;
@@ -39,21 +40,21 @@
 }
 
 .articleThumbHorizType{
-    color: #493ffc;
+    color: #CCCBFF;
     grid-area: horizTitle;
     margin-left: 18px;
 }
 
 .articleThumbHorizAuthor {
     grid-area: horizAuthor;
-    font-size: 17px;
-    margin-top: 25px;
+    font-size: 14px;
+    margin-top: 12px;
     margin-bottom: 3px;
 }
 
 .articleThumbHorizAuthorImage {
-    width: calc(var(--font-size) * 1.35 + 4px * 5);
-    height: calc(var(--font-size) * 1.35 + 3px * 5);
+    width: calc(var(--font-size) * 1.35 + 2px * 5);
+    height: calc(var(--font-size) * 1.35 + 1px * 5);
     object-fit: cover;
     margin-top: 10%;
     margin-left: 20%;
