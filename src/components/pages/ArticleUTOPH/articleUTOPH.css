@@ -1,0 +1,221 @@
+.articlePage-title {
+    margin: 0px;
+}
+  
+.articlePage-tag-holder, .articlePage-post-details, .articlePage-subheader-holder {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.3vw 0vw;
+}
+  
+.articlePage-tags {
+    margin: 2px;
+    background: black;
+    color: white;
+    padding: 4px;
+    border-radius: 7px;
+    font-size: 1vw;
+}
+  
+.articlePage-user-icon {
+    margin: 5px;
+    width: 30px;
+    border-radius: 25px;
+}
+  
+.articlePage-main-image {
+    width: 100%;
+    border: solid #d4d4d4 2px;
+    border-radius: 10px;
+    margin: 5px 0px -15px;
+}
+  
+.articlePage-color-block {
+    width: 7px;
+    height: 17px;
+    background-color: #9aa4ad;
+    margin: 5px;
+}
+
+.articlePage-main-text {
+    margin-top: 1vw;
+    margin-bottom: -2vw;
+}
+  
+.articleUTOPH {
+    padding: 0 15vw;
+    font-size: 1.2vw;
+}
+
+.articleUTOPHHeading {
+    display: flex;
+    margin: 6vw 0 1vw 0;
+    border-style: solid;
+    border-color:rgb(137, 251, 255);
+    border-width: 0;
+    border-left-width: 0.75vw;
+    padding-left: 0.75vw;
+}
+
+.articleUTOPHHeading p {
+    font-size: 2vw;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.articleUTOPHAbout {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.articleUTOPHSlideshow {
+    width: 50%;
+    
+}
+
+.articleUTOPHSlideshowImage {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-areas:
+    'leftArrow rightArrow';
+    align-items: center;
+    height: 20vw;
+    border-radius: 0 0 1vw 1vw;
+    box-shadow: 0.2vw 0.2vw 1vw 0.05vw rgb(0, 0, 0, 0.5);
+}
+
+#articleUTOPHSlideshowLeftArrow {
+    grid-area: leftArrow;
+    font-size: 2vw;
+    color: white;
+    box-shadow: 2vw black;
+    width: fit-content;
+    padding: 0.5vw 0vw;
+    margin-left: 1vw;
+    cursor: pointer;
+    
+}
+
+#articleUTOPHSlideshowRightArrow {
+    grid-area: rightArrow;
+    margin-left: auto;
+    font-size: 2vw;
+    color: white;
+    width: fit-content;
+    margin-right: 1vw;
+    cursor: pointer;
+    
+}
+
+#articleUTOPHSlideshowDescription {
+    margin-top: -7vw;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    padding: 1vw 1vw;
+    height: 7vw;
+    border-radius: 1vw;
+}
+
+#articleUTOPHSlideshowDescription h1 {
+    font-size: 2vw;
+    font-weight: 400;
+    padding-bottom: 0.5vw;
+}
+
+#articleUTOPHSlideshowDescription p {
+    font-size: 1vw;
+}
+
+#articleUTOPHSlideshowCircles {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5vw;
+    height: 3vw;
+    gap: 0.2vw;
+}
+
+.articleUTOPHAboutBlurb {
+    width: 40%;
+}
+
+.articleUTOPHAboutBlurb a {
+    color: inherit;
+}
+
+.articleUTOPHAboutRead {
+    width: fit-content;
+    margin: auto;
+    margin-top: 2vw;
+    font-size: 1.5vw;
+    border-width: 0.2vw;
+    border-color: black;
+    border-style: solid;
+    padding: 0.75vw 1.25vw;
+    border-radius: 1.25vw;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.articleUTOPHAboutRead:hover {
+    background-color: rgb(0, 0, 0, 0.8);
+    border-color: rgb(0, 0, 0, 0);
+    color: white;
+}
+
+.articleUTOPHBrainstormingImages {
+    display: flex;
+    justify-content: center;  
+    gap: 10%;
+    margin: 3vw;
+}
+
+#articleUTOPHArrow {
+    position: absolute;
+    width: 8vw;
+    margin-left: 7vw;
+    margin-top: 2vw;
+}
+
+#articleUTOPHBeforeImage {
+    position: absolute;
+    margin-right: 25vw;
+}
+
+#articleUTOPHAfterImage {
+    position: relative;
+    margin-top: 10vw;
+    margin-left: 25vw;
+}
+
+.articleUTOPHFigure {
+    width: 100%;
+}
+
+.articleUTOPHFigureSubheading {
+    display: flex;
+    font-size: 1.3vw;
+    margin-top: 0.5vw;
+    border-style: solid;
+    border-color: rgb(179, 179, 179);
+    border-width: 0;
+    border-left-width: 0.75vw;
+    padding-left: 0.75vw;
+}
+
+.articleUTOPHFigureImage {
+    height: fit-content;
+    width: 100%;
+}
+
+.articleUTOPHFigureImage img {
+    width: 100%;
+    object-fit: cover;
+    border-style: solid;
+    border-color: rgb(179, 179, 179);
+}
