@@ -3,7 +3,7 @@ import './App.css';
 import { Home, About, Article, Contact, Apply } from './components/pages/imports';
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 
 function App() {
@@ -17,8 +17,9 @@ function App() {
           <Route path="/articles" element={<Article />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/apply" element={<Apply />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </React.StrictMode>
   );
