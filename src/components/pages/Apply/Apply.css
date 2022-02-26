@@ -27,6 +27,17 @@
 .apply.intro p {
   padding-left: 2rem;
   max-width: 50%;
+
+}
+
+.apply .apply.intro .inner p{
+  padding-left: 225px;
+  padding-right: 50px;
+  max-width: fit-content;
+}
+
+.apply .apply.intro .inner h1{
+  padding-left: 50px;
 }
 
 .apply.waved {

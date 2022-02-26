@@ -42,12 +42,13 @@ function App() {
         <div className="inner">
           <h1>Looking to get involved?</h1>
           <p>
-            Short blurb about getting involved, gain experience with asjfda,
-            all skill levels welcome! Members are expected to blah blah.
-            According to all known laws of aviation, there is no way that a
-            bee should be able to fly. Its wings are too small to get its fat
-            little body off the ground. The bee, of course, flies anyways.
-            Because bees don't care what humans think is impossible.
+            Do you want to be part of a fast, dynamic and friendly team? 
+            Do you want to gain hands on development experience working for real clients?
+            Do you want to get a glimpse of what development actually feels like?
+            Are you someone that can understand what a client would want, and deliver exactly that?
+            If you answered "Yes" to these questions, UTFO is definitely the right place for you.
+            We will constantly increase the number and types of projects we do, taking on harder and bigger challenges in the process.
+            Fill the application form at the bottom of this page, and come join us for all of this and beyond.
           </p>
         </div>
       </div>
