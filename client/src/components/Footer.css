@@ -1,0 +1,11 @@
+.footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    color: gray;
+    text-align: center;
+}

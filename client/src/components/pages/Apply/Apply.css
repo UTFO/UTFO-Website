@@ -1,0 +1,105 @@
+.apply {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 1em;
+}
+.apply > .apply {
+  width: 100%;
+}
+
+.apply-wave {
+  width: 100%;
+}
+
+.apply.intro > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.apply.intro h1 {
+  color: var(--title-color);
+  max-width: 4em;
+  font-size: 3em;
+}
+.apply.intro p {
+  padding-left: 2rem;
+  max-width: 50%;
+}
+
+.apply.waved {
+  color: #fff;
+  background: linear-gradient(to bottom, var(--dark-bg-color) 0%, var(--title-color) 100%);
+}
+
+.apply .join {
+  text-align: center;
+  width: min-content;
+  margin: 0 auto;
+}
+.apply .join h1 {
+  white-space: nowrap;
+  font-size: 3em;
+}
+
+.apply .dash {
+  font-size: 7em;
+  margin: 0.5rem auto;
+}
+
+.apply .roles {
+  display: grid;
+  grid-template-columns: 1fr 60% 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.apply .role {
+  grid-column: 2 / span 1;
+}
+.apply .role.right {
+  text-align: right;
+}
+.apply .role h1 {
+  text-transform: uppercase;
+}
+.apply .roles img {
+  width: 100%;
+  grid-column: 1 / span 1;
+}
+.apply .roles img.right {
+  grid-column: 3 / span 1;
+}
+
+.apply .form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.apply .form > div {
+  width: 45%;
+}
+.apply .form .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.apply .form .blurb .logo {
+  height: 6em;
+}
+.apply .form .blurb h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.apply .form .blurb .arrow {
+  width: 100%;
+}
+.apply .form .apply-form {
+  height: 500px;
+  background-color: #cdcdff;
+  border-radius: 1em;
+  padding: 1em;
+  color: #000;
+}

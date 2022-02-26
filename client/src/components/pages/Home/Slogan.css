@@ -1,0 +1,6 @@
+.main-image p.slogan {
+	border-left: 10px solid var(--accent-color);
+	padding: 5px 0 6px 10px;
+	font-size: 1.1rem;
+	margin: 1rem 0;
+}

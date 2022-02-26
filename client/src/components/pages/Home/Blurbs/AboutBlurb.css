@@ -1,0 +1,41 @@
+.about-blurb {
+	width: 50%;
+	color: #fff;
+	background-color: var(--dark-bg-color);
+	box-shadow: 10px 15px var(--accent-color);
+	margin: 2em auto;
+	padding: 1em;
+}
+.about-blurb img {
+	height: 1em;
+}
+.about-blurb p.quote {
+	margin-top: 1em;
+}
+
+.reveal.about {
+	background: linear-gradient(transparent 0%, transparent 49.9%,
+		#6c63ff 50%, #6c63ff 100%);
+}
+
+.about-link div {
+	border: 3px solid #493ffc;
+	color: #493ffc;
+	text-transform: uppercase;
+	padding: 0.5rem;
+	padding-left: 0.75rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	transition: all 0.25s cubic-bezier(0.83, 0, 0.17, 1);
+}
+a.about-link {
+	text-decoration: none;
+	font-weight: bold;
+}
+.about-link div:hover {
+	border-color: #fff;
+	color: #fff;
+	background-color: #493ffc;
+}

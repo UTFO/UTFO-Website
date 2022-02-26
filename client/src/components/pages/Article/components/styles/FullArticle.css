@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Source+Code+Pro&display=swap');
+
+.markdown{
+    display:flex;
+    margin:40px;
+}
+
+.markdown h1{
+    font-size:3rem;
+    text-align:center;
+}
+
+.markdown code{
+    font-family: 'Source Code Pro', monospace;
+    color:light-red;
+}
+
+.markdown img{
+    height:500px;
+}

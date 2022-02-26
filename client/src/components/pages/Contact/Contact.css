@@ -1,0 +1,41 @@
+.contact-title {
+  font-family: Kollektif, monospace;
+  font-size: 4.2vw;
+  text-shadow: -3px 3px #AA82FB;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-form iframe {
+  padding: 2vw;
+  flex-basis: 70%;
+  height: 70vh;
+  background: #CDCDFF;
+  border-radius: 20px;
+  margin-right: 5%;
+}
+
+.contact-form .information {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+}
+.contact-form .information img {
+  width: 100%;
+}
+.contact-form .information > div {
+  font-size: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contact-form .information > div a {
+  color: unset;
+}

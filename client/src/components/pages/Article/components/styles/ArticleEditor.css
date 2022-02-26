@@ -1,0 +1,25 @@
+#test {
+  border-top: 10px solid;
+  margin: auto;
+}
+
+.title{
+    margin-bottom: 10px;
+}
+
+.articleRequirements{
+    margin: 20px 0;
+    display:flex;
+    justify-content:space-between;
+}
+
+.editor{
+    margin: 10px 0;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    margin:20px
+}
+
