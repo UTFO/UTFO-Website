@@ -8,12 +8,15 @@ import MainImage from './images/mainImage.png';
 import UTOPHBefore from './images/utophBefore.png';
 import UTOPHAfter from './images/utophAfter.png';
 import AfterArrow from './images/afterArrow.png';
+import OldTeam from './images/oldTeam.png';
+import OldMain from './images/oldMain.png';
+import Development from './images/development.png';
 
 const index = () => {
   return (
     <div className="articleUTOPH">
 
-        <h1 class="articlePage-title">TITLE OF ARTICLE HERE</h1>
+        <h1 class="articlePage-title">Redesign of UTOPH's Website</h1>
 
         <div class="articlePage-tag-holder">
             <div class="articlePage-tags">Projects</div>
@@ -21,10 +24,11 @@ const index = () => {
 
         <div class="articlePage-post-details">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Liliumbulbiferumflowertop.jpg/220px-Liliumbulbiferumflowertop.jpg" alt="" class="articlePage-user-icon"></img>
-            <p>Author | date</p>
+            <p>Jennifer Wu | February 26, 2022</p>
         </div>
-        
-        <Figure image={MainImage} subheading="Subheader" imageHeight="36vw" borderRadius="1.5vw"/>
+        <div id="articleUTOPHMainImage">
+            <Figure image={MainImage} subheading="The creation of UTOPH's website through HTML, Javascript, and CSS (Front-End)" imageHeight="36vw" borderRadius="1.5vw"/>
+        </div>
 
         <p class="articlePage-main-text">
             Are you interested in reading one of our first projects? In this article, we explain the process of how UTFO, our organization, redesigned and coded one of the
@@ -66,8 +70,8 @@ const index = () => {
             </p>
 
             <div className="articleUTOPHBrainstormingImages">
-                <Figure image="" subheading="Test" imageHeight="20vw"/>
-                <Figure image="" subheading="Test" imageHeight="20vw"/>
+                <Figure image={OldMain} subheading="The Main Page of the old UTOPH website" imageHeight="22.5vw"/>
+                <Figure image={OldTeam} subheading="The Team Page of the old UTOPH website" imageHeight="22.5vw"/>
             </div>
             
             <p style={{padding: "0 10vw"}}>
@@ -87,13 +91,13 @@ const index = () => {
             theme and general format of the website. The designers also ensured that the visual aspects of images, fonts, and colours blended well together.
             </p>
 
-            <div className="articleUTOPHBrainstormingImages">
-                <div id="articleUTOPHBeforeImage"><Figure image={UTOPHBefore} subheading="Test" imageHeight="30vw" borderRadius="0.5vw"/></div>
-                <img id="articleUTOPHArrow" src={AfterArrow} alt=""/>
-                <div id="articleUTOPHAfterImage"><Figure image={UTOPHAfter} subheading="Test" imageHeight="30vw" borderRadius="0.5vw"/></div>
+            <div className="articleUTOPHDesignImages">
+                <div id="articleUTOPHBeforeImage"><Figure image={UTOPHBefore} subheading="Old Project Page of UTOPH" imageHeight="30vw" borderRadius="0.5vw"/></div>
+                <img id="articleUTOPHArrow" src={AfterArrow} alt="" style={{borderStyle: 'none'}}/>
+                <div id="articleUTOPHAfterImage"><Figure image={UTOPHAfter} subheading="Our Project Page Design for UTOPH" imageHeight="30vw" borderRadius="0.5vw"/></div>
             </div>
 
-            <p style={{padding: "0 10vw"}}>
+            <p>
             Initially, the designers came upon a barrier when searching for a colour scheme that fit the virtual reality concept due to the possibility of 
             conflicting colour palettes. 
             The team resolved this issue by discussing it with the head designer and testing different tools and colours. 
@@ -107,10 +111,10 @@ const index = () => {
         <Heading heading="Development"/>
 
         <div className="articleUTOPHDevelopment">
-            <div style={{padding: '0 3vw', margin: '2vw 0'}}>
-                <Figure image="" subheading="Test" imageHeight="20vw"/>
+            <div id="articleUTOPHDevelopmentImage">
+                <Figure image={Development} subheading="The Icons of ReactJS, SVG, Canvas, and Git" imageHeight="30vw"/>
             </div>
-            <p style={{padding: "0 10vw"}}>
+            <p>
             After the developers are notified of a page design completion, they began working on implementing the ideas into the final product through code. 
             It was a learning journey for the developers as some of the software used was new to them, such as ReactJs, Scalable Vector Graphics (SVG), and Canvas API. 
             This opportunity allowed the developers to refresh their knowledge in other programming languages and methods (e.g. HTML, CSS, js). 

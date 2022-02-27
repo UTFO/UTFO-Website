@@ -25,11 +25,8 @@
     border-radius: 25px;
 }
   
-.articlePage-main-image {
-    width: 100%;
-    border: solid #d4d4d4 2px;
-    border-radius: 10px;
-    margin: 5px 0px -15px;
+#articleUTOPHMainImage img {
+    border: solid rgb(179, 179, 179) 0.2vw;
 }
   
 .articlePage-color-block {
@@ -168,12 +165,18 @@
     color: white;
 }
 
-.articleUTOPHBrainstormingImages {
+.articleUTOPHBrainstormingImages, .articleUTOPHDesignImages {
     display: flex;
     justify-content: center;  
     gap: 10%;
     margin: 3vw;
 }
+
+.articleUTOPHDesignImages img {
+    border-style: solid;
+    border-color: rgb(179, 179, 179);
+}
+
 
 #articleUTOPHArrow {
     position: absolute;
@@ -211,11 +214,24 @@
 .articleUTOPHFigureImage {
     height: fit-content;
     width: 100%;
+    
 }
 
 .articleUTOPHFigureImage img {
     width: 100%;
     object-fit: cover;
-    border-style: solid;
-    border-color: rgb(179, 179, 179);
+}
+
+.articleUTOPHDevelopment img {
+    height: fit-content;
+    width: fit-content;
+}
+
+#articleUTOPHDevelopmentImage {
+    width: fit-content;
+    position: relative;
+    margin: auto;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
 }
