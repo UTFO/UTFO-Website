@@ -93,13 +93,12 @@ function App() {
               Discord, which you will be invited to upon completion of this form.
             </p>
           </div>
-          <div className="apply-form">
-            <iframe
-              title="Application form"
-              src="https://docs.google.com/forms/d/e/1FAIpQLSemasu3z-2L0qEe61qA8GmAnpc2k0qYaX3cUkVBYpValiFRYg/viewform?embedded=true"
-              width="100%" height="100%"
-              frameborder="0" marginheight="0" marginwidth="0"
-            >Loading…</iframe>
+          <div className="apply_button">
+            <a href= " https://docs.google.com/forms/d/e/1FAIpQLSegAj-XyKDQT5x0AfKDoVap2mJKhG5cXl_HUBZe3eSo_k1N7A/viewform">
+              <button className= "button_to_form">
+                CLICK HERE FOR THE APPLICATION FORM
+              </button>
+            </a>
           </div>
         </div>
       </div>
