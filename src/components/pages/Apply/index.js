@@ -94,7 +94,7 @@ function App() {
           </div>
           <div className="apply button">
           <span className='apply form'>
-              <a href = "https://docs.google.com/forms/d/e/1FAIpQLSegAj-XyKDQT5x0AfKDoVap2mJKhG5cXl_HUBZe3eSo_k1N7A/viewform">
+              <a href = "https://docs.google.com/forms/d/e/1FAIpQLSeglrUFoM2vh7vWzHYHqtAMIeOKqKvKMVA4LGeR0wnR4nXDXA/viewform">
                 CLICK HERE FOR THE APPLICATION FORM
               </a>
             </span>
