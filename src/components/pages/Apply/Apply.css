@@ -106,13 +106,37 @@
   font-size: 3em;
   text-transform: uppercase;
 }
-.apply .form .blurb .arrow {
-  width: 100%;
+
+.apply a{
+  border: 3px solid #493ffc;
+  color: #493ffc;
+  background-color: white;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  padding-left: 0.75rem;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  transition: transform 250ms, opacity 400ms;
+  transition-timing-function: linear;
+  font-size: medium;
+  text-align: center;
+  
 }
-.apply .form .apply-form {
-  height: 500px;
-  background-color: #cdcdff;
-  border-radius: 1em;
-  padding: 1em;
-  color: #000;
+
+.apply .form.inner .blurb{
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+.apply span :hover{
+  transform: scale(1.2);
+}
+
+.apply span{
+  margin-right: 1300px;
+  margin-top: 400px;
 }
