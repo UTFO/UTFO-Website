@@ -4,6 +4,7 @@ import {
   getArticleFull,
   createArticle,
   updateArticle,
+  deleteArticle
 } from "../controllers/articles.js";
 const router = express.Router();
 
@@ -12,6 +13,7 @@ router.get("/preview", getArticlePreviews);
 router.get("/fullArticle/:id", getArticleFull);
 router.post("/fullArticle", createArticle)
 router.patch("/fullArticle/:id", updateArticle);
+router.delete("/fullArticle/:id", deleteArticle);
 
 
 export default router;

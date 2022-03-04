@@ -38,3 +38,9 @@ export const updateArticle = asyncWrapper(async (req, res) => {
   }
   res.status(200).json(article);
 });
+
+export const deleteArticle = asyncWrapper(async (req, res) => {
+  const { id: articleID } = req.params;
+  await Article.deleteOne({ _id: articleID });
+  res.status(200);
+})

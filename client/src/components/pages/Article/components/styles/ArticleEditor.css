@@ -23,3 +23,7 @@
     margin:20px
 }
 
+.delete{
+    display: flex;
+    justify-content: center;
+}

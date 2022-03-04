@@ -9,7 +9,7 @@ const articleScehma = new mongoose.Schema({
   imageThumbnail: String,
   articleBlurb: String,
   articleContent: String,
-  route: String
+  specialArticle: String
 });
 
 

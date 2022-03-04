@@ -16,5 +16,4 @@ export const createArticle = (newArticle) => API.post('api/v1/fullArticle', newA
 // Update an article
 export const updateArticle = (id, article) => API.patch(`/api/v1/fullArticle/${id}`, article);
 
-
-
+export const deleteArticlePermanently = (id) => API.delete(`/api/v1/fullArticle/${id}`);

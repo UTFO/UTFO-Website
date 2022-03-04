@@ -21,6 +21,10 @@
     color: #343347;
 }
 
+.articleVerticalContainerProgressBar{
+    width:200px;
+}
+
 .articleVerticalContainerVerti {
     position: relative;
     width: fit-content;

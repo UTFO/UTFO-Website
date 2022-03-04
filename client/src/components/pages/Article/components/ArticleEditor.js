@@ -12,18 +12,27 @@ import {
   Select,
   Alert,
   IconButton,
-  Collapse,
   Dialog,
+  DialogActions,
+  Checkbox,
+  FormControlLabel,
 } from "@mui/material";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DatePicker from "@mui/lab/DatePicker";
 import CloseIcon from "@mui/icons-material/Close";
-import { createArticle, getFullArticle, updateArticle } from "../api";
-import "./styles/ArticleEditor.css"
+import {
+  createArticle,
+  getFullArticle,
+  updateArticle,
+  deleteArticlePermanently,
+} from "../api";
+import {articleData} from "./specialArticleData";
+import "./styles/ArticleEditor.css";
 
 const ArticleEditor = () => {
   const { id } = useParams();
+  const [specialArticle, setSpecialArticle] = useState(false);
   const [articleContent, setArticleContent] = useState("");
   const [isUpdating, setIsUpdating] = useState(false);
   const [previewHtml, setPreviewHtml] = useState("");
@@ -31,16 +40,17 @@ const ArticleEditor = () => {
   const [title, setTitle] = useState("");
   const [authorName, setAuthorName] = useState("");
   const [authorImage, setAuthorImage] = useState("");
-  const [imageThumbnail, setImageThumbnail] = useState("");
   const [articleType, setArticleType] = useState("");
   const [articleBlurb, setArticleBlurb] = useState("");
+  const [imageThumbnail, setImageThumbnail] = useState("");
   const [error, setError] = useState(false);
+  const [deleteArticle, setDeleteArticle] = useState(false);
+  const [whichSpecialArticle, setWhichSpecialArticle] = useState("");
   const editorRef = useRef(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (id) {
-      // console.log(id);
       getFullArticle(id)
         .then(({ data }) => {
           setTitle(data["title"]);
@@ -50,7 +60,12 @@ const ArticleEditor = () => {
           setImageThumbnail(data["imageThumbnail"]);
           setArticleType(data["articleType"]);
           setArticleBlurb(data["articleBlurb"]);
-          setArticleContent(data["articleContent"]);
+          if (data["specialArticle"]) {
+            setSpecialArticle(true)
+            setWhichSpecialArticle(data["specialArticle"]);
+          } else {
+            setArticleContent(data["articleContent"]); 
+          }
           setIsUpdating(true);
         })
         .catch(function (error) {
@@ -59,16 +74,58 @@ const ArticleEditor = () => {
           navigate("/article-editor");
         });
     }
-  }, [])
+  }, []);
 
-  const formatDate = (date) => {
-    let d = new Date(date),
-      month = "" + (d.getMonth() + 1),
-      day = "" + d.getDate(),
-      year = d.getFullYear();
-    if (month.length < 2) month = "0" + month;
-    if (day.length < 2) day = "0" + day;
-    return [day, month, year].join("/");
+  const handleSubmit = () => {
+    if (
+      publishDate &&
+      articleType &&
+      title &&
+      authorName &&
+      articleBlurb &&
+      imageThumbnail &&
+      ((specialArticle && whichSpecialArticle) || articleContent)
+    ) {
+
+      let articleData = {
+        title: title,
+        authorName: authorName,
+        authorImage: authorImage,
+        publishDate: formatDate(publishDate),
+        articleType: articleType,
+        imageThumbnail: imageThumbnail,
+        articleBlurb: articleBlurb,
+      };
+      if (specialArticle) {
+        articleData["specialArticle"] = whichSpecialArticle;
+      } else {
+        articleData["articleContent"] = articleContent;
+      }
+      
+      console.log(articleData)
+      console.log(articleContent)
+      console.log(whichSpecialArticle)
+
+      if (!isUpdating) {
+        createArticle(articleData);
+        window.location.reload(false);
+      } else {
+        updateArticle(id, articleData);
+        navigate("/article-editor");
+        window.location.reload(false);
+      }
+    } else {
+      console.log("Error");
+      setError(true);
+    }
+  };
+
+  const handleDeleteArticle = () => {
+    if (id) {
+      deleteArticlePermanently(id);
+      navigate("/article-editor");
+      window.location.reload(false);
+    }
   };
 
   const handlePreview = () => {
@@ -80,48 +137,6 @@ const ArticleEditor = () => {
   const handleEditor = () => {
     if (editorRef.current) {
       setArticleContent(editorRef.current.getContent());
-    }
-  };
-
-  const handleSubmit = () => {
-    if (
-      articleContent &&
-      publishDate &&
-      articleType &&
-      title &&
-      authorName &&
-      articleBlurb &&
-      imageThumbnail
-    ) {
-      console.log("Correct Input");
-      console.log(formatDate(publishDate));
-      console.log(articleType);
-      console.log(title);
-      console.log(authorName);
-      console.log(articleBlurb);
-      console.log(imageThumbnail);
-
-      let articleData = {
-        title: title,
-        authorName: authorName,
-        authorImage: authorImage,
-        publishDate: formatDate(publishDate),
-        articleType: articleType,
-        imageThumbnail: imageThumbnail,
-        articleBlurb: articleBlurb,
-        articleContent: articleContent,
-      };  
-      if (!isUpdating) {
-        console.log("here")
-        createArticle(articleData);
-        window.location.reload(false);
-      } else {
-        updateArticle(id, articleData);
-        navigate("/article-editor");
-      }
-    } else {
-      console.log("Error");
-      setError(true);
     }
   };
 
@@ -137,13 +152,9 @@ const ArticleEditor = () => {
       setAuthorImage(e.target.result);
     };
   };
-  const handleThumbnailChange = ({ target }) => {
-    const fileReader = new FileReader();
 
-    fileReader.readAsDataURL(target.files[0]);
-    fileReader.onload = (e) => {
-      setImageThumbnail(e.target.result);
-    };
+  const handleImageThumbnailChange = (e) => {
+    setImageThumbnail(e.target.value);
   };
 
   const handleTitleChange = (e) => {
@@ -159,11 +170,34 @@ const ArticleEditor = () => {
   };
 
   const handleDateChange = (date) => {
-    // let formattedDate = formatDate(date);
-    console.log(date);
-    setPublishDate(date);
-  }
-  
+    let formattedDate = formatDate(date);
+    setPublishDate(formattedDate);
+  };
+
+  const handleSpecialArticleChange = () => {
+    setSpecialArticle(!specialArticle);
+    setArticleContent("");
+    setWhichSpecialArticle("");
+  };
+
+  const handleWhichSpecialArticleChange = (e) => {
+    setWhichSpecialArticle(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const handleDelete = () => {
+    setDeleteArticle(true);
+  };
+
+  const formatDate = (date) => {
+    let d = new Date(date),
+      month = "" + (d.getMonth() + 1),
+      day = "" + d.getDate(),
+      year = d.getFullYear();
+    if (month.length < 2) month = "0" + month;
+    if (day.length < 2) day = "0" + day;
+    return [month, day, year].join("/");
+  };
 
   return (
     <>
@@ -192,6 +226,43 @@ const ArticleEditor = () => {
         >
           Please enter all required fields before publishing article
         </Alert>
+      </Dialog>
+
+      <Dialog
+        open={deleteArticle}
+        onClose={() => {
+          setDeleteArticle(false);
+        }}
+      >
+        <Alert
+          severity="error"
+          variant="filled"
+          action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setDeleteArticle(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          }
+          sx={{ mb: 2 }}
+        >
+          Are you sure you want to delete this article?
+        </Alert>
+        <DialogActions>
+          <Button onClick={handleDeleteArticle}>DELETE</Button>
+          <Button
+            onClick={() => {
+              setDeleteArticle(false);
+            }}
+          >
+            CANCEL
+          </Button>
+        </DialogActions>
       </Dialog>
       <Box
         sx={{
@@ -235,10 +306,16 @@ const ArticleEditor = () => {
               onChange={handleImageCapture}
             />
           </Button>
+          <TextField
+            required
+            value={imageThumbnail}
+            id="outlined-required"
+            label="Thumbnail Link"
+            onChange={handleImageThumbnailChange}
+          />
           <LocalizationProvider dateAdapter={AdapterDateFns}>
             <DatePicker
               label="Publish Date"
-              format="DD-MM-YYYY"
               value={publishDate}
               onChange={handleDateChange}
               renderInput={(params) => <TextField {...params} />}
@@ -258,57 +335,90 @@ const ArticleEditor = () => {
               <MenuItem value={"Featured"}>Featured</MenuItem>
             </Select>
           </FormControl>
-          <Button variant="outlined" component="label">
-            Upload Thumbnail
-            <input
-              type="file"
-              hidden
-              accept="image/*"
-              onChange={handleThumbnailChange}
-            />
-          </Button>
         </div>
-        <TextField
-          required
-          style={{ width: 500 }}
-          label="Article Blurb"
-          multiline
-          rows={3}
-          value={articleBlurb}
-          onChange={handleArticleBlurbChange}
-        />
-        <div className="editor">
-          <Editor
-            onInit={(evt, editor) => {
-              editorRef.current = editor;
-              editorRef.current.setContent(articleContent);
-            }}
-            value={articleContent}
-            onEditorChange={handleEditor}
-            initialValue="<p>This is the initial content of the editor.</p>"
-            init={{
-              height: 500,
-              menubar: false,
-              plugins: [
-                "advlist autolink lists link image charmap print preview anchor",
-                "searchreplace visualblocks code fullscreen",
-                "insertdatetime media table paste code help wordcount",
-              ],
-              toolbar:
-                "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment | code ",
-              automatic_uploads: true,
-              file_picker_types: "image",
-            }}
+        <div>
+          <TextField
+            required
+            style={{ width: 500 }}
+            label="Article Blurb"
+            multiline
+            rows={3}
+            value={articleBlurb}
+            onChange={handleArticleBlurbChange}
           />
+          <FormControlLabel
+            value="start"
+            control={
+              <Checkbox
+                checked={specialArticle}
+                onClick={handleSpecialArticleChange}
+              />
+            }
+            label="Special Article"
+            labelPlacement="start"
+            value={specialArticle}
+          />
+          {specialArticle ? (
+            <FormControl sx={{ minWidth: 200, marginLeft: 9 }}>
+              <InputLabel>Which Special Article</InputLabel>
+              <Select
+                label="Which Special Article"
+                autoWidth
+                value={whichSpecialArticle}
+                onChange={handleWhichSpecialArticleChange}
+              >
+                {articleData.map((article) => {
+                  return (
+                    <MenuItem value={article.name}>{article.name}</MenuItem>
+                  );
+                })}
+              </Select>
+            </FormControl>
+          ) : null}
+        </div>
+        <div className="editor">
+          {!specialArticle ? (
+            <Editor
+              onInit={(evt, editor) => {
+                editorRef.current = editor;
+                editorRef.current.setContent(articleContent);
+              }}
+              value={articleContent}
+              onEditorChange={handleEditor}
+              init={{
+                height: 500,
+                menubar: false,
+                plugins: [
+                  "advlist autolink lists link image charmap print preview anchor",
+                  "searchreplace visualblocks code fullscreen",
+                  "insertdatetime media table paste code help wordcount",
+                ],
+                toolbar:
+                  "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment | code ",
+                automatic_uploads: true,
+                file_picker_types: "image",
+              }}
+            />
+          ) : null}
         </div>
         <div className="submit">
-          <Button variant="outlined" onClick={handlePreview}>
-            Log editor content
-          </Button>
-          <Button variant="outlined" onClick={handleSubmit}>
+          {!specialArticle ? (
+            <Button variant="outlined" onClick={handlePreview}>
+              Log editor content
+            </Button>
+          ) : null}
+          <Button variant="outlined" onClick={handleSubmit} color="success">
             {isUpdating ? "Update Article" : "Submit Article"}
           </Button>
         </div>
+        {isUpdating ? (
+          <div className="delete">
+            <Button variant="contained" color="error" onClick={handleDelete}>
+              DELETE ARTICLE!
+            </Button>
+          </div>
+        ) : null}
+        <div></div>
         <div
           className="preview"
           dangerouslySetInnerHTML={{ __html: previewHtml }}
