@@ -24,6 +24,25 @@ export const Title = styled("p")(({ theme }) => ({
     margin: "`${theme.spacing(2)} 0 ${theme.spacing(1)} 0`",
 }));
 
+export const SubtitleContainer = styled('div')(({ theme }) => ({
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    margin: `${theme.spacing(2)} 0 ${theme.spacing(2)} 0`
+}))
+
+export const Subtitle = styled('p')(({ theme }) => ({
+    fontSize: '1.5em',
+    fontWeight: '400',
+}))
+
+export const VerticalDivider = styled('div')(({ theme }) => ({
+    width: '5px',
+    height: '1.5em',
+    backgroundColor: 'rgb(170,170,170)',
+    margin: `0 ${theme.spacing(1)}`
+}))
+
 export const Tag = styled("button")(({ theme }) => ({
     color: "white",
     backgroundColor: "black",

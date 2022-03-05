@@ -11,9 +11,13 @@ import {
   ShortDivider,
   Title,
   Tag,
+  SubtitleContainer,
+  VerticalDivider,
+  Subtitle,
 } from "./styles/ArticlePageStyles";
 import stockAuthorImage from "./images/stockAuthorImage.png"
 import "./styles/ArticlePage.css";
+import stockThumbnailImage from "./images/brainImage.jpg"
 
 const getMonthName = (date) => {
   const monthNames = [
@@ -33,18 +37,27 @@ const getMonthName = (date) => {
   return monthNames[date.getMonth()];
 }
 
-const ArticleImage = ({ authorImage , author}) => {
-  if (typeof authorImage !== "undefined") {
-    return (
-      <img
-        src={authorImage || stockAuthorImage}
-        alt={author}
-        style={{ height: "20px", width: "20px", marginRight: "5px" }}
-      />
-    );
-  }
-  return <AccountCircleIcon color="primary" sx={{ mr: 1 }} />;
+const AuthorImage = ({ authorImage }) => {
+return (
+    <img
+      src={authorImage || stockAuthorImage}
+      alt=""
+      style={{ height: "20px", width: "20px", marginRight: "5px" }}
+    />
+  );
 };
+
+export const SubtitleBox = ({ title }) => {
+  if (typeof title !== "undefined") {
+    return (
+        <SubtitleContainer>
+            <VerticalDivider />
+            <Subtitle>{title}</Subtitle>
+        </SubtitleContainer>
+    )
+  }
+  return null;
+}
 
 const ArticleHeader = ({
   title,
@@ -52,6 +65,8 @@ const ArticleHeader = ({
   authorName,
   authorImage,
   publishDate,
+  imageThumbnail,
+  thumbnailSubtitle,
 }) => {
   let date = publishDate.split("/");
   let month = getMonthName(new Date(publishDate));
@@ -62,11 +77,13 @@ const ArticleHeader = ({
       <Title>{title}</Title>
       <Tag>{articleType}</Tag>
       <AuthorContainer>
-        <ArticleImage author={authorName} authorImage={authorImage} alt="" />
+        <AuthorImage authorImage={authorImage} />
         <p>{authorName}</p>
         <p>&nbsp;|&nbsp;</p>
         <p>{fullDate}</p>
       </AuthorContainer>
+      <img src={imageThumbnail || stockThumbnailImage} />
+      <SubtitleBox title={thumbnailSubtitle} />
     </HeaderContainer>
   );
 };
@@ -122,6 +139,8 @@ function ArticlePage() {
               authorName={article["authorName"]}
               authorImage={article["authorImage"]}
               publishDate={article["publishDate"]}
+              imageThumbnail={article["imageThumbnail"]}
+              thumbnailSubtitle={article["thumbnailSubtitle"]}
             />
             <div
               dangerouslySetInnerHTML={{ __html: article["articleContent"] }}
