@@ -7,6 +7,7 @@ const articleScehma = new mongoose.Schema({
   publishDate: String,
   articleType: String,
   imageThumbnail: String,
+  thumbnailCaption: String,
   articleBlurb: String,
   articleContent: String,
   specialArticle: String

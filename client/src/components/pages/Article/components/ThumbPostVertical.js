@@ -1,4 +1,5 @@
 import './styles/ThumbPostVert.css';
+import stockAuthorImage from "./images/stockAuthorImage.png";
 
 const ThumbPostThree = ( { post } ) => {
 
@@ -15,7 +16,7 @@ const ThumbPostThree = ( { post } ) => {
                     </div>
                 <div className="articleThumbVertAuthorContainer">
                     <div className="articleThumbVertAuthorImageContainer">
-                        <img className="articleThumbVertAuthorImage" src={post.authorImage} alt=""/>
+                        <img className="articleThumbVertAuthorImage" src={post.authorImage || stockAuthorImage} alt=""/>
                     </div>
                     <div className="articleThumbVertAuthorDateContainer">
                         <p className="articleThumbVertAuthor">{post.authorName}</p>

@@ -1,4 +1,5 @@
 import './styles/ThumbPostHorizontal.css';
+import stockAuthorImage from "./images/stockAuthorImage.png";
 import { Link } from "react-router-dom";
 
 const ThumbPostFour = ( { post } ) => {
@@ -13,7 +14,7 @@ const ThumbPostFour = ( { post } ) => {
                         <p className="articleThumbHorizType">{post.articleType}</p>
                         <p className="articleThumbHorizTitle">{post.title}</p>
                         <div className="articleThumbHorizAuthorImageNameContainer">
-                            <img className="articleThumbHorizAuthorImage" src={post.authorImage} alt=""/>
+                            <img className="articleThumbHorizAuthorImage" src={post.authorImage || stockAuthorImage} alt=""/>
                             <p className="articleThumbHorizAuthor">{post.authorName}</p>
                         </div>
                     </div>

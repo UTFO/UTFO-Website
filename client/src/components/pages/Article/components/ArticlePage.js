@@ -2,7 +2,6 @@ import { useEffect, useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import Box from "@mui/material/Box";
 import LinearProgress from "@mui/material/LinearProgress";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { getFullArticle } from "../api";
 import { renderer } from "./specialArticleData";
 import {
@@ -11,9 +10,13 @@ import {
   ShortDivider,
   Title,
   Tag,
+  SubtitleContainer,
+  VerticalDivider,
+  Subtitle,
 } from "./styles/ArticlePageStyles";
 import stockAuthorImage from "./images/stockAuthorImage.png"
 import "./styles/ArticlePage.css";
+import stockThumbnailImage from "./images/brainImage.jpg";
 
 const getMonthName = (date) => {
   const monthNames = [
@@ -33,17 +36,26 @@ const getMonthName = (date) => {
   return monthNames[date.getMonth()];
 }
 
-const ArticleImage = ({ authorImage , author}) => {
-  if (typeof authorImage !== "undefined") {
+const AuthorImage = ({ authorImage }) => {
+  return (
+    <img
+      src={authorImage || stockAuthorImage}
+      alt=""
+      style={{ height: "20px", width: "20px", marginRight: "5px" }}
+    />
+  );
+};
+
+export const SubtitleBox = ({ title }) => {
+  if (typeof title !== "undefined") {
     return (
-      <img
-        src={authorImage || stockAuthorImage}
-        alt={author}
-        style={{ height: "20px", width: "20px", marginRight: "5px" }}
-      />
+      <SubtitleContainer>
+        <VerticalDivider />
+        <Subtitle>{title}</Subtitle>
+      </SubtitleContainer>
     );
   }
-  return <AccountCircleIcon color="primary" sx={{ mr: 1 }} />;
+  return null;
 };
 
 const ArticleHeader = ({
@@ -52,6 +64,8 @@ const ArticleHeader = ({
   authorName,
   authorImage,
   publishDate,
+  imageThumbnail,
+  thumbnailCaption,
 }) => {
   let date = publishDate.split("/");
   let month = getMonthName(new Date(publishDate));
@@ -62,11 +76,13 @@ const ArticleHeader = ({
       <Title>{title}</Title>
       <Tag>{articleType}</Tag>
       <AuthorContainer>
-        <ArticleImage author={authorName} authorImage={authorImage} alt="" />
+        <AuthorImage authorImage={authorImage} />
         <p>{authorName}</p>
         <p>&nbsp;|&nbsp;</p>
         <p>{fullDate}</p>
       </AuthorContainer>
+      <img className="thumbnail" src={imageThumbnail || stockThumbnailImage} />
+      <SubtitleBox title={thumbnailCaption} />
     </HeaderContainer>
   );
 };
@@ -112,6 +128,9 @@ function ArticlePage() {
           <LinearProgress />
         ) : component ? (
           <Fragment>
+            <div style={{ padding: "0 15vw" }}>
+              <ShortDivider />
+            </div>
             {component}
           </Fragment>
         ) : (
@@ -122,8 +141,11 @@ function ArticlePage() {
               authorName={article["authorName"]}
               authorImage={article["authorImage"]}
               publishDate={article["publishDate"]}
+              imageThumbnail={article["imageThumbnail"]}
+              thumbnailCaption={article["thumbnailCaption"]}
             />
             <div
+              style={{ marginTop: "4em" }}
               dangerouslySetInnerHTML={{ __html: article["articleContent"] }}
             />
           </div>

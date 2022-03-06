@@ -43,6 +43,7 @@ const ArticleEditor = () => {
   const [articleType, setArticleType] = useState("");
   const [articleBlurb, setArticleBlurb] = useState("");
   const [imageThumbnail, setImageThumbnail] = useState("");
+  const [thumbnailCaption, setThumbnailCaption] = useState("");
   const [error, setError] = useState(false);
   const [deleteArticle, setDeleteArticle] = useState(false);
   const [whichSpecialArticle, setWhichSpecialArticle] = useState("");
@@ -60,6 +61,7 @@ const ArticleEditor = () => {
           setImageThumbnail(data["imageThumbnail"]);
           setArticleType(data["articleType"]);
           setArticleBlurb(data["articleBlurb"]);
+          setThumbnailCaption(data["thumbnailCaption"])
           if (data["specialArticle"]) {
             setSpecialArticle(true)
             setWhichSpecialArticle(data["specialArticle"]);
@@ -83,6 +85,7 @@ const ArticleEditor = () => {
       title &&
       authorName &&
       articleBlurb &&
+      thumbnailCaption &&
       imageThumbnail &&
       ((specialArticle && whichSpecialArticle) || articleContent)
     ) {
@@ -94,6 +97,7 @@ const ArticleEditor = () => {
         publishDate: formatDate(publishDate),
         articleType: articleType,
         imageThumbnail: imageThumbnail,
+        thumbnailCaption: thumbnailCaption,
         articleBlurb: articleBlurb,
       };
       if (specialArticle) {
@@ -173,6 +177,10 @@ const ArticleEditor = () => {
     let formattedDate = formatDate(date);
     setPublishDate(formattedDate);
   };
+
+  const handleThumbailCaptionChange = (e) => {
+    setThumbnailCaption(e.target.value);
+  }
 
   const handleSpecialArticleChange = () => {
     setSpecialArticle(!specialArticle);
@@ -313,6 +321,13 @@ const ArticleEditor = () => {
             label="Thumbnail Link"
             onChange={handleImageThumbnailChange}
           />
+          <TextField
+            required
+            value={thumbnailCaption}
+            id="outlined-required"
+            label="Thumbnail Caption"
+            onChange={handleThumbailCaptionChange}
+          />
           <LocalizationProvider dateAdapter={AdapterDateFns}>
             <DatePicker
               label="Publish Date"
@@ -386,10 +401,11 @@ const ArticleEditor = () => {
               value={articleContent}
               onEditorChange={handleEditor}
               init={{
+                forced_root_block: false,
                 height: 500,
                 menubar: false,
                 plugins: [
-                  "advlist autolink lists link image charmap print preview anchor",
+                  "advlist autolink lists link image charmap print preview anchor ",
                   "searchreplace visualblocks code fullscreen",
                   "insertdatetime media table paste code help wordcount",
                 ],
@@ -397,6 +413,8 @@ const ArticleEditor = () => {
                   "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment | code ",
                 automatic_uploads: true,
                 file_picker_types: "image",
+                extended_valid_elements:
+                  "a[class|name|href|target|title|onclick|rel],script[type|src],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]",
               }}
             />
           ) : null}

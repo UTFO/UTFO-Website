@@ -19,7 +19,7 @@ const index = () => {
         <h1 class="articlePage-title">Redesign of UTOPH's Website</h1>
 
         <div class="articlePage-tag-holder">
-            <div class="articlePage-tags">Projects</div>
+            <div class="articlePage-tags">Project</div>
         </div>
 
         <div class="articlePage-post-details">
