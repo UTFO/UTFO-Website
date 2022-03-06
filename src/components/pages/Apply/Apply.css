@@ -43,6 +43,7 @@
 .apply.waved {
   color: #fff;
   background: linear-gradient(to bottom, var(--dark-bg-color) 0%, var(--title-color) 100%);
+  padding-bottom: 5rem;
 }
 
 .apply .join {
@@ -108,7 +109,6 @@
 }
 
 .apply a{
-  border: 3px solid #493ffc;
   color: #493ffc;
   background-color: white;
   text-transform: uppercase;
@@ -123,13 +123,6 @@
   font-size: medium;
   text-align: center;
   
-}
-
-.apply .form.inner .blurb{
-  margin-left: 300px;
-  margin-right: 300px;
-  margin-bottom: 200px;
-  text-align: center;
 }
 
 .apply span :hover{

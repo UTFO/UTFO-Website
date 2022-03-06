@@ -7,14 +7,9 @@
   position: relative;
   text-align: center;
   overflow: hidden;
-  opacity: 0.6;
-  transition: opacity 0.5s;
-}
-
-.home .active {
-  opacity: 1;
 }
 
 .home .accent {
   background-color: #6c63ff;
+  color: white;
 }

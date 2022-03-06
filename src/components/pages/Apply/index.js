@@ -79,26 +79,18 @@ function App() {
           </Role>
         </div>
         <div className="dash">-</div>
-        <div className="form inner">
-          <div className="blurb">
-            <div className="heading">
-              <img className="logo" src={Logo} alt="UTFO Logo" />
-              <h1>Become a Member!</h1>
-            </div>
+        <div className='join inner'>
+          <h1>Become a Member!</h1>
             <p>
               Sign up through the form below to become a member of the University
               of Toronto Freelancers' Organization! Further join details will
               be sent to your email. Our main platform of communication is
               Discord, which you will be invited to upon completion of this form.
             </p>
-          </div>
-          <div className="apply button">
-          <span className='apply form'>
-              <a href = "https://docs.google.com/forms/d/e/1FAIpQLSeglrUFoM2vh7vWzHYHqtAMIeOKqKvKMVA4LGeR0wnR4nXDXA/viewform">
+            <br></br>
+            <a href = "https://docs.google.com/forms/d/e/1FAIpQLSeglrUFoM2vh7vWzHYHqtAMIeOKqKvKMVA4LGeR0wnR4nXDXA/viewform">
                 CLICK HERE FOR THE APPLICATION FORM
-              </a>
-            </span>
-          </div>
+            </a>
         </div>
       </div>
     </div>
