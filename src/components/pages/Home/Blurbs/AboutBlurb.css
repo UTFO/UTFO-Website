@@ -1,4 +1,5 @@
 .about-blurb {
+  font-size: 19px;
   width: 50%;
   color: #fff;
   background-color: var(--dark-bg-color);
@@ -28,19 +29,22 @@
   text-transform: uppercase;
   padding: 0.5rem;
   padding-left: 0.75rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  transition: all 0.25s cubic-bezier(0.83, 0, 0.17, 1);
+  margin-top: 0.5em;
+  transition: 200ms;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 2;
+  font-size: 1.8rem;
 }
 
 .about-link div:hover {
-  transition: -webkit-transform 0.5s linear;
-  display: flex;
-  border-radius: 4px;
   transform: scale(1.03);
+
+  background-color: #493ffc;
+  color: white;
+  transition: 200ms;
 }
+
 
 a.about-link {
   text-decoration: none;

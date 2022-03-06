@@ -1,7 +1,7 @@
 .contact-title {
   font-family: Kollektif, monospace;
   font-size: 4.2vw;
-  text-shadow: -3px 3px #AA82FB;
+  text-shadow: -3px 3px #aa82fb;
   padding-top: 2vh;
   padding-bottom: 2vh;
 }
@@ -9,17 +9,16 @@
 .contact-form {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  font-size: 14px;
 }
 
 .contact-form iframe {
-  padding: 2vw;
-  flex-basis: 70%;
+  width: 0px;
+  flex-basis: 65%;
   height: 70vh;
-  background: #CDCDFF;
   border-radius: 20px;
-  margin-right: 5%;
 }
 
 .contact-form .information {
