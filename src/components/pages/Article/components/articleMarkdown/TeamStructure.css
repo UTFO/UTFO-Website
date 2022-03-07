@@ -68,7 +68,7 @@
 
 .articlePageFigureImage img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-style: solid;
     border-color: rgb(179, 179, 179);
 }

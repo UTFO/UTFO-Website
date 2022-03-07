@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from './Heading.js';
 import Figure from './Figure.js';
 import './TeamStructure.css';
+import image from '../images/team_structure.png';
 
 import workflowImg from './images/workflow.png';
 import communicationImg from './images/communication.png';
@@ -15,9 +16,9 @@ const TeamStructure = () => {
             </div>
             <div class="articlePage-post-details">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Liliumbulbiferumflowertop.jpg/220px-Liliumbulbiferumflowertop.jpg" alt="" class="articlePage-user-icon"></img>
-                <p>Leonid Nediak | February 26, 2022</p>
+                <p>Rohit & Lia | February 26, 2022</p>
             </div>
-            <Figure image={""} subheading="Lorem Ipsum" imageHeight="36vw" borderRadius="1.5vw"/>
+            <Figure image={image} subheading="Lorem Ipsum" imageHeight="36vw" borderRadius="1.5vw"/>
             <p style={{marginTop: "1vw"}}>The current team structure of the University of Toronto Freelancer's Organization (UTFO) was designed to reflect how typical professional web development teams are structured.</p>
             <Heading heading="Description" />
             <div id="artTeamStrSec1">
