@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Blurb from '../../About/Blurb';
 import './AboutBlurb.css';
 import TopQuote from '../../../../assets/top_quote.png';
@@ -16,11 +17,11 @@ export function AboutBlurb() {
 }
 
 export function AboutLink() {
+
 	return (
 		<Link className="about-link" to="/about">
 			<div>
-				<span>More About Us</span>
-				<KeyboardArrowRightIcon fontSize='normal' />
+				<span>More About Us ►</span>
 			</div>
 		</Link>
 	)

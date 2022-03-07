@@ -9,294 +9,27 @@ import brain from './components/images/brainImage.jpg';
 import sleep from './components/images/sleep.png';
 import authorImage from './components/images/authorImage.png';
 
+import { projectsInfo } from './ProjectsInfo.js'
+import { tutorialsInfo } from './TutorialsInfo.js';
+import { featuredPostsInfo } from './FeaturedPostsInfo.js'
+import { recentsInfo } from './RecentsInfo.js';
+
 import './components/styles/CategorySelector.css';
 import './Article.css';
 
 function Article() {
 
   //List of Announcements
-  const [ announcements ] = useState([
-    {
-      title: "Announcement!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-  ])
+  const announcements = projectsInfo
 
   //List of projects
-  const [ projects ] = useState([
-    {
-      title: "Project!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-  ])
+  const projects = projectsInfo
 
   //List of tutorials
-  const [ tutorials ] = useState([
-    {
-      title: "Tutorial!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-    ,
-    {
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
-    }
-  ])
+  const tutorials  = tutorialsInfo
 
   //List of featured posts
-  const featuredPosts = [{
-      title: "The Brain is a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis. Purus non enim praesent elementum facilisis leo vel. Libero enim sed faucibus turpis. Aenean vel elit scelerisque mauris. Volutpat sed cras ornare arcu dui vivamus. Vitae ultricies leo integer malesuada nunc. Gravida in fermentum et sollicitudin ac orci phasellus. Porttitor eget dolor morbi non arcu risus. Nunc non blandit massa enim nec dui nunc mattis. Turpis egestas integer eget aliquet nibh. Urna nec tincidunt praesent semper feugiat. Sed adipiscing diam donec adipiscing. Viverra tellus in hac habitasse platea dictumst."
-    }
-    ,
-    {
-      title: "The Brain is NOT a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis. Purus non enim praesent elementum facilisis leo vel. Libero enim sed faucibus turpis. Aenean vel elit scelerisque mauris. Volutpat sed cras ornare arcu dui vivamus. Vitae ultricies leo integer malesuada nunc. Gravida in fermentum et sollicitudin ac orci phasellus. Porttitor eget dolor morbi non arcu risus. Nunc non blandit massa enim nec dui nunc mattis. Turpis egestas integer eget aliquet nibh. Urna nec tincidunt praesent semper feugiat. Sed adipiscing diam donec adipiscing. Viverra tellus in hac habitasse platea dictumst."
-    }
-    ,
-    {
-      title: "The Brain is DEF a Tumor!",
-      date: "01/23/2025",
-      author: "Guy D",
-      image: brain,
-      authorImage: authorImage,
-      category: "Health & Science",
-      link: "https://www.youtube.com/watch?v=jvGnekdMOhI",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis. Purus non enim praesent elementum facilisis leo vel. Libero enim sed faucibus turpis. Aenean vel elit scelerisque mauris. Volutpat sed cras ornare arcu dui vivamus. Vitae ultricies leo integer malesuada nunc. Gravida in fermentum et sollicitudin ac orci phasellus. Porttitor eget dolor morbi non arcu risus. Nunc non blandit massa enim nec dui nunc mattis. Turpis egestas integer eget aliquet nibh. Urna nec tincidunt praesent semper feugiat. Sed adipiscing diam donec adipiscing. Viverra tellus in hac habitasse platea dictumst."
-    }
-  ]
+  const featuredPosts = featuredPostsInfo
 
   const [ featuredNum , setFeaturedNum] = useState(0);
 
@@ -315,47 +48,7 @@ function Article() {
   }
 
  //List of Recent Posts
-  const [ recentPosts, setRecentPosts ] = useState([
-    {
-      title: "Test Test 1",
-      date: "03/14/1592",
-      author: "Author",
-      image: sleep,
-      type: "Announcement",
-      authorImage: authorImage,
-      link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    }
-    ,
-    {
-      title: "Test Test 2 - I Needed a Longer Title to Test",
-      date: "03/14/1592",
-      author: "Author",
-      image: brain,
-      type: "Announcement",
-      authorImage: authorImage,
-      link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    }
-    ,
-    {
-      title: "Test Test 3 - I Needed a Longer Title to Test",
-      date: "03/14/1592",
-      author: "Author",
-      image: sleep,
-      type: "Project",
-      authorImage: authorImage,
-      link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    }
-    ,
-    {
-      title: "Test Test 4 - I Needed a Longer Title to Test",
-      date: "03/14/1592",
-      author: "Author",
-      image: brain,
-      type: "Tutorial",
-      authorImage: authorImage,
-      link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    }
-  ])
+  const recentPosts = recentsInfo;
 
   let categories = [
     {

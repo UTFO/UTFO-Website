@@ -11,6 +11,8 @@ import ShreyPic from './dev-pics/shrey.png';
 import LiaPic from './dev-pics/lia.jpg';
 import JenPic from './dev-pics/jennifer.jpeg';
 import OsmanPic from './dev-pics/osman.jpg';
+import CelmaPic from './dev-pics/celma.jpg';
+import LeonidPic from './dev-pics/leonid.jpg';
 
 /**
  * Format a bio for a team member.
@@ -80,6 +82,13 @@ function Execs() {
 				<GitHub>100emoji</GitHub>
 				<LinkedIn>https://linkedin.com/in/osmansultan-</LinkedIn>
 			</Bio>
+			<Bio
+				name="Celina Micaela Javier" pic={CelmaPic}
+				positions={[Roles.socialMedia]}
+			>
+				<LinkedIn>https://linkedin.com/in/celjavier</LinkedIn>
+				<Instagram>celijavi</Instagram>
+			</Bio>
 		</div>
 	)
 }
@@ -131,6 +140,12 @@ function Bios() {
 				>
 					<LinkedIn>https://linkedin.com/in/jennifer-wu2021</LinkedIn>
 					<Instagram>jennifer_wuu</Instagram>
+				</Bio>
+				<Bio
+					name="Leonid Nediak" pic={LeonidPic}
+					positions={[Roles.frontend]}
+				>
+					<GitHub>lnediak</GitHub>
 				</Bio>
 			</div>
 			</div>

@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import { Home, About, Article, Contact, Apply } from './components/pages/imports';
+import { Home, About, Article, Contact, Apply, FullArticle } from './components/pages/imports';
+import ArticleUTOPH from './components/pages/ArticleUTOPH';
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 
 function App() {
@@ -17,8 +18,11 @@ function App() {
           <Route path="/articles" element={<Article />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/apply" element={<Apply />} />
+          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/articles/:title" element={<FullArticle />} />
+          <Route path="/articles/utoph" element={<ArticleUTOPH/>}/>
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </React.StrictMode>
   );

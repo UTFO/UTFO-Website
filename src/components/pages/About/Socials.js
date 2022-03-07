@@ -75,6 +75,7 @@ export const Roles = {
 	chiefExec: (<div><i className="fas fa-crown"></i> <span>Chief Executive</span></div>),
 	vp: (<div><i className="fas fa-crown"></i> <span>Vice President</span></div>),
 	teamLead: (<div><i className="fas fa-tasks"></i> <span>Team Lead</span></div>),
+	socialMedia: (<div><i className="fas fa-hashtag"></i> <span>Social Media Manager</span></div>),
 	frontend: (<div><i className="fas fa-code"></i> <span>Front-end Developer</span></div>),
 	backend: (<div><i className="fas fa-server"></i> <span>Back-end Developer</span></div>),
 	designer: (<div><i className="fas fa-pencil-ruler"></i> <span>Designer</span></div>),

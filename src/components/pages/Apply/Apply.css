@@ -7,6 +7,7 @@
 }
 .apply > .apply {
   width: 100%;
+  font-size: 1.2rem;
 }
 
 .apply-wave {
@@ -26,11 +27,23 @@
 .apply.intro p {
   padding-left: 2rem;
   max-width: 50%;
+
+}
+
+.apply .apply.intro .inner p{
+  padding-left: 225px;
+  padding-right: 50px;
+  max-width: fit-content;
+}
+
+.apply .apply.intro .inner h1{
+  padding-left: 50px;
 }
 
 .apply.waved {
   color: #fff;
   background: linear-gradient(to bottom, var(--dark-bg-color) 0%, var(--title-color) 100%);
+  padding-bottom: 5rem;
 }
 
 .apply .join {
@@ -86,6 +99,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .apply .form .blurb .logo {
   height: 6em;
 }
@@ -93,13 +107,29 @@
   font-size: 3em;
   text-transform: uppercase;
 }
-.apply .form .blurb .arrow {
-  width: 100%;
+
+.apply a{
+  color: #493ffc;
+  background-color: white;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  padding-left: 0.75rem;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  transition: transform 250ms, opacity 400ms;
+  transition-timing-function: linear;
+  font-size: medium;
+  text-align: center;
+  
 }
-.apply .form .apply-form {
-  height: 500px;
-  background-color: #cdcdff;
-  border-radius: 1em;
-  padding: 1em;
-  color: #000;
+
+.apply span :hover{
+  transform: scale(1.2);
+}
+
+.apply span{
+  margin-right: 1300px;
+  margin-top: 400px;
 }

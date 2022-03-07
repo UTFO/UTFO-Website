@@ -11,8 +11,9 @@
 }
 
 .articleFeaturedContainer {
-    width: 100%;
+    width: 50%;
     max-width: 1500px;
+    margin-left: 200px;
 }
 
 .articleFeaturedCategory {
@@ -23,9 +24,8 @@
     font-weight: bold;
     top: 23px;
     z-index: 1;
-    background-color: white;
     padding: 0px 10px 0px 10px;
-    color: #343347;
+    color: white;
     margin: auto;
 }
 
@@ -45,7 +45,7 @@
     cursor: pointer;
     background-color: rgb(0, 0, 0, 0);
     border: none;
-    color: #999ca3;
+    color: #CCCBFF;
     z-index: 1
 }
 
@@ -62,7 +62,7 @@
     cursor: pointer;
     border: none;
     background-color: rgb(0, 0, 0, 0);
-    color: #999ca3;
+    color: #CCCBFF;
     z-index: 1
 }
 
@@ -75,7 +75,7 @@
 
 .articleFeaturedPostImage {
     width: 100%;
-    height: 680px;
+    height: 550px;
     object-fit: cover;
     border-radius: 40px 40px 40px 40px;
     margin: auto
@@ -83,7 +83,7 @@
 
 .articleFeaturedPostTextContainer {
     width: 40%;
-    height: 680px;
+    height: 550px;
     background-color: #000000;
     opacity: 0.7;
     z-index: 1;
@@ -122,7 +122,7 @@ a:link {
 }
 
 .readMore{
-    margin-top: 200px;
+    margin-top: 100px;
     color: #cccbff;
     font-size: 23px;
 }
