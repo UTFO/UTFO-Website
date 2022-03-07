@@ -10,7 +10,9 @@ import sleep from './components/images/sleep.png';
 import authorImage from './components/images/authorImage.png';
 
 import { projectsInfo } from './ProjectsInfo.js'
+import { tutorialsInfo } from './TutorialsInfo.js';
 import { featuredPostsInfo } from './FeaturedPostsInfo.js'
+import { recentsInfo } from './RecentsInfo.js';
 
 import './components/styles/CategorySelector.css';
 import './Article.css';
@@ -24,7 +26,7 @@ function Article() {
   const projects = projectsInfo
 
   //List of tutorials
-  const tutorials  = projectsInfo
+  const tutorials  = tutorialsInfo
 
   //List of featured posts
   const featuredPosts = featuredPostsInfo
@@ -46,7 +48,7 @@ function Article() {
   }
 
  //List of Recent Posts
-  const recentPosts = projectsInfo;
+  const recentPosts = recentsInfo;
 
   let categories = [
     {

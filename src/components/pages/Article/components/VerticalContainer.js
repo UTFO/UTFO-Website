@@ -13,7 +13,7 @@ const VerticalContainer = ( { recentPosts, category }) => {
 
         <div className="articleVerticalContainerVerti">
             <div className="articleVerticalContainerPost">
-                {recentPosts.slice(recentPosts.length-3).map((recentPost) => {
+                {recentPosts.map((recentPost) => {
                     return <ThumbPost post={recentPost}/>
                 })}
             </div>
