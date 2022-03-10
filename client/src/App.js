@@ -1,10 +1,18 @@
-import React from 'react';
-import './App.css';
-import { Home, About, Article, Contact, Apply, FullArticle, ArticleEditor, ArticlePage } from './components/pages/imports';
-import Navbar from './components/Navbar/Navbar'
-import Footer from './components/Footer'
+import React from "react";
+import "./App.css";
+import {
+  Home,
+  About,
+  Article,
+  Contact,
+  Apply,
+  FullArticle,
+  ArticleEditor,
+  ArticlePage,
+} from "./components/pages/imports";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
 
 function App() {
   return (
