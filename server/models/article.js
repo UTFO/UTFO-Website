@@ -5,7 +5,7 @@ const articleScehma = new mongoose.Schema({
   authorName: String,
   authorImage:String,
   publishDate: String,
-  articleType: String,
+  articleType: [String],
   imageThumbnail: String,
   thumbnailCaption: String,
   articleBlurb: String,

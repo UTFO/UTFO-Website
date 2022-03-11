@@ -2,8 +2,8 @@ import { useEffect, useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import Box from "@mui/material/Box";
 import LinearProgress from "@mui/material/LinearProgress";
-import { getFullArticle } from "../api";
-import { renderer } from "./specialArticleData";
+import { getFullArticle } from "../../api";
+import { renderer } from "./specialArticles/specialArticleData";
 import {
   HeaderContainer,
   AuthorContainer,

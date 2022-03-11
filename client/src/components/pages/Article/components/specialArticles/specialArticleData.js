@@ -1,7 +1,8 @@
 import React from "react";
-import {ArticleUTOPH, TeamStructure} from "./specialArticles/import.js";
+import ArticleUTOPH from "./ArticleUTOPH";
+import TeamStructure from "./TeamStructure/TeamStructure";
 
-export const articleData = [
+export const specialArticleData = [
     {
         name: "utoph",
         component: ArticleUTOPH
@@ -13,7 +14,7 @@ export const articleData = [
 ];
 
 export const renderer = (name) => {
-    for (const data of articleData) {
+    for (const data of specialArticleData) {
         console.log(data)
         if (data["name"] === name) {
             return React.createElement(data["component"]);

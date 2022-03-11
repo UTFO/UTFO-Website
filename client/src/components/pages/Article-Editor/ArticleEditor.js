@@ -28,9 +28,9 @@ import {
   getFullArticle,
   updateArticle,
   deleteArticlePermanently,
-} from "../../api";
-import { specialArticleData } from "./specialArticles/specialArticleData";
-import "./styles/ArticleEditor.css";
+} from "../api";
+import { specialArticleData } from "../Article/components/specialArticles/specialArticleData";
+import "./ArticleEditor.css";
 
 const articleTypes = ["Featured", "Announcements", "Tutorials", "Projects"];
 

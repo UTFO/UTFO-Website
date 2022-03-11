@@ -4,7 +4,7 @@ import Header from "./components/Header.js";
 import VerticalContainer from "./components/VerticalContainer.js";
 
 import { useState, useEffect } from "react";
-import { getArticlePreviews } from "./api";
+import { getArticlePreviews } from "../api";
 
 import "./components/styles/CategorySelector.css";
 import "./Article.css";
@@ -23,17 +23,21 @@ function Article() {
       .then(({ data }) => {
         setTestAnnouncement(
           data.data.filter(
-            (article) => article["articleType"] === "Announcement"
+            (article) => article["articleType"][0] === "Announcement"
           )
         );
         setTestProject(
-          data.data.filter((article) => article["articleType"] === "Project")
+          data.data.filter((article) => article["articleType"][0] === "Project")
         );
         setTestTutorial(
-          data.data.filter((article) => article["articleType"] === "Tutorial")
+          data.data.filter(
+            (article) => article["articleType"][0] === "Tutorial"
+          )
         );
         setTestFeatured(
-          data.data.filter((article) => article["articleType"] === "Featured")
+          data.data.filter(
+            (article) => article["articleType"][0] === "Featured"
+          )
         );
 
         let dummyArray = data.data
