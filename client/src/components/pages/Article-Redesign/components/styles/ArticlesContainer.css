@@ -1,6 +1,15 @@
 .articlesContainer {
+    /* display: flex; */
+    justify-content: center;
+}
+
+.articlesAlign{
     display: flex;
     justify-content: center;
+}
+
+.linear{
+    margin: 5%;
 }
 
 @media only screen and (min-width: 300px) {
