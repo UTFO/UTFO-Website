@@ -1,10 +1,30 @@
 .articlesContainer {
-    margin: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
 
-.articleDiv {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5vh 2vw;
-    justify-content: center;
+@media only screen and (min-width: 300px) {
+    .articleDiv {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 2%;
+    }
+    
+    .child {
+        margin: 2.5%;
+        padding: 2.5%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .articleDiv {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .articleDiv {
+        grid-template-columns: auto auto auto;
+    }
 }

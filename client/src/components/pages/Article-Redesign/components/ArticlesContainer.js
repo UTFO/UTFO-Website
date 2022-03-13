@@ -12,12 +12,14 @@ const ArticlesContainer = ( { posts, isLoading }) => {
                 <div className="articleDiv">
                     {posts.map((post) => {
                         return (
-                            <Link
-                                to={`/articles/${post._id}`}
-                                target="_blank" key={post._id}
-                            >
-                                <ThumbPost post={post} /> {/*For now using this until a new card component is made*/}
-                            </Link>
+                            <div className='child'>
+                                <Link
+                                    to={`/articles/${post._id}`}
+                                    target="_blank" key={post._id}
+                                >
+                                    <ThumbPost post={post} /> {/*For now using this until a new card component is made*/}
+                                </Link>
+                            </div>
                         );
                     })}
                 </div>
