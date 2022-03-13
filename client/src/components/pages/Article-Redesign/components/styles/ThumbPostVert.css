@@ -56,7 +56,7 @@
 
 .articleThumbVertAuthor {
     font-size: var(--font-size);
-    color: white;
+    color: #343347;
     margin-top: 15px;
     margin-bottom: 3px;
     margin-left: 10px;
@@ -65,7 +65,7 @@
 .articleThumbVertDate {
     margin-top: 15px;
     margin-left: 10px;
-    color: white;
+    color: #343347;
     font-family: Kollektif;
     font-size: var(--font-size);
 }
