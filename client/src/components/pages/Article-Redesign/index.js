@@ -5,7 +5,7 @@ import Header from "./components/Header.js";
 
 import { useState, useEffect } from "react";
 import { getArticlePreviews } from "../api";
-import HorizontalContainer from "./components/HorizontalContainer.js";
+import ArticlesContainer from "./components/ArticlesContainer.js";
 
 //import "./components/styles/CategorySelector.css";
 //import "./Article.css";
@@ -15,26 +15,23 @@ function Article() {
     const [articles, setArticles] = useState([])
 
     useEffect(() => {
-        /*const fetchData = async () => {
-            let fetchedArticles = await getArticlePreviews();
-            setArticles(fetchedArticles.data);
+        const fetchData = async () => {
+            const fetchedArticles = await getArticlePreviews();
+            setArticles(fetchedArticles.data.data); //For some reason have this really weird format for the JSON
             setIsLoading(false);
         } 
 
         try{
             fetchData();    
         } catch (err) {
-            setArticles(['1', '2'])
             console.err(err);
-        }*/
-        setArticles(['1', '2'])
+        }
     }, []);
 
     return (
         <div className="article-page">
             <Header />
-            <HorizontalContainer posts={[]} isLoading={isLoading} />
-          
+            <ArticlesContainer posts={articles} isLoading={isLoading} />          
         </div>
     );
 }

@@ -1,0 +1,10 @@
+.articlesContainer {
+    margin: 5%;
+}
+
+.articleDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vh 2vw;
+    justify-content: center;
+}
