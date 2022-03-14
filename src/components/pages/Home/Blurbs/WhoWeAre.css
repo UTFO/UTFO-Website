@@ -1,0 +1,145 @@
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #493ffc;
+}
+
+.blurb {
+  font-size: 2rem;
+  display: block;
+  line-height: 1.5;
+}
+.purple {
+  color: #5029fc;
+}
+
+.vertical {
+  color: #5029fc;
+  margin-top: 0;
+  font-size: 4em;
+  font-weight: bold;
+  margin-right: 1em;
+  text-transform: uppercase;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 5.5em;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: #d9d9d9;
+}
+
+.characterFlipped {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.conversation {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  height: 450px;
+}
+
+.conversationAlt {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  height: 450px;
+}
+
+.stack {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  margin-left: 1.3rem;
+  margin-right: 1.3rem;
+}
+
+.speech-bubble {
+  width: 300px;
+  height: 150px;
+  margin: 10px auto;
+
+  padding: 20px;
+  text-align: center;
+
+  position: relative;
+  border-radius: 0.8rem;
+
+  font-size: 1.4rem;
+  line-height: 1.5;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.speech-bubble p {
+}
+
+.sbPurple {
+  background: #6f4dfd;
+  color: white;
+}
+
+.sbGray {
+  background: #d9d9d9;
+  color: black;
+}
+
+.sbRight:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #d9d9d9;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #d9d9d9;
+  border-bottom: 10px solid transparent;
+  right: -20px;
+  top: 20px;
+}
+.sbLeft:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #6f4dfd;
+  border-top: 10px solid #6f4dfd;
+  border-bottom: 10px solid transparent;
+  left: -19px;
+  bottom: 20px;
+}
+
+.sbRightAlt:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #6f4dfd;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #6f4dfd;
+  border-bottom: 10px solid transparent;
+  right: -20px;
+  bottom: 20px;
+}
+.sbLeftAlt:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #d9d9d9;
+  border-top: 10px solid #d9d9d9;
+  border-bottom: 10px solid transparent;
+  left: -19px;
+  top: 20px;
+}

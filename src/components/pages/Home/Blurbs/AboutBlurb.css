@@ -1,5 +1,5 @@
 .about-blurb {
-  font-size: 19px;
+  font-size: 1.8rem;
   width: 50%;
   color: #fff;
   background-color: var(--dark-bg-color);
@@ -45,13 +45,15 @@
   transition: 200ms;
 }
 
-
 a.about-link {
   text-decoration: none;
   font-weight: bold;
 }
 .about-link div:hover {
-  border-color: #fff;
   color: #fff;
   background-color: #493ffc;
+}
+
+.turquoise {
+  color: aqua;
 }
