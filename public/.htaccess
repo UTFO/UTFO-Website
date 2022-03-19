@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^/?(api.*)$ http://localhost:8836/$1 [P]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+RewriteRule ^ index.html [L]
