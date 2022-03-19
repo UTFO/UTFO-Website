@@ -24,3 +24,7 @@ yarn-error.log*
 
 # VS(Code) files
 .vs*
+
+# log files
+*.log
+nohup.out
