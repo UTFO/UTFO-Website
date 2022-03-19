@@ -38,6 +38,12 @@
 
 }
 
+.buttons{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
 .articleFeaturedLeftButton {
     margin-left: 5%;
     font-size: 3em;
@@ -45,14 +51,10 @@
     cursor: pointer;
     background-color: rgb(0, 0, 0, 0);
     border: none;
-    color: #CCCBFF;
-    z-index: 1
-}
-
-.buttons{
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-around;
+    color: #999ca3;
+    z-index: 1;
+    transition: transform 250ms, opacity 400ms;
+    transition-timing-function: linear;
 }
 
 .articleFeaturedRightButton {
@@ -62,9 +64,24 @@
     cursor: pointer;
     border: none;
     background-color: rgb(0, 0, 0, 0);
-    color: #CCCBFF;
-    z-index: 1
+    color: #999ca3;
+    z-index: 1;
+    transition: transform 250ms, opacity 400ms;
+    transition-timing-function: linear;
 }
+
+.articleFeaturedRightButton:hover{
+    color: #000000;
+    transition: -webkit-transform 0.5s linear;
+    transform: scale(1.3);
+}
+
+.articleFeaturedLeftButton:hover{
+    color: #000000;
+    transition: -webkit-transform 0.5s linear;
+    transform: scale(1.3);
+}
+
 
 .articleFeaturedPostContainer {
     position: relative;

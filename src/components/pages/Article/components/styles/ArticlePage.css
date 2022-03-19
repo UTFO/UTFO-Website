@@ -1,0 +1,9 @@
+.fullArticlePage{
+    padding: 0 15vw;
+}
+
+.thumbnail{
+    border: solid rgb(179, 179, 179) 0.2vw;
+    border-radius: 1.5vw;
+    height:36vw;
+}

@@ -1,15 +1,9 @@
 import Home from './Home/Home.js';
 import About from './About';
-import Article from './Article';
 import Contact from './Contact';
 import Apply from './Apply';
-import FullArticle from './Article/components/FullArticle';
+import Article from './Article-Redesign/index.js';
+import ArticlePage from "./Article-Page/ArticlePage";
+import ArticleEditor from "./Article-Editor/ArticleEditor";
 
-export {
-    Home,
-    About,
-    Article,
-    Contact,
-    Apply,
-    FullArticle,
-};
+export { Home, About, Article, Contact, Apply, ArticleEditor, ArticlePage };

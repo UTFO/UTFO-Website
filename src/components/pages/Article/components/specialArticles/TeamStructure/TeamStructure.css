@@ -1,0 +1,95 @@
+.articlePage {
+    padding: 0 15vw;
+    font-size: 1.2vw;
+}
+
+.articlePage-title {
+    margin: 0px;
+}
+  
+.articlePage-tag-holder, .articlePage-post-details, .articlePage-subheader-holder {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.3vw 0vw;
+}
+  
+.articlePage-tags {
+    margin: 2px;
+    background: black;
+    color: white;
+    padding: 4px;
+    border-radius: 7px;
+    font-size: 1vw;
+}
+  
+.articlePage-user-icon {
+    margin: 5px;
+    width: 30px;
+    border-radius: 25px;
+}
+
+.articlePageHeading {
+    display: flex;
+    margin: 6vw 0 1vw 0;
+    border-style: solid;
+    border-color:rgb(137, 251, 255);
+    border-width: 0;
+    border-left-width: 0.75vw;
+    padding-left: 0.75vw;
+}
+
+.articlePageHeading p {
+    font-size: 2vw;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.articlePageFigure {
+    width: 100%;
+}
+
+.articlePageFigureSubheading {
+    display: flex;
+    font-size: 1.3vw;
+    margin-top: 0.5vw;
+    border-style: solid;
+    border-color: rgb(179, 179, 179);
+    border-width: 0;
+    border-left-width: 0.75vw;
+    padding-left: 0.75vw;
+}
+
+.articlePageFigureImage {
+    height: fit-content;
+    width: 100%;
+}
+
+.articlePageFigureImage img {
+    width: 100%;
+    object-fit: cover;
+    border-style: solid;
+    border-color: rgb(179, 179, 179);
+}
+
+/* --- */
+
+#artTeamStrSec1 {
+    display: flex;
+    gap: 5%;
+}
+
+#artTeamStrSec1-1 {
+    width: 120%;
+}
+
+#artTeamStrSec2 {
+    display: flex;
+    gap: 5%;
+}
+
+#artTeamStrSec2-1 {
+    width: 50%;
+}
+
