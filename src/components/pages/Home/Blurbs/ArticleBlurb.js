@@ -1,5 +1,5 @@
 import './ArticleBlurb.css';
-import ThumbPost from './ArticleBlurbComponents/ThumbPost.js';
+import ArticlePreviewCard from "../../Article-Redesign/components/ArticlePreviewCard"
 import { useEffect, useState } from 'react'
 import LinearProgress from "@mui/material/LinearProgress";
 import {getArticlePreviews} from "../../api"
@@ -31,7 +31,7 @@ function ArticleBlurb() {
 			<div className="homeArticleBlurbPostContainer">
 				{isLoading ? <LinearProgress/> :
 					recommendedArticles.map((article) => {
-						return <ThumbPost image={article.imageThumbnail} title={article.title} link={`articles/${article._id}`} blurb={article.articleBlurb}/>
+						return <ArticlePreviewCard key={article._id} post={article} />;
 					})
 				}
 			</div>
