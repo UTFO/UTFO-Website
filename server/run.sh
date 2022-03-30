@@ -5,7 +5,7 @@ cd /root/UTFO-Website/server/
 KEYWORD="npm"
 
 get_pid() {
-	ps aux | grep "$1" | grep -v grep | awl '{print $2}'
+	ps aux | grep "$1" | grep -v grep | awk '{print $2}'
 }
 
 start_app() {
