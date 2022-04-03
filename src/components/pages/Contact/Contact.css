@@ -1,9 +1,10 @@
 .contact-title {
   font-family: Kollektif, monospace;
-  font-size: 4.2vw;
+  font-size: 2.2vw;
   text-shadow: -3px 3px #aa82fb;
   padding-top: 2vh;
   padding-bottom: 2vh;
+  padding-left: 10px;
 }
 
 .contact-form {
@@ -11,14 +12,15 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .contact-form iframe {
   width: 0px;
-  flex-basis: 65%;
-  height: 70vh;
+  flex-basis: 60%;
+  height: 65vh;
   border-radius: 20px;
+  margin-left: 15px;
 }
 
 .contact-form .information {
@@ -30,11 +32,13 @@
   width: 100%;
 }
 .contact-form .information > div {
-  font-size: 3em;
+  font-size: 2em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-right: 10px;
 }
 .contact-form .information > div a {
   color: unset;
+  margin-right: 7px;
 }
