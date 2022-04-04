@@ -57,3 +57,29 @@ a.about-link {
 .turquoise {
   color: aqua;
 }
+
+@media screen and (max-width: 960px){
+  .about-blurb{
+    width: 45%;
+    margin-left: 25vw;
+    line-height: 4vh;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .about-blurb{
+    width: 40%;
+    margin-left: 22.5vw;
+    line-height: 4vh;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .about-blurb{
+    width: 30%;
+    margin-left: 20vw;
+    line-height: 4vh;
+  }
+}
+

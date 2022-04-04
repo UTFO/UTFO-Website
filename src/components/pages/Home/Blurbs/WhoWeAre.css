@@ -9,6 +9,7 @@
   display: block;
   line-height: 1.5;
 }
+
 .purple {
   color: #5029fc;
 }
@@ -142,4 +143,56 @@
   border-bottom: 10px solid transparent;
   left: -19px;
   top: 20px;
+}
+
+@media screen and (max-width: 960px){
+  .blurb {
+    font-size: 2rem;
+    display: block;
+    line-height: 1.5;
+    max-width: 10vw;
+    padding-left: 40vw;
+    line-height: 4vh;
+    flex-direction: row;
+    
+  }
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #493ffc;
+    max-width: 10vw;
+    padding-left: 40vw;
+  }
+  .conversation .vertical{
+    padding-left: 5vw;
+  }
+  .conversationAlt .vertical{
+    padding-right: 5vw;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .blurb {
+    font-size: 2rem;
+    display: block;
+    line-height: 1.5;
+    max-width: 10vw;
+    padding-left: 37vw;
+    line-height: 4vh;
+    flex-direction: row;
+  }
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #493ffc;
+    max-width: 10vw;
+    white-space: nowrap;
+    padding-left: 15vw;
+  }
+  .conversation .vertical{
+    padding-left: 5vw;
+  }
+  .conversationAlt .vertical{
+    
+  }
 }
