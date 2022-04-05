@@ -154,7 +154,6 @@
     padding-left: 40vw;
     line-height: 4vh;
     flex-direction: row;
-    
   }
   .title {
     font-size: 3rem;
@@ -163,11 +162,47 @@
     max-width: 10vw;
     padding-left: 40vw;
   }
-  .conversation .vertical{
-    padding-left: 5vw;
+  .conversation{
+    transform: scale(0.7);
+    margin-right: 10vw;
   }
-  .conversationAlt .vertical{
-    padding-right: 5vw;
+  .conversationAlt{
+    transform: scale(0.7);
+    margin-left: 75vw;
+  }
+  .line{
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 600px){
+  .blurb {
+    font-size: 2rem;
+    display: block;
+    line-height: 1.5;
+    max-width: 10vw;
+    padding-left: 37vw;
+    line-height: 4vh;
+    flex-direction: row;
+  }
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #493ffc;
+    max-width: 10vw;
+    white-space: nowrap;
+    padding-left: 15vw;
+  }
+  .conversation{
+    transform: scale(0.55);
+    margin-right: 60vw;
+  }
+  .conversationAlt{
+    transform: scale(0.55);
+    margin-left: 102vw;
+  }
+  .line{
+    transform: scale(0.8);
   }
 }
 
@@ -189,10 +224,15 @@
     white-space: nowrap;
     padding-left: 15vw;
   }
-  .conversation .vertical{
-    padding-left: 5vw;
+  .conversation{
+    transform: scale(0.45);
+    margin-right: 85vw;
   }
-  .conversationAlt .vertical{
-    
+  .conversationAlt{
+    transform: scale(0.47);
+    margin-left: 105vw;
+  }
+  .line{
+    transform: scale(0.8);
   }
 }
