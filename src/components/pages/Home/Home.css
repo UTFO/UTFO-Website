@@ -13,3 +13,30 @@
   background-color: #6c63ff;
   color: white;
 }
+
+@media screen and (max-width: 960px) {
+  .home .accent p{
+    transform: scale(0.95);
+  }
+  .home .accent h2{
+    transform: scale(0.95);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home .accent p{
+    transform: scale(0.9);
+  }
+  .home .accent h2{
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home .accent p{
+    transform: scale(0.95);
+  }
+  .home .accent h2{
+    transform: scale(0.95);
+  }
+}

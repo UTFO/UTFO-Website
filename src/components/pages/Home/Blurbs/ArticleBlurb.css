@@ -63,3 +63,15 @@
 .homeArticleBlurbPostTextContainer p {
   margin: 10%;
 }
+
+@media screen and (max-width: 960px) {
+  .homeArticleBlurbPostContainer{
+    transform: scale(0.85);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homeArticleBlurbPostContainer{
+    transform: scale(0.9);
+  }
+}
