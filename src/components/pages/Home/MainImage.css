@@ -32,23 +32,34 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 960px) {
-  .text{
-    margin-left: 45vw;
+@media screen and (max-width: 960px){
+  .main-image img{
+    transform: scale(0.85);
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px){
   .text{
-    margin-left: 20vw;
+    transform: scale(0.8);
   }
+  .main-image img{
+    transform: scale(0.8);
+    margin-top: 5vh;
+  }
+  
 }
 
-
-@media screen and (max-width: 480px) {
-  .text{
-    margin-left: 10vw;
+@media screen and (max-width: 480px){
+  .main-image{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
   }
+  .main-image img{
+    transform: scale(0.5);
+  }
+  .text{
+    transform: scale(0.7);
+  }
+  
 }
-
-
