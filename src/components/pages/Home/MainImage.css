@@ -56,7 +56,7 @@
     flex-wrap: wrap;
   }
   .main-image img{
-    transform: scale(0.5);
+    transform: scale(0.4);
   }
   .text{
     transform: scale(0.7);
