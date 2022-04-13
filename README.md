@@ -1,29 +1,30 @@
 # UTFO-Website
 A website for the University of Toronto Freelancers' Society.
 
-# Acquiring the code
-First, make sure you have Git installed. Look up how to do this on your type of machine (e.g. google "install git on windows").
+# Run site locally
+To run the site locally now (since it requires a database connection), there are a few steps you need to take.
+## Acquiring the code
+1. Clone or Reclone the repository. (Delete versions prior to 03/22/2022)
 
-We recommend using the Source Control tab in VSCode to clone this repository (`UTFO/UTFO-Website`). However, if you prefer the commandline:
-```
-git clone https://github.com/UTFO/UTFO-Website.git
-```
+## Install packages
+2. Run 
+```npm i```
+ in the root directory of the folder you cloned the repository to, and also run 
+```npm i```
+in the server directory. This installs packages for both the client and the server.
 
-# Build instructions
-Before doing anything else, install the required dependencies:
-```
-npm install
-```
-This only needs to be done once, when you first clone the repository.
+## Set Environment Variables
+3. In the server directory, create a 
+```.env```
+ file (no name, just the extension), and put the following in it. 
+```CONNECTION_URL=mongodb+srv://admin:admin@articles.bgojn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority```
 
-## Running a test server
-```
-npm start
-```
-This will open up a browser window that runs your local code. Modify your files and save them, and the browser will reload the changed code in realtime. (If that doesn't happen, refresh the browser.)
+## Run Server
+4. In the server directory, run 
+```npm start```
 
-## Building for production
-```
-npm run build
-```
-This will create a `build` folder. Put these files into the webroot of a regular static webserver and the site will be served from there. If you don't know what any of that means, you probably won't be running this command.
+## Run Client
+5. In another terminal, run 
+```npm start```
+ in the root directory
+6. Wait for react to load your webpage and you're done!
